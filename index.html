@@ -122,24 +122,29 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <div class="teaser-container">
-          <div class="carousel-extra-padding">
-            <div id="teaser-carousel" class="carousel results-carousel">
-              <div class="item">
-                <img id="teaser1" class="teaser-image" src="static/images/teaser1.gif">
-              </div>
-              <div class="item">
-                <img id="teaser2" class="teaser-image" src="static/images/teaser2.gif">
-              </div>
-              <div class="item">
-                <img id="teaser3" class="teaser-image" src="static/images/teaser3.gif">
-              </div>
-            </div>
+        <div class="columns is-centered">
+          <div class="column is-one-third">
+            <img class="teaser-image" src="static/images/teaser1.gif" alt="Teaser 1">
+          </div>
+          <div class="column is-one-third">
+            <img class="teaser-image" src="static/images/teaser2.gif" alt="Teaser 2">
+          </div>
+          <div class="column is-one-third">
+            <img class="teaser-image" src="static/images/teaser3.gif" alt="Teaser 3">
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <style>
+    .teaser-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
 
   <section class="hero is-white is-small">
     <div class="hero-body">
@@ -271,72 +276,45 @@
       <br>
       <br>
 
-      <section class="section" style="background-color:#e4e4f781">
-        <div class="container is-max-desktop">
-
-          <!-- Section title -->
-          <div class="columns is-centered has-text-centered">
-            <div class="column">
-              <h2 class="title is-3"><b>ConditionedMath</b> AIME Samples</h2>
+      <section class="hero is-light is-small">
+        <div class="hero-body">
+          <div class="container">
+            <div class="carousel-extra-padding">
+              <div id="results-carousel" class="carousel results-carousel">
+                <div class="item item-swing_tire">
+                  <video class="carousel-video" id="swing_tire" controls muted loop playsinline height="100%"
+                    poster="static/images/swing_tire.jpg" data-src="./static/videos/swing_tire.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="item item-tennis">
+                  <video class="carousel-video" id="tennis" controls muted loop playsinline height="100%"
+                    poster="static/images/tennis.jpg" data-src="./static/videos/tennis.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="item item-libby">
+                  <video class="carousel-video" id="libby" controls muted loop playsinline height="100%"
+                    poster="static/images/libby.jpg" data-src="./static/videos/libby.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="item item-soapbox">
+                  <video class="carousel-video" id="soapbox" controls muted loop playsinline height="100%"
+                    poster="static/images/soapbox.jpg" data-src="./static/videos/soapbox.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="item item-snowy-trees">
+                  <video class="carousel-video" id="snowy-trees" controls muted loop playsinline height="100%"
+                    poster="static/images/snowy-trees.jpg" data-src="./static/videos/snowy-trees.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="item item-birch">
+                  <video class="carousel-video" id="birch" controls muted loop playsinline height="100%"
+                    poster="static/images/birch.jpg" data-src="./static/videos/birch.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- Three‐part carousel row -->
-          <div class="columns">
-
-            <!-- Part 1: Modified Question -->
-            <div class="column is-one-third has-text-centered">
-              <h3 class="title is-4">Modified Question</h3>
-              <div class="carousel-extra-padding">
-                <div id="question-carousel" class="carousel results-carousel">
-                  <div class="item">
-                    <div class="box">
-                      <p><strong>2022-I-5:</strong> A straight river that is 264 m wide flows from west to east at 14
-                        m/min. Melanie and Sherry sit on the south bank with Melanie a distance D m downstream from
-                        Sherry. They both swim to the north bank directly opposite Sherry and arrive simultaneously.
-                        Melanie’s speed relative to the water is 80 m/min; Sherry’s is 60 m/min. Find D.</p>
-                    </div>
-                  </div>
-                  <!-- …more question items here… -->
-                </div>
-              </div>
-            </div>
-
-            <!-- Part 2: Ground Truth Solution -->
-            <div class="column is-one-third has-text-centered">
-              <h3 class="title is-4">Ground Truth Solution</h3>
-              <div class="carousel-extra-padding">
-                <div id="solution-carousel" class="carousel results-carousel">
-                  <div class="item">
-                    <div class="box">
-                      <p>Let t be the time they each take.
-                        For Sherry: <em>√(D² + 264²) = 60 t</em>.
-                        For Melanie: <em>√((D–x)² + 264²) + x = 80 t</em>,
-                        where x is upstream drift.
-                        Solve for D = … (full derivation).</p>
-                    </div>
-                  </div>
-                  <!-- …more solution items here… -->
-                </div>
-              </div>
-            </div>
-
-            <!-- Part 3: Answer -->
-            <div class="column is-one-third has-text-centered">
-              <h3 class="title is-4">Answer</h3>
-              <div class="carousel-extra-padding">
-                <div id="answer-carousel" class="carousel results-carousel">
-                  <div class="item">
-                    <div class="box">
-                      <p><strong>Answer:</strong> D = 132·(√749 − 7)·√851 / 851</p>
-                    </div>
-                  </div>
-                  <!-- …more answer items here… -->
-                </div>
-              </div>
-            </div>
-
-          </div>
+          <p style="margin-top: 5px; text-align: center; margin-bottom: -15px;">Trail visualization</p>
         </div>
       </section>
 
