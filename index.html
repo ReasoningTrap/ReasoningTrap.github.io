@@ -39,12 +39,6 @@
   <script src="./static/js/lazy.js"></script>
   <script src="./static/js/faster.js"></script>
   <script src="./static/js/index.js"></script>
-  <style>
-    /* optional: centre the content inside each slide */
-    #results-carousel .item {
-      padding: 1rem 1.5rem;
-    }
-  </style>
 </head>
 
 <body>
@@ -125,6 +119,20 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="teaser-grid">
+            <div><img src="static/images/teaser1.gif" alt="Teaser 1"></div>
+            <div><img src="static/images/teaser2.gif" alt="Teaser 2"></div>
+            <div><img src="static/images/teaser3.gif" alt="Teaser 3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <style>
     .teaser-grid {
       display: grid;
@@ -133,24 +141,15 @@
       width: 80%;
       /* span the full page width */
       gap: 0;
-      /* no spacing between items  */
+      margin: 0 auto;
     }
 
     .teaser-grid img {
       width: 100%;
-      /* each image fills its cell */
       height: auto;
       display: block;
     }
   </style>
-
-  <section>
-    <div class="teaser-grid">
-      <div><img src="static/images/teaser1.gif" alt="Teaser 1"></div>
-      <div><img src="static/images/teaser2.gif" alt="Teaser 2"></div>
-      <div><img src="static/images/teaser3.gif" alt="Teaser 3"></div>
-    </div>
-  </section>
 
   <section class="hero is-white is-small">
     <div class="hero-body">
@@ -304,7 +303,7 @@
 
       <div class="carousel-extra-padding">
         <!--  ONE carousel, ONE ID  -->
-        <div id="results-carousel" class="carousel">
+        <div id="results-carousel" class="carousel results-carousel">
 
           <!-- ─────── Slide 1 ─────── -->
           <div class="item">
@@ -368,31 +367,11 @@
           </div><!-- /.item -->
 
           <!-- Additional slides can follow the same pattern … -->
-
         </div><!-- /#results-carousel -->
       </div>
-
     </div>
   </section>
 
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // initialise a single-slide carousel
-      const [carousel] = bulmaCarousel.attach('#results-carousel', {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        navigation: true,
-        pagination: true,
-        loop: false
-      });
-
-      // re-typeset LaTeX whenever we change slide
-      carousel.on('show', () => {
-        if (window.MathJax) { MathJax.typesetPromise(); }
-      });
-    });
-  </script>
   <style>
     .carousel-sample {
       display: grid;
