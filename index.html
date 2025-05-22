@@ -118,14 +118,58 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img id="teaser" width="100%" src="images/teaser.png">
+        <div class="columns is-centered">
+          <div class="column is-one-third">
+            <div class="carousel-extra-padding">
+              <div id="teaser-carousel-1" class="carousel results-carousel">
+                <div class="item">
+                  <img id="teaser" width="100%" src="images/teaser1.png">
+                </div>
+                <div class="item">
+                  <img id="teaser" width="100%" src="images/teaser2.png">
+                </div>
+                <div class="item">
+                  <img id="teaser" width="100%" src="images/teaser3.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="carousel-extra-padding">
+              <div id="teaser-carousel-2" class="carousel results-carousel">
+                <div class="item">
+                  <img id="teaser" width="100%" src="images/teaser1.png">
+                </div>
+                <div class="item">
+                  <img id="teaser" width="100%" src="images/teaser2.png">
+                </div>
+                <div class="item">
+                  <img id="teaser" width="100%" src="images/teaser3.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="carousel-extra-padding">
+              <div id="teaser-carousel-3" class="carousel results-carousel">
+                <div class="item">
+                  <img id="teaser" width="100%" src="images/teaser1.png">
+                </div>
+                <div class="item">
+                  <img id="teaser" width="100%" src="images/teaser2.png">
+                </div>
+                <div class="item">
+                  <img id="teaser" width="100%" src="images/teaser3.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <h2 class="subtitle has-text-centered">
-          <p style="font-family:Times New Roman"><b>Figure 1. Reasoning Rigidity in Well-Known Math Problem and Logic
-              Puzzle.
-              When solving a subtly modified version of a well-known math problems (AIME) and famous logic puzzles
-              (Fibonacci Rabbit and Tower of Hanoi),
-              advanced reasoning models such as Qwen3-32B and OpenAI o3 default to familiar reasoning template leading
-              to incorrect conclusions.</b></p>
+          <p style="font-family:Times New Roman"><b>Reasoning Rigidity in Well-Known Math Problem and Logic Puzzle. When
+              solving a subtly modified version of a well-known math problems (AIME) and famous logic puzzles (Fibonacci
+              Rabbit and Tower of Hanoi), advanced reasoning models such as Qwen3-32B and OpenAI o3 default to familiar
+              reasoning template leading to incorrect conclusions.</b></p>
         </h2>
       </div>
     </div>
@@ -188,23 +232,24 @@
             <font color="#0000ff">Dataset Construction Pipeline</font>
           </h2>
           <div class="content has-text-justified">
+            <h1 class="title is-5">The dataset construction pipeline of <b>ReasoningTrap</b>
+              consists of two steps.</h1>
             <ul>
               <li>Step1: Create new questions with unusual conditions that are (1) valid, (2)
                 meaningfully different from the original, and (3) solvable without ambiguity.</li>
               <li>Step2: Verify each question with three criteria: (1) valid, (2)
                 different from the original, (3) solvability. Output answer and solution for the modified question.</li>
-              <li>Two modified versions of a
-                card-guessing problem are shown. While Modif 1 introduces a small tweak that preserves validity and
-                solvability, Modif 2 includes an invalid condition (multiplying a card count by –3), rendering the
-                problem unsolvable. Despite the simplicity of the problem, reasoning models overcomplicate the
-                problem and override the simple logic by defaulting to more complex problem templates (e.g., assuming a
-                two-card setup).</li>
+
             </ul>
           </div>
           <img id="teaser" width="98%" src="images/pipeline.png">
           <h1>
-            <p style="font-family:Times New Roman"><b>The dataset construction pipeline of <b>ReasoningTrap</b>
-                consists of two steps.</b>
+            <p style="font-family:Times New Roman"><b>Two modified versions of a
+                card-guessing problem are shown. While Modif 1 introduces a small tweak that preserves validity and
+                solvability, Modif 2 includes an invalid condition (multiplying a card count by –3), rendering the
+                problem unsolvable. Despite the simplicity of the problem, reasoning models overcomplicate the
+                problem and override the simple logic by defaulting to more complex problem templates (e.g., assuming a
+                two-card setup).</b>
           </h1>
         </div>
       </div>
@@ -390,6 +435,51 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    // Initialize teaser carousels
+    bulmaCarousel.attach('#teaser-carousel-1', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: false,
+      navigation: true,
+      navigationKeys: true,
+      infinite: true
+    });
+
+    bulmaCarousel.attach('#teaser-carousel-2', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: false,
+      navigation: true,
+      navigationKeys: true,
+      infinite: true
+    });
+
+    bulmaCarousel.attach('#teaser-carousel-3', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: false,
+      navigation: true,
+      navigationKeys: true,
+      infinite: true
+    });
+
+    // Synchronize teaser carousels
+    const teaserCarousels = ['#teaser-carousel-1', '#teaser-carousel-2', '#teaser-carousel-3'];
+    teaserCarousels.forEach(carousel => {
+      const carouselInstance = document.querySelector(carousel).bulmaCarousel();
+      carouselInstance.on('slide:ready', function (slide) {
+        const currentIndex = slide.index;
+        teaserCarousels.forEach(otherCarousel => {
+          if (otherCarousel !== carousel) {
+            document.querySelector(otherCarousel).bulmaCarousel().slide(currentIndex);
+          }
+        });
+      });
+    });
+
     // Initialize all carousels
     bulmaCarousel.attach('#question-carousel', {
       slidesToScroll: 1,
