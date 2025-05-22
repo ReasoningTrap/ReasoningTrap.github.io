@@ -45,7 +45,8 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Reasoning Model is Stubborn:</h1>
-            <h2 class="title is-2 publication-title">Diagnosing Instruction Overriding in Reasoning Models</h2>
+            <h3 class="title is-3 publication-title"> <img id="dataset_icon" width="3%"
+                src="images/sketch style.jpg">Diagnosing Instruction Overriding in Reasoning Models</h3>
             <div class="is-size-5">
               <span class="author-block">
                 <a href="https://jadohu.github.io/" style="color:#f68946;font-weight:normal;">Doohyuk
@@ -165,31 +166,50 @@
           </div>
         </div>
         <!-- Abstract. -->
-        <div style="float:left; width:47.1%; border: 0px solid rgba(5, 130, 255, 0.534);">
-          <h2 class="title is-5">I. <b>ReasoningTrap</b> Dataset Samples</h2>
-          <div class="column is-five-fifths">
-            <div class="columns is-centered">
-              <img id="teaser" width="100%" src="images/same_box.gif">
-            </div>
-          </div>
-        </div>
-        <!--/ Abstract. -->
-
-        <div style=" float:right; width:49.8%; border: 0px solid black;">
-          <h2 class="title is-5">II. Demo Instruction</h2>
-          <div class="column is-five-fifths">
-            <div class="columns is-centered">
-              <div class="publication-video">
-                <iframe src="https://www.youtube.com/embed/-MCkU7IAGKs" title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen></iframe>
-                <!--               <iframe src="https://user-images.githubusercontent.com/6631389/211468127-60dd5c69-8db9-43d2-a45d-e97b336e5249.mp4" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+        <section class="hero is-light is-small">
+          <div class="hero-body">
+            <div class="container">
+              <div class="carousel-extra-padding">
+                <div id="trail-carousel" class="carousel results-carousel">
+                  <div class="item item-swing_tire">
+                    <video class="carousel-video" id="swing_tire" controls muted loop playsinline height="100%"
+                      poster="static/images/swing_tire.jpg" data-src="./static/videos/swing_tire.mp4"
+                      type="video/mp4"></video>
+                  </div>
+                  <div class="item item-tennis">
+                    <video class="carousel-video" id="tennis" controls muted loop playsinline height="100%"
+                      poster="static/images/tennis.jpg" data-src="./static/videos/tennis.mp4" type="video/mp4"></video>
+                  </div>
+                  <div class="item item-libby">
+                    <video class="carousel-video" id="libby" controls muted loop playsinline height="100%"
+                      poster="static/images/libby.jpg" data-src="./static/videos/libby.mp4" type="video/mp4"></video>
+                  </div>
+                  <div class="item item-soapbox">
+                    <video class="carousel-video" id="soapbox" controls muted loop playsinline height="100%"
+                      poster="static/images/soapbox.jpg" data-src="./static/videos/soapbox.mp4"
+                      type="video/mp4"></video>
+                  </div>
+                  <div class="item item-snowy-trees">
+                    <video class="carousel-video" id="snowy-trees" controls muted loop playsinline height="100%"
+                      poster="static/images/snowy-trees.jpg" data-src="./static/videos/snowy-trees.mp4"
+                      type="video/mp4"></video>
+                  </div>
+                  <div class="item item-birch">
+                    <video class="carousel-video" id="birch" controls muted loop playsinline height="100%"
+                      poster="static/images/birch.jpg" data-src="./static/videos/birch.mp4" type="video/mp4"></video>
+                  </div>
+                </div>
               </div>
             </div>
+            <p style="margin-top: 5px; text-align: center; margin-bottom: -15px;">Trail visualization</p>
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
+        <br>
+
+  </section>
+
+  </div>
+  </div>
   </section>
 
   <section class="section">
@@ -278,113 +298,13 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3"><img id="painting_icon" width="3%"
-            src="https://cdn-icons-png.flaticon.com/512/3515/3515174.png"> Results</h2>
+            src="https://cdn-icons-png.flaticon.com/512/3515/3515174.png"> Dataset Construction</h2>
       </div>
     </div>
     <!-- </div> -->
     <!--/ Results. -->
     <div class="container is-max-desktop">
 
-
-      <!-- Grounedtext2img. -->
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">
-            <font color="#0000ff">Text Grounded T2I Generation (Bounding box)</font>
-          </h2>
-          <img id="teaser" width="95%" src="images/groundtext2img.png">
-          <h1>
-            <p style="font-family:Times New Roman"><b>By exploiting knowledge of pretrained text2img model, GLIGEN can
-                generate varieties of objects in given locations, it also supports varies of styles.</b>
-          </h1>
-          <br>
-          <img id="teaser" width="95%" src="images/gligen_vs_dalle_images.png">
-          <h1>
-            <p style="font-family:Times New Roman"><b>Compared with existing text2img models such as DALLE1 and DALLE2,
-                GLIGEN enables the new capability to allow grounding instruction. The text prompt and DALLE generated
-                images are from <a href='https://openai.com/dall-e-2/'>OpenAI Blog</a>.</b>
-          </h1>
-        </div>
-      </div>
-
-      <br>
-      <br>
-      <br>
-
-      <!-- counterfactual. -->
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">
-            <font color="#0000ff">Spatially counterfactual generation</font>
-          </h2>
-          <img id="teaser" width="95%" src="images/counterfactual.png">
-          <h1>
-            <p style="font-family:Times New Roman"><b>By explicitly specifying object size and location, GLIGEN can
-                generate spatially counterfactual results which are difficult to release through text2img model (e.g.,
-                Stable Diffusion).</b>
-          </h1>
-        </div>
-      </div>
-
-
-      <br>
-      <br>
-      <br>
-
-      <!-- counterfactual. -->
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">
-            <font color="#0000ff">Image Grounded T2I Generation (Bounding box)</font>
-          </h2>
-          <img id="teaser" width="95%" src="images/image_condition.png">
-          <h1>
-            <p style="font-family:Times New Roman"><b>GLIGEN can also ground on reference images. Top row indicates
-                reference images can provide more fine-grained details beyond text description such as style and shape
-                or car. The second row shows reference image can also be used as style image in which case we find
-                ground it into corner or edge of an image is sufficient.</b>
-          </h1>
-        </div>
-      </div>
-
-
-      <br>
-      <br>
-      <br>
-
-      <!-- counterfactual. -->
-      <!-- <div class="columns is-centered">
-    <div class="column is-full-width">
-      <h2 class="title is-4">Grounded T2I Generation (Keypoints)</h2>
-      <img id="teaser" width="95%" src="images/keypoint.png">
-      <h1>
-        <p style="font-family:Times New Roman"><b>GLIGEN can also ground human keypoints while doing text-to-image generation.</b>
-      </h1>                 
-    </div>
-  </div> -->
-
-
-      <!-- <br>
-  <br>
-  <br> -->
-
-      <!-- counterfactual. -->
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">
-            <font color="#0000ff">Grounded Inpainting</font>
-          </h2>
-          <img id="teaser" width="95%" src="images/inpaint.png">
-          <h1>
-            <p style="font-family:Times New Roman"><b>Like other diffusion models, GLIGEN can also perform grounded
-                image inpaint, which can generate objects tightly following provided bounding boxes.</b>
-          </h1>
-        </div>
-      </div>
-
-
-
-
       <br>
       <br>
       <br>
@@ -392,83 +312,37 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-4">
-            <font color="#0000ff">Canny Map Grounded T2I Generation</font>
+            <font color="#0000ff">Dataset Construction Pipeline</font>
           </h2>
-          <img id="teaser" width="98%" src="images/canny.png">
+          <img id="teaser" width="98%" src="images/pipeline.pdf">
           <h1>
-            <p style="font-family:Times New Roman"><b>GLIGEN results on canny maps.</b>
+            <p style="font-family:Times New Roman"><b>The dataset construction pipeline of \texttt{ConditionedMath}
+                consists of two steps. Step1: Create new questions with unusual conditions that are (1) valid, (2)
+                meaningfully different from the original, and (3) solvable without ambiguity. Two modified versions of a
+                card-guessing problem are shown. While Modif 1 introduces a small tweak that preserves validity and
+                solvability, Modif 2 includes an invalid condition (multiplying a card count by –3), rendering the
+                problem unsolvable. (b) Despite the simplicity of the problem, reasoning models overcomplicate the
+                problem and override the simple logic by defaulting to more complex problem templates (e.g., assuming a
+                two-card setup).</b>
           </h1>
         </div>
       </div>
-
-
-      <br>
-      <br>
-      <br>
 
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-4">
-            <font color="#0000ff">Depth Map Grounded T2I Generation</font>
+            <font color="#0000ff">Contamination of Reasoning Models from Familiar Pattern</font>
           </h2>
-          <img id="teaser" width="98%" src="images/depth.png">
+          <img id="teaser" width="98%" src="images/plot.pdf">
           <h1>
-            <p style="font-family:Times New Roman"><b>GLIGEN results on depth maps.</b>
-          </h1>
-        </div>
-      </div>
-
-
-
-
-      <br>
-      <br>
-      <br>
-
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">
-            <font color="#0000ff">Normal Map Grounded T2I Generation</font>
-          </h2>
-          <img id="teaser" width="98%" src="images/normal.png">
-          <h1>
-            <p style="font-family:Times New Roman"><b>GLIGEN results on normal maps.</b>
-          </h1>
-        </div>
-      </div>
-
-
-      <br>
-      <br>
-      <br>
-
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">
-            <font color="#0000ff">Semantic Map Grounded T2I Generation</font>
-          </h2>
-          <img id="teaser" width="98%" src="images/sem.png">
-          <h1>
-            <p style="font-family:Times New Roman"><b>GLIGEN results on semantic maps.</b>
-          </h1>
-        </div>
-      </div>
-
-
-
-
-      <br>
-      <br>
-      <br>
-
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">
-            <font color="#0000ff">Hed Map Grounded T2I Generation</font>
-          </h2>
-          <img id="teaser" width="98%" src="images/hed.png">
-          <h1>
-            <p style="font-family:Times New Roman"><b>GLIGEN results on hed maps.</b>
+            <p style="font-family:Times New Roman"><b>(a) Relationship between contamination ratio and <b>p-pass@1</b>
+                reveals
+                that contamination in the reasoning path does not affect the final output up to certain point
+                (approximately $40\%$), while contamination over this point drastically reduces the <b>p-pass@1</b>
+                score,
+                indicating that the model is trapped into a wrongful reasoning path and arrived at incorrect output. (b)
+                Observing the contamination ratio between specific interval of reasoning steps, wrong output reasoning
+                exhibits progressively worsening contamination as the reasoning step length increases.</b>
           </h1>
         </div>
       </div>
@@ -477,56 +351,145 @@
       <br>
       <br>
 
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">Terms and Conditions</h2>
-          <h1>
-            <p style="font-family:Times New Roman">We have strict terms and conditions for using the model checkpoints
-              and the demo; it is restricted to uses that follow the license agreement of <a
-                href="https://github.com/CompVis/latent-diffusion">Latent Diffusion Model</a> and <a
-                href="https://github.com/Stability-AI/StableDiffusion">Stable Diffusion</a>.
-              </b>
-          </h1>
+
+
+
+      <section class="section" style="background-color:#e4e4f781">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-six-fifths">
+              <h2 class="title is-3"><img id="dataset_icon" width="3%" src="images/logo.jpg"> AIME Samples</h2>
+            </div>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column is-one-third">
+              <h3 class="title is-4">Modified Question</h3>
+              <div class="carousel-extra-padding">
+                <div id="question-carousel" class="carousel results-carousel">
+                  <div class="item">
+                    <div class="box">
+                      <p><strong>2022-I-5:</strong> A straight river that is 264 meters wide flows from west to east at
+                        a rate of 14 meters per minute. Melanie and Sherry sit on the south bank with Melanie a distance
+                        D meters downstream from Sherry. The two swimmers swim to a point on the north bank directly
+                        opposite Sherry's position and arrive simultaneously. Melanie swims at 80 meters per minute
+                        relative to the water, Sherry swims at 60 meters per minute relative to the water. Find D.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="box">
+                      <p><strong>2022-I-7:</strong> Let $a,b,c,d,e,f,g,h,i$ be distinct integers from $1$ to $9$, and
+                        suppose that $a,b,c,d,e,f$ are consecutive integers. Find the minimum possible positive value of
+                        $\frac{a \cdot b \cdot c - d \cdot e \cdot f}{g \cdot h \cdot i}$.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="box">
+                      <p><strong>2022-II-6:</strong> Let $x_1 \leq x_2 \leq \cdots \leq x_{100}$ be real numbers such
+                        that $|x_1| + |x_2| + \cdots + |x_{100}| = 1$ and $x_1 + x_2 + \cdots + x_{100} = 0$. Suppose
+                        that $x_1 = x_2 = \cdots = x_{15} = -\frac{1}{100}$ and $x_{77} = x_{78} = \cdots = x_{100} =
+                        \frac{1}{100}$, find the greatest possible value of $x_{76} - x_{16}$ under these conditions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-one-third">
+              <h3 class="title is-4">Modified Answer</h3>
+              <div class="carousel-extra-padding">
+                <div id="answer-carousel" class="carousel results-carousel">
+                  <div class="item">
+                    <div class="box">
+                      <p><strong>2022-I-5:</strong> $\frac{264 \left( \sqrt{749} - 7 \right)}{\sqrt{851}} \approx 184.4$
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="box">
+                      <p><strong>2022-I-7:</strong> $\frac{1}{36}$</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="box">
+                      <p><strong>2022-II-6:</strong> $0.02$</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-one-third">
+              <h3 class="title is-4">Modified Solution</h3>
+              <div class="carousel-extra-padding">
+                <div id="solution-carousel" class="carousel results-carousel">
+                  <div class="item">
+                    <div class="box">
+                      <p><strong>2022-I-5:</strong></p>
+                      <ol>
+                        <li>For Sherry: to land at $x=0$, set horizontal speed $-60\sin\theta_S+14=0 \Rightarrow
+                          \sin\theta_S=\frac{7}{30}$, so
+                          $v_{y,S}=60\cos\theta_S=60\cdot\sqrt{1-\frac{49}{900}}=2\sqrt{851}$, giving
+                          $t=\frac{264}{2\sqrt{851}}=\frac{132}{\sqrt{851}}$.</li>
+                        <li>For Melanie: vertical gives $80\cos\theta_M\cdot t=264 \Rightarrow
+                          \cos\theta_M=\frac{264}{80\cdot t}=\frac{\sqrt{851}}{40} \Rightarrow
+                          \sin\theta_M=\sqrt{1-\frac{851}{1600}}=\frac{\sqrt{749}}{40}$. Then horizontal displacement
+                          $(80\sin\theta_M-14)\cdot t=D \Rightarrow
+                          D=(80\cdot\frac{\sqrt{749}}{40}-14)\cdot\left(\frac{132}{\sqrt{851}}\right)=\frac{264(\sqrt{749}-7)}{\sqrt{851}}\approx
+                          184.4 \, \text{m}$.</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="box">
+                      <p><strong>2022-I-7:</strong></p>
+                      <ol>
+                        <li>There are four possible 6-term consecutive sets $S = \{k, \ldots, k+5\}$ with $k=1\ldots4$.
+                        </li>
+                        <li>For each, enumerate all ways to split into two triples $A$ and $B$, compute products $P(A)$
+                          and $P(B) = \text{Total}/P(A)$.</li>
+                        <li>The minimal positive difference $P(A) - P(B)$ occurs for $S = \{2, \ldots, 7\}$ with $A =
+                          \{3, 4, 6\}$ giving $P(A) = 72$, $P(B) = 70$ and numerator 2.</li>
+                        <li>The remaining numbers are $\{1, 8, 9\}$ so the denominator is 72, yielding $\frac{2}{72} =
+                          \frac{1}{36}$.</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="box">
+                      <p><strong>2022-II-6:</strong></p>
+                      <ol>
+                        <li>Sum of absolutes on $x_1 \ldots x_{15}$ and $x_{77} \ldots x_{100}$ uses $\frac{39}{100}$,
+                          so on $x_{16} \ldots x_{76}$ it's $\frac{61}{100}$, and their sum must be $-\frac{9}{100}$.
+                        </li>
+                        <li>Partition the 61 variables into $n_-$ at $-u$ and $n_+$ at $v$ so that $n_- u = 0.35$ and
+                          $n_+ v = 0.26$.</li>
+                        <li>The bounds $u,v \leq 0.01$ force $n_- = \frac{0.35}{0.01} = 35$ and $n_+ = 61 - 35 = 26$.
+                        </li>
+                        <li>Thus $u = 0.01$, $v = 0.01$, so $x_{16} = -0.01$, $x_{76} = 0.01$.</li>
+                        <li>Therefore the maximum $x_{76} - x_{16} = 0.01 - (-0.01) = 0.02$.</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-
-
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">Broader Impact</h2>
-          <h1>
-            <p style="font-family:Times New Roman">It is important to note that our model GLIGEN is designed for
-              open-world grounded text-to-image generation with caption and various condition inputs (e.g. bounding
-              box). However, we also recognize the importance of responsible AI considerations and the need to clearly
-              communicate the capabilities and limitations of our research. While the grounding ability generalizes well
-              to novel spatial configuration and concepts, our model may not perform well in scenarios that are out of
-              scope or beyond the intended use case. We strongly discourage the misuse of our model in scenarios, where
-              our technology could be used to generate misleading or malicious images. We also acknowledge the potential
-              biases that may be present in the data used to train our model, and the need for ongoing evaluation and
-              improvement to address these concerns. To ensure transparency and accountability, we have included a model
-              card that describes the intended use cases, limitations, and potential biases of our model. We encourage
-              users to refer to this model card and exercise caution when applying our technology in new contexts. We
-              hope that our work will inspire further research and discussion on the ethical implications of AI and the
-              importance of transparency and accountability in the development of new technologies.</a>.
-              </b>
-          </h1>
-        </div>
-      </div>
-
+      </section>
 
 
       <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
           <h2 class="title">BibTeX</h2>
           <pre><code>
-@article{li2023gligen,
-  author      = {Li, Yuheng and Liu, Haotian and Wu, Qingyang and Mu, Fangzhou and Yang, Jianwei and Gao, Jianfeng and Li, Chunyuan and Lee, Yong Jae},
-  title       = {GLIGEN: Open-Set Grounded Text-to-Image Generation},
-  publisher   = {arXiv:2301.07093},
-  year        = {2023},
-}
-</code></pre>
+          @article{jang2025reasoning,
+            author      = {Jang, Doohyuk and Kim, Yoonjeon and Park, Chanjae and Ryu, Hyun and Yang, Eunho},
+            title       = {Reasoning Model is Stubborn: Diagnosing Instruction Overriding in Reasoning Models},
+            publisher   = {arXiv:2505.??},
+            year        = {2025},
+          }
         </div>
       </section>
 
@@ -535,32 +498,65 @@
           <h2 class="title">Acknowledgement</h2>
           <p>
             This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and <a
-              href="https://x-decoder-vl.github.io">X-Decoder</a>, licensed under a <a rel="license"
-              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              href="https://x-decoder-vl.github.io">X-Decoder</a> and <a href="https://gligen.github.io/">GLIGEN</a>,
+            licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
               Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-
-            <a href='https://github.com/Computer-Vision-in-the-Wild/'><img id="painting_icon" width="10%"
-                src="https://avatars.githubusercontent.com/u/97258247?s=200&v=4">
-            </a>
-            <b> Related Links</b> :
-          <div class="content has-text-justified">
-            <ul>
-              <li><a href='https://github.com/Computer-Vision-in-the-Wild/'>[Computer Vision in the Wild] </a> </li>
-              <li>GLIGEN: (box, concept) &#8594 image || GLIP : image &#8594 (box, concept); See grounded image
-                understanding in <a href='https://github.com/microsoft/GLIP'>[GLIP]</a></li>
-              <li>Modulated design and training of foundation models for image understanding <a
-                  href='https://react-vl.github.io/'>[REACT]</a></li>
-            </ul>
-
-          </div>
-
-
           </p>
         </div>
       </section>
 
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize all carousels
+    bulmaCarousel.attach('#question-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: false,
+      navigation: true,
+      navigationKeys: true,
+      infinite: true
+    });
+
+    bulmaCarousel.attach('#answer-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: false,
+      navigation: true,
+      navigationKeys: true,
+      infinite: true
+    });
+
+    bulmaCarousel.attach('#solution-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: false,
+      navigation: true,
+      navigationKeys: true,
+      infinite: true
+    });
+
+    // Synchronize carousels
+    const carousels = ['#question-carousel', '#answer-carousel', '#solution-carousel'];
+    carousels.forEach(carousel => {
+      const carouselInstance = document.querySelector(carousel).bulmaCarousel();
+      carouselInstance.on('slide:ready', function (slide) {
+        const currentIndex = slide.index;
+        carousels.forEach(otherCarousel => {
+          if (otherCarousel !== carousel) {
+            document.querySelector(otherCarousel).bulmaCarousel().slide(currentIndex);
+          }
+        });
+      });
+    });
+  });
+</script>
 
 </body>
 

@@ -34,11 +34,11 @@
         "modified_question":"In a long line of ancient scrolls, one contains the secret to immortality whose position is known. The scrolls are sorted in increasing magical power. You must find the secret scroll using the fewest inspections possible.",
         "modified_answer":"1, position of the secret scroll is known."
     },
-    "92": {
+    "91": {
         "Label": "Puzzle",
         "original_question": "You have only a 3-gallon jug and a 5-gallon jug. Neither jug has markings. How can you measure exactly 4 gallons of water?",
         "original_answer": "Fill the 5-gallon jug and pour it into the 3-gallon jug, leaving 2 gallons in the 5-gallon jug. Empty the 3-gallon jug, transfer the remaining 2 gallons into it, then fill the 5-gallon jug again and pour from it into the 3-gallon jug until the 3-gallon jug is full. This leaves exactly 4 gallons in the 5-gallon jug.",
-        "modified_question": "How do you measure exactly 2 liters of water with only a 1-liter, 2-liter, 3-liter, and 5-liter flask if you are a clever scientist?",
-        "modified_answer": "Fill up the 2-liter flask"
-    }
+        "modified_question":   "How do you measure exactly 3 gallons of water with only a 3-gallon, 5-gallon, 4-gallon, and 2-gallon jug if you are a clever gardener?",
+        "modified_answer": "Fill up the 3-gallon jug"
+      }
 }
