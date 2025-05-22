@@ -1,0 +1,203 @@
+{
+    "2022-I-5_ver3": {
+        "original_question": "A straight river that is $264$ meters wide flows from west to east at a rate of $14$ meters per minute. Melanie and Sherry sit on the south bank of the river with Melanie a distance of $D$ meters downstream from Sherry. Relative to the water, Melanie swims at $80$ meters per minute, and Sherry swims at $60$ meters per minute. At the same time, Melanie and Sherry begin swimming in straight lines to a point on the north bank of the river that is equidistant from their starting positions. The two women arrive at this point simultaneously. Find $D.$",
+        "original_solution": [
+            "Define \\(m\\) as the number of minutes they swim for. \\ Let their meeting point be \\(A\\). Melanie is swimming against the current, so she must aim upstream from point \\(A\\), to compensate for this; in particular, since she is swimming for \\(m\\) minutes, the current will push her \\(14m\\) meters downstream in that time, so she must aim for a point \\(B\\) that is \\(14m\\) meters upstream from point \\(A\\). Similarly, Sherry is swimming downstream for \\(m\\) minutes, so she must also aim at point \\(B\\) to compensate for the flow of the current.",
+            "If Melanie and Sherry were to both aim at point \\(B\\) in a currentless river with the same dimensions, they would still both meet at that point simultaneously. Since there is no current in this scenario, the distances that Melanie and Sherry travel, respectively, are \\(80m\\) and \\(60m\\) meters.",
+            "(While it is indeed true that the triangle above with side lengths \\(60m\\), \\(80m\\) and \\(D\\) is a right triangle, we do not know this yet, so we cannot assume this based on the diagram.)",
+            "By the Pythagorean Theorem, we have \\[ 264^2 + \\left(\\frac{D}{2} - 14m\\right)^2 = 3600m^2 \\] \\[ 264^2 + \\left(\\frac{D}{2} + 14m\\right)^2 = 6400m^2. \\]",
+            "Subtracting the first equation from the second gives us \\(28Dm = 2800m^2\\), so \\(D = 100m\\). Substituting this into our first equation, we have that \\[ 264^2 + 36^2m^2 = 60^2m^2 \\] \\[ 264^2 = 96 \\cdot 24 \\cdot m^2 \\] \\[ 11^2 = 4 \\cdot m^2 \\] \\[ m = \\frac{11}{2}. \\]"
+        ],
+        "original_answer": "550",
+        "modified_question": "A straight river that is 264 meters wide flows from west to east at a rate of 14 meters per minute. Melanie and Sherry sit on the south bank with Melanie a distance D meters downstream from Sherry. The two swimmers swim to a point on the north bank directly opposite Sherry's position and arrive simultaneously. Melanie swims at 80 meters per minute relative to the water, Sherry swims at 60 meters per minute relative to the water. Find D.",
+        "modified_solution": [
+            "1. For Sherry: to land at \\( x=0 \\), set horizontal speed \\(-60\\sin\\theta_S+14=0 \\Rightarrow \\sin\\theta_S=\\frac{7}{30}\\), so \\( v_{y,S}=60\\cos\\theta_S=60\\cdot\\sqrt{1-\\frac{49}{900}}=2\\sqrt{851} \\), giving \\( t=\\frac{264}{2\\sqrt{851}}=\\frac{132}{\\sqrt{851}} \\).",
+            "2. For Melanie: vertical gives \\( 80\\cos\\theta_M\\cdot t=264 \\Rightarrow \\cos\\theta_M=\\frac{264}{80\\cdot t}=\\frac{\\sqrt{851}}{40} \\Rightarrow \\sin\\theta_M=\\sqrt{1-\\frac{851}{1600}}=\\frac{\\sqrt{749}}{40} \\). Then horizontal displacement \\( (80\\sin\\theta_M-14)\\cdot t=D \\Rightarrow D=(80\\cdot\\frac{\\sqrt{749}}{40}-14)\\cdot\\left(\\frac{132}{\\sqrt{851}}\\right)=\\frac{264(\\sqrt{749}-7)}{\\sqrt{851}}\\approx 184.4 \\, \\text{m} \\)."
+        ],
+        "modified_answer": [
+            "\\frac{264 \\left( \\sqrt{749} - 7 \\right)}{\\sqrt{851}}",
+            "184.4"
+        ],
+        "year": 2022
+    },
+    "2022-I-7_ver4": {
+        "original_question": "Let $a,b,c,d,e,f,g,h,i$ be distinct integers from $1$ to $9.$ The minimum possible positive value of \\[\\dfrac{a \\cdot b \\cdot c - d \\cdot e \\cdot f}{g \\cdot h \\cdot i}\\] can be written as $\\frac{m}{n},$ where $m$ and $n$ are relatively prime positive integers. Find $m+n.$",
+        "original_solution": [
+            "To minimize a positive fraction, we minimize its numerator and maximize its denominator. It is clear that \\[ \\frac{a \\cdot b \\cdot c - d \\cdot e \\cdot f}{g \\cdot h \\cdot i} \\ge \\frac{1}{7 \\cdot 8 \\cdot 9}. \\]",
+            "If we minimize the numerator, then \\( a \\cdot b \\cdot c - d \\cdot e \\cdot f = 1 \\). Note that \\[ a \\cdot b \\cdot c \\cdot d \\cdot e \\cdot f = (a \\cdot b \\cdot c) \\cdot (a \\cdot b \\cdot c - 1) \\ge 6! = 720, \\] so \\( a \\cdot b \\cdot c \\ge 28 \\). It follows that \\( a \\cdot b \\cdot c \\) and \\( d \\cdot e \\cdot f \\) are consecutive composites with prime factors no other than 2, 3, 5, and 7. The smallest values for \\( a \\cdot b \\cdot c \\) and \\( d \\cdot e \\cdot f \\) are 36 and 35, respectively. So, we have \\( \\{a, b, c\\} = \\{2, 3, 6\\} \\), \\( \\{d, e, f\\} = \\{1, 5, 7\\} \\), and \\( \\{g, h, i\\} = \\{4, 8, 9\\} \\), from which \\[ \\frac{a \\cdot b \\cdot c - d \\cdot e \\cdot f}{g \\cdot h \\cdot i} = \\frac{1}{288}. \\]",
+            "If we do not minimize the numerator, then \\( a \\cdot b \\cdot c - d \\cdot e \\cdot f > 1 \\). Note that \\[ \\frac{a \\cdot b \\cdot c - d \\cdot e \\cdot f}{g \\cdot h \\cdot i} \\ge \\frac{2}{7 \\cdot 8 \\cdot 9} > \\frac{1}{288}. \\]",
+            "Together, we conclude that the minimum possible positive value of \\[ \\frac{a \\cdot b \\cdot c - d \\cdot e \\cdot f}{g \\cdot h \\cdot i} \\] is \\( \\frac{1}{288} \\). Therefore, the answer is \\( 1 + 288 = \\boxed{289} \\)."
+        ],
+        "original_answer": "289",
+        "modified_question": "Let $a,b,c,d,e,f,g,h,i$ be distinct integers from $1$ to $9$, and suppose that $a,b,c,d,e,f$ are consecutive integers. Find the minimum possible positive value of \\[\\frac{a \\cdot b \\cdot c - d \\cdot e \\cdot f}{g \\cdot h \\cdot i}\\].",
+        "modified_solution": [
+            "There are four possible 6‒term consecutive sets \\( S = \\{k, \\ldots, k+5\\} \\) with \\( k=1\\ldots4 \\).",
+            "For each, enumerate all ways to split into two triples \\( A \\) and \\( B \\), compute products \\( P(A) \\) and \\( P(B) = \\text{Total}/P(A) \\).",
+            "The minimal positive difference \\( P(A) - P(B) \\) occurs for \\( S = \\{2, \\ldots, 7\\} \\) with \\( A = \\{3, 4, 6\\} \\) giving \\( P(A) = 72 \\), \\( P(B) = 70 \\) and numerator 2.",
+            "The remaining numbers are \\(\\{1, 8, 9\\}\\) so the denominator is 72, yielding \\(\\frac{2}{72} = \\frac{1}{36}\\)."
+        ],
+        "modified_answer": "\\frac{1}{36}",
+        "year": 2022
+    },
+    "2022-II-6_ver1": {
+        "original_question": "Let $x_1\\leq x_2\\leq \\cdots\\leq x_{100}$ be real numbers such that $|x_1| + |x_2| + \\cdots + |x_{100}| = 1$ and $x_1 + x_2 + \\cdots + x_{100} = 0$ . Among all such $100$ -tuples of numbers, the greatest value that $x_{76} - x_{16}$ can achieve is $\\tfrac mn$ , where $m$ and $n$ are relatively prime positive integers. Find $m+n$ .",
+        "original_solution": [
+            "To find the greatest value of \\(x_{76} - x_{16}\\), \\(x_{76}\\) must be as large as possible, and \\(x_{16}\\) must be as small as possible. If \\(x_{76}\\) is as large as possible, \\(x_{76} = x_{77} = x_{78} = \\cdots = x_{100} > 0\\). If \\(x_{16}\\) is as small as possible, \\(x_{16} = x_{15} = x_{14} = \\cdots = x_{1} < 0\\). The other numbers between \\(x_{16}\\) and \\(x_{76}\\) equal to 0.",
+            "Let \\(a = x_{76},\\ b = x_{16}\\). Substituting \\(a\\) and \\(b\\) into \\(|x_1| + |x_2| + \\cdots + |x_{100}| = 1\\) and \\(x_1 + x_2 + \\cdots + x_{100} = 0\\) we get: \\[25a - 16b = 1\\] \\[25a + 16b = 0\\]",
+            "\\[a = \\frac{1}{50}, \\quad b = -\\frac{1}{32}\\]",
+            "\\[x_{76} - x_{16} = a - b = \\frac{1}{50} + \\frac{1}{32} = \\frac{41}{800}. \\quad m + n = \\boxed{841}\\]"
+        ],
+        "original_answer": "841",
+        "modified_question": "Let $x_1 \\leq x_2 \\leq \\cdots \\leq x_{100}$ be real numbers such that $|x_1| + |x_2| + \\cdots + |x_{100}| = 1$ and $x_1 + x_2 + \\cdots + x_{100} = 0$. Suppose that $x_1 = x_2 = \\cdots = x_{15} = -\\frac{1}{100}$ and $x_{77} = x_{78} = \\cdots = x_{100} = \\frac{1}{100}$, find the greatest possible value of $x_{76} - x_{16}$ under these conditions.",
+        "modified_solution": [
+            "1. Sum of absolutes on \\( x_1 \\ldots x_{15} \\) and \\( x_{77} \\ldots x_{100} \\) uses \\( \\frac{39}{100} \\), so on \\( x_{16} \\ldots x_{76} \\) it’s \\( \\frac{61}{100} \\), and their sum must be \\(-\\frac{9}{100}\\).",
+            "2. Partition the 61 variables into \\( n_- \\) at \\(-u\\) and \\( n_+ \\) at \\( v \\) so that \\( n_- u = 0.35 \\) and \\( n_+ v = 0.26 \\).",
+            "3. The bounds \\( u,v \\leq 0.01 \\) force \\( n_- = \\frac{0.35}{0.01} = 35 \\) and \\( n_+ = 61 - 35 = 26 \\).",
+            "4. Thus \\( u = 0.01 \\), \\( v = 0.01 \\), so \\( x_{16} = -0.01 \\), \\( x_{76} = 0.01 \\).",
+            "5. Therefore the maximum \\( x_{76} - x_{16} = 0.01 - (-0.01) = 0.02 \\)."
+        ],
+        "modified_answer": "0.02",
+        "year": 2022
+    },
+    "2022-II-12_ver4": {
+        "original_question": "Let $a, b, x,$ and $y$ be real numbers with $a>4$ and $b>1$ such that \\[\\frac{x^2}{a^2}+\\frac{y^2}{a^2-16}=\\frac{(x-20)^2}{b^2-1}+\\frac{(y-11)^2}{b^2}=1.\\] Find the least possible value of $a+b.$",
+        "original_solution": [
+            "Denote \\(P = (x, y)\\). \\ Because \\(\\frac{x^2}{a^2} + \\frac{y^2}{a^2 - 16} = 1\\), \\(P\\) is on an ellipse whose center is \\((0, 0)\\) and foci are \\((-4, 0)\\) and \\((4, 0)\\).",
+            "Hence, the sum of distance from \\(P\\) to \\((-4, 0)\\) and \\((4, 0)\\) is equal to twice the major axis of this ellipse, \\(2a\\).",
+            "Because \\(\\frac{(x - 20)^2}{b^2 - 1} + \\frac{(y - 11)^2}{b^2} = 1\\), \\(P\\) is on an ellipse whose center is \\((20, 11)\\) and foci are \\((20, 10)\\) and \\((20, 12)\\).",
+            "Hence, the sum of distance from \\(P\\) to \\((20, 10)\\) and \\((20, 12)\\) is equal to twice the major axis of this ellipse, \\(2b\\).",
+            "Therefore, \\(2a + 2b\\) is the sum of the distance from \\(P\\) to four foci of these two ellipses.",
+            "To make this minimized, \\(P\\) is the intersection point of the line that passes through \\((-4, 0)\\) and \\((20, 10)\\), and the line that passes through \\((4, 0)\\) and \\((20, 12)\\).",
+            "The distance between \\((-4, 0)\\) and \\((20, 10)\\) is \\(\\sqrt{(20 + 4)^2 + (10 - 0)^2} = 26\\).",
+            "The distance between \\((4, 0)\\) and \\((20, 12)\\) is \\(\\sqrt{(20 - 4)^2 + (12 - 0)^2} = 20\\).",
+            "Hence, \\(2a + 2b = 26 + 20 = 46\\).",
+            "Therefore, \\(a + b = \\boxed{023}\\)."
+        ],
+        "original_answer": "23",
+        "modified_question": "Let $a,b,x,y$ be real numbers with $a>4$ and $b>1$ such that \\[\\frac{x^2}{a^2}+\\frac{y^2}{a^2-16}=1,\\quad \\text{and}\\quad (x,y)=(20,11).\\] Find the least possible value of $a+b$ given these conditions.",
+        "modified_solution": [
+            "Plugging \\((x,y)=(20,11)\\) into \\(\\frac{x^2}{a^2} + \\frac{y^2}{a^2-16}=1\\) gives \\(\\frac{400}{a^2} + \\frac{121}{a^2-16}=1\\).",
+            "Multiply through: \\(400(a^2-16)+121a^2 = a^2(a^2-16) \\Rightarrow a^4-537a^2+6400=0\\).",
+            "Let \\(t=a^2\\), so \\(t=\\frac{537\\pm\\sqrt{262769}}{2}\\).",
+            "The solution \\(>16\\) is \\(t=\\frac{537+\\sqrt{262769}}{2}\\), hence \\(a=\\sqrt{\\left(\\frac{537+\\sqrt{262769}}{2}\\right)}\\).",
+            "Since \\(b>1\\) is free, the infimum of \\(a+b\\) is attained as \\(b\\to1^+\\), giving \\(\\inf(a+b)=1+\\sqrt{\\left(\\frac{537+\\sqrt{262769}}{2}\\right)} \\approx 23.912\\ldots\\)."
+        ],
+        "modified_answer": ["1 + \\sqrt{\\frac{537+\\sqrt{262769}}{2}}", "23.9"],
+        "year": 2022
+    },
+    "2023-I-1_ver0": {
+        "original_question": "Five men and nine women stand equally spaced around a circle in random order. The probability that every man stands diametrically opposite a woman is $\\frac{m}{n},$ where $m$ and $n$ are relatively prime positive integers. Find $m+n.$ ",
+        "original_solution": [
+            "For simplicity purposes, we consider two arrangements different even if they only differ by rotations or reflections.",
+            "In this way, there are \\(14!\\) arrangements without restrictions.",
+            "First, there are \\(\\binom{7}{5}\\) ways to choose the man–woman diameters.",
+            "Then, there are \\(10 \\cdot 8 \\cdot 6 \\cdot 4 \\cdot 2\\) ways to place the five men each in a man–woman diameter.",
+            "Finally, there are \\(9!\\) ways to place the nine women without restrictions.",
+            "Together, the requested probability is \\[\\frac{\\binom{7}{5} \\cdot (10 \\cdot 8 \\cdot 6 \\cdot 4 \\cdot 2) \\cdot 9!}{14!} = \\frac{21 \\cdot (10 \\cdot 8 \\cdot 6 \\cdot 4 \\cdot 2)}{14 \\cdot 13 \\cdot 12 \\cdot 11 \\cdot 10} = \\frac{48}{143}\\] from which the answer is \\(48 + 143 = \\boxed{191}\\)."
+        ],
+        "original_answer": "191",
+        "modified_question": "Two men and two women stand equally spaced around a circle in random order. What is the probability that every man stands diametrically opposite a woman?",
+        "modified_solution": [
+            "\\text{Label the 4 seats 1–4 around the circle; opposites are (1,3) and (2,4). Total seatings}=4!=24.",
+            "\\text{For both men to be opposite women they must occupy one opposite pair: choose the pair in 2 ways, arrange the 2 men in it in } 2! \\text{ ways, and place the 2 women in the remaining seats in } 2! \\text{ ways, giving } 2 \\cdot 2 \\cdot 2 = 8 \\text{ favorable.}",
+            "\\text{Thus } P = \\frac{8}{24} = \\frac{1}{3}."
+        ],
+        "modified_answer": "\\frac{1}{3}",
+        "year": 2023
+    },
+    "2023-I-4_ver1": {
+        "original_question": "The sum of all positive integers $m$ such that $\\frac{13!}{m}$ is a perfect square can be written as $2^a3^b5^c7^d11^e13^f,$ where $a,b,c,d,e,$ and $f$ are positive integers. Find $a+b+c+d+e+f.$",
+        "original_solution": [
+            "We first rewrite \\(13!\\) as a prime factorization, which is \\(2^{10} \\cdot 3^5 \\cdot 5^2 \\cdot 7 \\cdot 11 \\cdot 13\\).",
+            "For the fraction to be a square, it needs each prime to be an even power. This means \\(m\\) must contain \\(7 \\cdot 11 \\cdot 13\\). Also, \\(m\\) can contain any even power of \\(2\\) up to \\(2^{10}\\), any odd power of \\(3\\) up to \\(3^5\\), and any even power of \\(5\\) up to \\(5^2\\).",
+            "The sum of \\(m\\) is \\[(2^0 + 2^2 + 2^4 + 2^6 + 2^8 + 2^{10})(3^1 + 3^3 + 3^5)(5^0 + 5^2)(7^1)(11^1)(13^1) =\\] \\[1365 \\cdot 273 \\cdot 26 \\cdot 7 \\cdot 11 \\cdot 13 = 2 \\cdot 3^2 \\cdot 5 \\cdot 7^3 \\cdot 11 \\cdot 13^4.\\]",
+            "Therefore, the answer is \\(1 + 2 + 1 + 3 + 1 + 4 = \\boxed{012}\\)."
+        ],
+        "original_answer": "12",
+        "modified_question": "Find the sum of all positive integers $m$ which are powers of 2 and satisfy that $\\frac{13!}{m}$ is a perfect square.",
+        "modified_solution": [
+            "1. \\(\\left\\lfloor \\frac{13}{2} \\right\\rfloor + \\left\\lfloor \\frac{13}{4} \\right\\rfloor + \\left\\lfloor \\frac{13}{8} \\right\\rfloor = 6 + 3 + 1 = 10\\)",
+            "2. \\(10 - k\\), \\(k \\in \\{0, 2, 4, 6, 8, 10\\}\\)",
+            "3. \\(2^0 + 2^2 + 2^4 + 2^6 + 2^8 + 2^{10} = 1 + 4 + 16 + 64 + 256 + 1024 = 1365\\)"
+        ],
+        "modified_answer": "1365",
+        "year": 2023
+    },
+    "63_ver3": {
+        "original_question": "Define $f(x)=|| x|-\\tfrac{1}{2}|$ and $g(x)=|| x|-\\tfrac{1}{4}|$. Find the number of intersections of the graphs of [y=4 g(f(\\sin (2 \\pi x))) \\quad\\text{ and }\\quad x=4 g(f(\\cos (3 \\pi y))).]",
+        "original_solution": [
+            "We will denote $h(x)=4g(f(x))$ for simplicity.",
+            "Denote $p(x)$ as the first equation and $q(y)$ as the graph of the second.",
+            "We notice that both $f(x)$ and $g(x)$ oscillate between 0 and 1.",
+            "The intersections are thus all in the square $(0,0)$, $(0,1)$, $(1,1)$, and $(1,0)$.",
+            "Every $p(x)$ wave going up and down crosses every $q(y)$ wave.",
+            "Now, we need to find the number of times each wave touches 0 and 1.",
+            "We notice that $h(x)=0$ occurs at $x=-\\frac{3}{4}, -\\frac{1}{4}, \\frac{1}{4}, \\frac{3}{4}$, and $h(x)=1$ occurs at $x=-1, -\\frac{1}{2}, 0,\\frac{1}{2},1$.",
+            "A sinusoid passes through each point twice during each period, but it only passes through the extrema once.",
+            "$p(x)$ has 1 period between 0 and 1, giving 8 solutions for $p(x)=0$ and 9 solutions for $p(x)=1$, or 16 up and down waves.",
+            "$q(y)$ has 1.5 periods, giving 12 solutions for $q(y)=0$ and 13 solutions for $q(y)=1$, or 24 up and down waves.",
+            "This amounts to $16\\cdot24=384$ intersections.",
+            "However, we have to be very careful when counting around $(1, 1)$.",
+            "At this point, $q(y)$ has an infinite downwards slope and $p(x)$ is slanted, giving us an extra intersection; thus, we need to add 1 to our answer to get $\\boxed{385}$."
+        ],
+        "original_answer": 385,
+        "modified_question": "Define $f(x)=|| x| - \\tfrac{1}{2}|$ and $g(x)=|| x| - \\tfrac{1}{4}|$. Find the number of intersections of the graphs of [y=4 g(f(\\sin(2 \\pi x))) \\quad\\text{ and }\\quad x=0.] (Fix $x=0$ instead of the original expression.",
+        "modified_solution": [
+            "1. Set \\( x = 0 \\). Then \\( y = 4g(f(\\sin(2\\pi \\cdot 0))) = 4g(f(0)) \\).",
+            "2. Compute \\( f(0) = \\left| \\left| 0 \\right| - \\frac{1}{2} \\right| = \\left| -\\frac{1}{2} \\right| = \\frac{1}{2} \\).",
+            "3. Compute \\( g\\left(\\frac{1}{2}\\right) = \\left| \\left| \\frac{1}{2} \\right| - \\frac{1}{4} \\right| = \\left| \\frac{1}{4} \\right| = \\frac{1}{4} \\).",
+            "4. Thus \\( y = 4 \\cdot \\frac{1}{4} = 1 \\).",
+            "5. Therefore there is exactly one intersection point at \\( (0, 1) \\)."
+        ],
+        "modified_answer": "1",
+        "year": 2024
+    },
+    "64_ver2": {
+        "original_question": "Let $p$ be the least prime number for which there exists a positive integer $n$ such that $n^{4}+1$ is divisible by $p^{2}$. Find the least positive integer $m$ such that $m^{4}+1$ is divisible by $p^{2}$.",
+        "original_solution": [
+            "Note that $n^4 + 1 \\equiv 0 \\pmod{p}$ means $\\text{ord}_{p}(n) = 8 \\mid p-1.$",
+            "The smallest prime that does this is $17$ and $2^4 + 1 = 17$ for example.",
+            "Now let $g$ be a primitive root of $17^2.$",
+            "The satisfying $n$ are of the form, $g^{\\frac{p(p-1)}{8}}, g^{3\\frac{p(p-1)}{8}}, g^{5\\frac{p(p-1)}{8}}, g^{7\\frac{p(p-1)}{8}}.$",
+            "So if we find one such $n$, then all $n$ are $n, n^3, n^5, n^7.$",
+            "Consider the $2$ from before.",
+            "Note $17^2 \\mid 2^{4 \\cdot 17} + 1$ by LTE.",
+            "Hence the possible $n$ are, $2^{17}, 2^{51}, 2^{85}, 2^{119}.$",
+            "Some modular arithmetic yields that $2^{51} \\equiv \\boxed{110}$ is the least value."
+        ],
+        "original_answer": 110,
+        "modified_question": "Let $p$ be the least prime number for which there exists a positive integer $n$ such that $n^{4}+1$ is divisible by $p^{2}$. Find the least positive integer $m$ such that $m^{4}+1$ is divisible by $p^{2}$. Add condition: Only consider $n$ and $m$ such that $m=n$.",
+        "modified_solution": [
+            "Since \\( n^4 \\equiv -1 \\mod p^2 \\) forces \\( p \\equiv 1 \\mod 8 \\), the least such \\( p \\) is 17.",
+            "Mod 17, we have \\( 2^4 = 16 \\equiv -1 \\), and \\( f(x) = x^4 + 1 \\) has \\( f'(2) = 4 \\cdot 2^3 \\not\\equiv 0 \\mod 17 \\), so by Hensel’s lemma, there is a unique lift modulo \\( 17^2 \\): \\( x = 2 + 17k \\).",
+            "Expanding \\((2+17k)^4+1 \\equiv 17(1+32k) \\equiv 0 \\mod 289 \\) gives \\( k \\equiv 9 \\mod 17 \\), so the least positive solution is \\( n = m = 2 + 17 \\cdot 9 = 155 \\)."
+        ],
+        "modified_answer": "155",
+        "year": 2024
+    },
+    "75_ver3": {
+        "original_question": "Among the 900 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. There are 437 residents who own exactly two of these things, and 234 residents who own exactly three of these things. Find the number of residents of Aimeville who own all four of these things.",
+        "original_solution": [
+            "Let $w, x, y, z$ denote the number of residents who own 1, 2, 3, and 4 of these items, respectively.",
+            "We know $w+x+y+z=900$, since there are 900 residents in total.",
+            "This simplifies to $w+z=229$, since we know $x=437$ and $y=234$.",
+            "Now, we set an equation for the total number of items.",
+            "We know there are 195 rings, 367 clubs, 562 spades, and 900 candy hearts.",
+            "Adding these up, there are 2024 items in total.",
+            "Thus, $w+2x+3y+4z=2024$ since we are not adding the number of items each group of people contributes, and this must be equal to the total number of items.",
+            "Plugging in $x$ and $y$, we get $w+4z=448$.",
+            "Solving $w+z=229$ and $w+4z=448$, we get $z=73$."
+        ],
+        "original_answer": 73,
+        "modified_question": "Among the 900 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. Suppose the 234 residents who own exactly three of these things also own a candy store, which means all four items. Find the number of residents who own all four of these things.",
+        "modified_solution": [
+            "Let \\( n_k \\) be the number of residents owning exactly \\( k \\) items.",
+            "Modified gives \\( n_2 = 437 \\) and those 234 with exactly three now own all four, so \\( n_3 = 0 \\) and let \\( x = n_4 \\).",
+            "From \\( n_1 + n_2 + n_3 + n_4 = 900 \\), \\( n_1 = 900 - 437 - x \\).",
+            "Also the total item\u2010count is \\( 195 + 367 + 562 + 900 = 2024 \\), so \\( n_1 + 2 \\cdot 437 + 3 \\cdot 0 + 4x = 2024 \\).",
+            "Substituting \\( n_1 \\) yields:\n\n\\[\n(900 - 437 - x) + 874 + 4x = 2024 \\implies 3x = 687 \\implies x = 229\n\\]"
+        ],
+        "modified_answer": "229",
+        "year": 2024
+    }
+}

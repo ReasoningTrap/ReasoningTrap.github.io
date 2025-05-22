@@ -1,0 +1,44 @@
+{
+    "21": {
+        "Label": "Puzzle",
+        "original_question": "A hotel with an infinite number of rooms is completely full. How can it accommodate one additional guest?",
+        "original_answer": "Have every current guest move from room n to room n + 1; this frees up room 1 for the new guest.",
+        "modified_question": "An underground parking garage with an infinite number of parking spaces is partially full. A new car arrives—what can the attendant do to make space?",
+        "modified_answer": "Move the new car to any empty parking space."
+    },
+    "30": {
+        "Label": "Puzzle",
+        "original_question": "A runaway trolley is heading toward five people who are stuck on the main track. You are standing next to a lever that can divert the trolley onto a side track where only one person is stuck. How might pulling the lever impact the five people's lives?",
+        "original_answer": "Pulling the lever diverts the trolley onto the side track, so instead of the five people on the main track being killed, they all survive—at the tragic cost of the one person on the side track.",
+        "modified_question": "A runaway trolley is heading down the tracks away from five people upwards of the track. You are near a lever that can switch the trolley to another track. How might pulling the lever impact the five people's lives?",
+        "modified_answer": "No, as the trolley is heading down the tracks in the opposite direction to the five people up the track."
+    },
+    "41": {
+        "Label": "Popular Science",
+        "original_question": "A 2kg tree grows in a planted pot with 10kg of soil. When the tree grows to 4kg, how much soil is left?",
+        "original_answer": "There is still 10kg of soil. Trees are primarily composed of carbon dioxide and water, not soil.",
+        "modified_question": "A 2kg tree grows in a planted pot with 10kg of soil. When the tree grows to 4kg, how much soil is left?",
+        "modified_answer": "There is still 10kg of soil. Trees are primarily composed of carbon dioxide and water, not soil."
+    },
+    "50": {
+        "Label": "Puzzle",
+        "original_question": "You have 12 identical-looking coins. Exactly one coin is counterfeit and differs in weight—you don’t know whether it is heavier or lighter. Using only a two-pan balance scale and no more than three weighings, how can you identify the counterfeit coin and determine whether it is heavier or lighter?",
+        "original_answer": "It can always be solved in exactly three weighings. One standard strategy is:\n1. Weigh coins 1-4 against coins 5-8.\n   • If they balance, the counterfeit is among 9-12.\n   • If they do not balance, the counterfeit is among the heavier or lighter eight just weighed, and you know whether it is heavier (down side) or lighter (up side).\n2. Use the second weighing to narrow the suspects to three coins, taking into account the information from the first weighing about heavier vs. lighter.\n3. Use the third weighing to test one of the three suspects against another (or against a known-genuine coin if the first two weighings balanced) to pinpoint the exact counterfeit coin and whether it is heavier or lighter.\nThus, three weighings are both necessary and sufficient to determine the counterfeit coin and its weight difference.",
+        "modified_question": "There are 12 coins, and one is rumored to be heavier than the rest. You have a perfect balance scale to determine which coin it is. However, all coins are actually identical. Which coin is heavier?",
+        "modified_answer": "None—they all weigh the same."
+    },
+    "60": {
+        "Label": "Puzzle",
+        "original_question":"In a long line of ancient scrolls, one contains the secret to immortality. The scrolls are sorted in increasing magical power. You must find the secret scroll using the fewest inspections possible.",
+        "original_answer":"Use binary search to find the secret scroll in O(log n) inspections.",
+        "modified_question":"In a long line of ancient scrolls, one contains the secret to immortality whose position is known. The scrolls are sorted in increasing magical power. You must find the secret scroll using the fewest inspections possible.",
+        "modified_answer":"1, position of the secret scroll is known."
+    },
+    "92": {
+        "Label": "Puzzle",
+        "original_question": "You have only a 3-gallon jug and a 5-gallon jug. Neither jug has markings. How can you measure exactly 4 gallons of water?",
+        "original_answer": "Fill the 5-gallon jug and pour it into the 3-gallon jug, leaving 2 gallons in the 5-gallon jug. Empty the 3-gallon jug, transfer the remaining 2 gallons into it, then fill the 5-gallon jug again and pour from it into the 3-gallon jug until the 3-gallon jug is full. This leaves exactly 4 gallons in the 5-gallon jug.",
+        "modified_question": "How do you measure exactly 2 liters of water with only a 1-liter, 2-liter, 3-liter, and 5-liter flask if you are a clever scientist?",
+        "modified_answer": "Fill up the 2-liter flask"
+    }
+}
