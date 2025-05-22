@@ -12,15 +12,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ConditionedMath AIME Samples</title>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D65ZW4CJYF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-D65ZW4CJYF');
+  </script>
+
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
   <script src="./static/js/jquery-3.6.4.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/lazy.js"></script>
+  <script src="./static/js/faster.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
 
@@ -30,7 +47,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><img id="dataset_icon" width="18%" src="images/sketch style.jpg">
+            <h1 class="title is-1 publication-title"><img id="dataset_icon" width="18%"
+                src="static/images/sketch style.jpg">
               Reasoning Model is Stubborn:</h1>
             <h3 class="title is-3 publication-title"> Diagnosing Instruction Overriding in Reasoning Models</h3>
             <div class="is-size-5">
@@ -108,13 +126,13 @@
           <div class="carousel-extra-padding">
             <div id="teaser-carousel" class="carousel results-carousel">
               <div class="item">
-                <img id="teaser1" class="teaser-image" src="images/teaser1.gif">
+                <img id="teaser1" class="teaser-image" src="static/images/teaser1.gif">
               </div>
               <div class="item">
-                <img id="teaser2" class="teaser-image" src="images/teaser2.gif">
+                <img id="teaser2" class="teaser-image" src="static/images/teaser2.gif">
               </div>
               <div class="item">
-                <img id="teaser3" class="teaser-image" src="images/teaser3.gif">
+                <img id="teaser3" class="teaser-image" src="static/images/teaser3.gif">
               </div>
             </div>
           </div>
@@ -129,14 +147,14 @@
         <div class="columns is-centered">
           <div class="column is-two-thirds">
             <div class="box">
-              <img id="main_math" width="100%" src="images/main_math.png">
+              <img id="main_math" width="100%" src="static/images/main_math.png">
               <h3 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"><b>Reasoning Models Perform Worse on ConditionedMath than Base
                     Models</b></p>
               </h3>
             </div>
             <div class="box" style="margin-top: 2rem;">
-              <img id="main_puzzle" width="100%" src="images/main_puzzle.png">
+              <img id="main_puzzle" width="100%" src="static/images/main_puzzle.png">
               <h3 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"><b>Reasoning Models Perform Worse on PuzzleTrivial than Base
                     Models</b></p>
@@ -212,7 +230,7 @@
 
             </ul>
           </div>
-          <img id="teaser" width="98%" src="images/pipeline.png">
+          <img id="teaser" width="98%" src="static/images/pipeline.png">
           <h1>
             <p style="font-family:Times New Roman"><b>Two modified versions of a
                 card-guessing problem are shown. While Modif 1 introduces a small tweak that preserves validity and
@@ -230,7 +248,7 @@
             <h2 class="title is-3"> Contamination of Reasoning Models from Familiar Pattern</h2>
           </div>
           <div class="content">
-            <img id="teaser" width="98%" src="images/plot.png">
+            <img id="teaser" width="98%" src="static/images/plot.png">
             <ul style="font-family:'Noto Sans', sans-serif; font-weight: bold; margin-top: 1rem;">
               <li>
                 <b>(a)</b> Relationship between contamination ratio and <b>p-pass@1</b> reveals
@@ -353,21 +371,44 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // initialize carousels
-    const [qC] = bulmaCarousel.attach('#question-carousel', {
-      slidesToShow: 1, slidesToScroll: 1,
-      loop: true, navigation: true, infinite: true
-    });
-    const [sC] = bulmaCarousel.attach('#solution-carousel', {
-      slidesToShow: 1, slidesToScroll: 1,
-      loop: true, navigation: true, infinite: true
-    });
-    const [aC] = bulmaCarousel.attach('#answer-carousel', {
-      slidesToShow: 1, slidesToScroll: 1,
-      loop: true, navigation: true, infinite: true
+    // Attach the teaser carousel
+    const [teaserC] = bulmaCarousel.attach('#teaser-carousel', {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      loop: true,
+      navigation: true,
+      infinite: true
+      // pagination: true,  // You can enable this if you want dots
     });
 
-    // sync them
+    // Attach the question carousel
+    const [qC] = bulmaCarousel.attach('#question-carousel', {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      loop: true,
+      navigation: true,
+      infinite: true
+    });
+
+    // Attach the solution carousel
+    const [sC] = bulmaCarousel.attach('#solution-carousel', {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      loop: true,
+      navigation: true,
+      infinite: true
+    });
+
+    // Attach the answer carousel
+    const [aC] = bulmaCarousel.attach('#answer-carousel', {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      loop: true,
+      navigation: true,
+      infinite: true
+    });
+
+    // Optionally sync question/solution/answer, etc.
     qC.on('before:show', state => {
       sC.show(state.index);
       aC.show(state.index);
