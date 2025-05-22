@@ -319,7 +319,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>
                     <strong>Sherry.</strong> To land at \(x=0\) we need horizontal speed
                     \(-60\sin\theta_S + 14 = 0 \Longrightarrow
@@ -379,7 +379,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>There are four possible 6‒term consecutive sets \( S = \{k, \ldots, k+5\} \) with \( k=1\ldots4
                     \).</li>
                   <li>For each, enumerate all ways to split into two triples \( A \) and \( B \), compute products \(
@@ -404,40 +404,63 @@
 
             <!-- ─────────────  Slide 3  ───────────── -->
             <div class="item item-aime3">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Let $x_1 \leq x_2 \leq \cdots \leq x_{100}$ be real numbers such that $|x_1| + |x_2| + \cdots +
-                  |x_{100}| = 1$ and $x_1 + x_2 + \cdots + x_{100} = 0$. Suppose that $x_1 = x_2 = \cdots = x_{15} =
-                  -\frac{1}{100}$ and $x_{77} = x_{78} = \cdots = x_{100} = \frac{1}{100}$, find the greatest possible
-                  value of $x_{76} - x_{16}$ under these conditions.
+              <!-- Question -->
+              <h3 class="subtitle has-text-centered">Modified Question</h3>
+              <div class="content" style="font-family: 'Times New Roman'; text-align: center;">
+                <p>
+                  Let \(x_1 \le x_2 \le \cdots \le x_{100}\) be real numbers such that
+                  \(\lvert x_1\rvert + \lvert x_2\rvert + \cdots + \lvert x_{100}\rvert = 1\)
+                  and
+                  \(x_1 + x_2 + \cdots + x_{100} = 0\).
+                  Suppose
+                  \(x_1 = x_2 = \cdots = x_{15} = -\tfrac{1}{100}\)
+                  and
+                  \(x_{77} = x_{78} = \cdots = x_{100} = \tfrac{1}{100}\).
+                  Find the greatest possible value of \(x_{76} - x_{16}\) under these conditions.
                 </p>
-              </h1>
+              </div>
 
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em">
-                  <li>Sum of absolutes on \( x_1 \ldots x_{15} \) and \( x_{77} \ldots x_{100} \) uses \( \frac{39}{100}
-                    \), so on \( x_{16} \ldots x_{76} \) it's \( \frac{61}{100} \), and their sum must be
-                    \(-\frac{9}{100}\).</li>
-                  <li>Partition the 61 variables into \( n_- \) at \(-u\) and \( n_+ \) at \( v \) so that \( n_- u =
-                    0.35 \) and \( n_+ v = 0.26 \).</li>
-                  <li>The bounds \( u,v \leq 0.01 \) force \( n_- = \frac{0.35}{0.01} = 35 \) and \( n_+ = 61 - 35 = 26
-                    \).</li>
-                  <li>Thus \( u = 0.01 \), \( v = 0.01 \), so \( x_{16} = -0.01 \), \( x_{76} = 0.01 \).</li>
-                  <li>Therefore the maximum \( x_{76} - x_{16} = 0.01 - (-0.01) = 0.02 \).</li>
+              <!-- Solution -->
+              <h3 class="subtitle has-text-centered">Modified Solution</h3>
+              <div class="content" style="font-family: 'Times New Roman';">
+                <ol style="margin-left: 1.5em; text-align: left;">
+                  <li>
+                    The sum of absolute values on
+                    \(x_1,\dots,x_{15}\) and \(x_{77},\dots,x_{100}\) is \(\tfrac{39}{100}\),
+                    so on \(x_{16},\dots,x_{76}\) it must be \(\tfrac{61}{100}\),
+                    and their (signed) sum is \(-\tfrac{9}{100}\).
+                  </li>
+                  <li>
+                    Partition these 61 variables into \(n_-\) entries at \(-u\)
+                    and \(n_+\) entries at \(v\) so that
+                    \(n_-\,u = 0.35\) and \(n_+\,v = 0.26\).
+                  </li>
+                  <li>
+                    Since \(u,v \le 0.01\), we get
+                    \(n_- = \tfrac{0.35}{0.01} = 35\)
+                    and
+                    \(n_+ = 61 - 35 = 26\).
+                  </li>
+                  <li>
+                    Thus \(u = 0.01\) and \(v = 0.01\), giving
+                    \(x_{16} = -0.01\) and \(x_{76} = 0.01\).
+                  </li>
+                  <li>
+                    Therefore the maximum
+                    \[
+                    x_{76} - x_{16}
+                    = 0.01 - (-0.01)
+                    = 0.02.
+                    \]
+                  </li>
                 </ol>
-                </p>
-              </h1>
+              </div>
 
               <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[0.02\]
-                </p>
-              </h1>
+              <h3 class="subtitle has-text-centered">Modified Answer</h3>
+              <div class="content" style="font-family: 'Times New Roman'; text-align: center;">
+                <p><strong>Answer:</strong> \[0.02\]</p>
+              </div>
             </div>
 
 
@@ -455,7 +478,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Plugging \((x,y)=(20,11)\) into \(\frac{x^2}{a^2} + \frac{y^2}{a^2-16}=1\) gives \(\frac{400}{a^2}
                     + \frac{121}{a^2-16}=1\).</li>
                   <li>Multiply through: \(400(a^2-16)+121a^2 = a^2(a^2-16) \Rightarrow a^4-537a^2+6400=0\).</li>
@@ -493,7 +516,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Label the 4 seats 1–4 around the circle; opposites are (1,3) and (2,4). Total seatings=4!=24.</li>
                   <li>For both men to be opposite women they must occupy one opposite pair: choose the pair in 2 ways,
                     arrange the 2 men in it in 2! ways, and place the 2 women in the remaining seats in 2! ways, giving
@@ -525,7 +548,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>\(\left\lfloor \frac{13}{2} \right\rfloor + \left\lfloor \frac{13}{4} \right\rfloor + \left\lfloor
                     \frac{13}{8} \right\rfloor = 6 + 3 + 1 = 10\)</li>
                   <li>\(10 - k\), \(k \in \{0, 2, 4, 6, 8, 10\}\)</li>
@@ -557,7 +580,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Set \( x = 0 \). Then \( y = 4g(f(\sin(2\pi \cdot 0))) = 4g(f(0)) \).</li>
                   <li>Compute \( f(0) = \left| \left| 0 \right| - \frac{1}{2} \right| = \left| -\frac{1}{2} \right| =
                     \frac{1}{2} \).</li>
@@ -592,7 +615,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Since \( n^4 \equiv -1 \mod p^2 \) forces \( p \equiv 1 \mod 8 \), the least such \( p \) is 17.
                   </li>
                   <li>Mod 17, we have \( 2^4 = 16 \equiv -1 \), and \( f(x) = x^4 + 1 \) has \( f'(2) = 4 \cdot 2^3
@@ -628,7 +651,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Let \( n_k \) be the number of residents owning exactly \( k \) items.</li>
                   <li>Modified gives \( n_2 = 437 \) and those 234 with exactly three now own all four, so \( n_3 = 0 \)
                     and let \( x = n_4 \).</li>
@@ -679,7 +702,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>\(m = \frac{\frac{3}{8} - \frac{2}{3}}{3 - 2} = \frac{9}{24} - \frac{16}{24} = -\frac{7}{24}\)
                   </li>
                   <li>Line: \(p(x) = mx + b\)</li>
@@ -715,7 +738,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>\(w = c + (z - c)e^{i\pi} = c - (z - c)\)</li>
                   <li>Compute \(z - c = (2 + \sqrt{2} - 2) + (-(3 + 3\sqrt{2}) + 3)i = \sqrt{2} - 3\sqrt{2}i =
                     \sqrt{2}(1 - 3i)\)</li>
@@ -747,7 +770,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Let p be the pay per dog.</li>
                   <li>Initially Denali earns 16p.</li>
                   <li>After taking x dogs, she earns (16+x)p, which doubles her pay: (16+x)p = 2 · 16p = 32p.</li>
@@ -778,7 +801,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Domain requires \(k>0\) and \(x>0\).</li>
                   <li>Rewrite \(\log(kx)=2\log(x+2)\) as \(kx=(x+2)^2 \Rightarrow x^2+(4-k)x+4=0\).</li>
                   <li>Discriminant \(D=(k-4)^2-16=k(k-8)\).</li>
@@ -811,7 +834,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Since \(x = 1\) and \(xyz = 2\), we have \(yz = 2\), so \(y = \frac{2}{z}\).</li>
                   <li>Substitute into the target: \(f(z) = 1^4 + 4y^2 + 4z^4 = 1 + 4\left(\frac{2}{z}\right)^2 + 4z^4 =
                     1 + \frac{16}{z^2} + 4z^4\).</li>
@@ -844,7 +867,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Since \(x \neq 1\), we can multiply both sides by \(x^2 - 1\): \(x^2 + 2x + 1 = 2(x^2 - 1)\).</li>
                   <li>Expand and simplify: \(x^2 + 2x + 1 = 2x^2 - 2 \Rightarrow -x^2 + 2x + 3 = 0\).</li>
                   <li>Multiply by -1: \(x^2 - 2x - 3 = 0\).</li>
@@ -877,7 +900,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Area of circle: \(\pi r^2 = 25\pi\).</li>
                   <li>Area of square: \(6 \times 6 = 36\).</li>
                   <li>Desired area = Circle area - Square area = \(25\pi - 36\).</li>
@@ -906,7 +929,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Note that \(n^2 + n + 1 = (n + 1)^2\).</li>
                   <li>We need \((n + 1)^2 \equiv 0 \pmod{7}\).</li>
                   <li>This means \(n + 1 \equiv 0 \pmod{7}\).</li>
@@ -938,7 +961,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Factor: \(f(x) = x(x^2 - 3x + 2) = x(x - 1)(x - 2)\).</li>
                   <li>Set \(f(x) = 0\): \(x(x - 1)(x - 2) = 0\).</li>
                   <li>Solutions: \(x = 0, 1, 2\).</li>
@@ -970,7 +993,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Fix M at start and I at end.</li>
                   <li>Remaining letters: ISSISSIP (2 I's, 4 S's, 2 P's).</li>
                   <li>Number of arrangements = \(\frac{8!}{2!4!2!} = 420\).</li>
@@ -999,7 +1022,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Use the formula \(R = \frac{abc}{4K}\) where \(K\) is the area.</li>
                   <li>Find area using Heron's formula: \(s = 9\), \(K = \sqrt{9(4)(3)(2)} = 6\sqrt{6}\).</li>
                   <li>Thus \(R = \frac{5 \times 6 \times 7}{4 \times 6\sqrt{6}} = \frac{35}{4\sqrt{6}}\).</li>
@@ -1028,7 +1051,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>We need \(n^2 + n + 1 \equiv 0 \pmod{13}\).</li>
                   <li>Complete the square: \((n + 7)^2 \equiv 48 \pmod{13}\).</li>
                   <li>Since 48 ≡ 9 mod 13, we need \((n + 7)^2 \equiv 9 \pmod{13}\).</li>
@@ -1060,7 +1083,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Since \(x \neq 1\), we can simplify: \(f(x) = x + 1\).</li>
                   <li>Set \(f(x) = 2\): \(x + 1 = 2\).</li>
                   <li>Thus \(x = 1\), but this contradicts \(x \neq 1\).</li>
@@ -1091,7 +1114,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>First arrange the 5 red balls: 1 way.</li>
                   <li>There are 6 possible positions for the blue balls (before, between, and after red balls).</li>
                   <li>Choose 3 positions from 6: \(\binom{6}{3} = 20\).</li>
@@ -1122,7 +1145,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>Area of circle: \(\pi r^2 = 16\pi\).</li>
                   <li>Area of square: \(4 \times 4 = 16\).</li>
                   <li>Desired area = Circle area - Square area = \(16\pi - 16\).</li>
@@ -1165,7 +1188,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>The garage is only partially full, meaning there are empty spaces available.</li>
                   <li>Since there are empty spaces, the attendant can simply direct the new car to any available empty
                     space.</li>
@@ -1197,7 +1220,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>The trolley is moving away from the five people, not towards them.</li>
                   <li>Since the trolley is moving in the opposite direction, it poses no threat to the five people.</li>
                   <li>Pulling the lever would have no impact on the five people's safety.</li>
@@ -1228,7 +1251,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>The question states that all coins are actually identical.</li>
                   <li>Despite the rumor about one coin being heavier, the reality is that all coins weigh the same.</li>
                   <li>No matter how many times you use the balance scale, it will always show equal weights.</li>
@@ -1259,7 +1282,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>The position of the secret scroll is already known.</li>
                   <li>Since we know exactly where the scroll is, we only need one inspection.</li>
                   <li>No need for binary search or multiple inspections since the location is given.</li>
@@ -1289,7 +1312,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em">
+                <ol style="margin-left:1.2em; text-align: left;">
                   <li>You have a 3-gallon jug available.</li>
                   <li>Since you need exactly 3 gallons, and you have a 3-gallon jug, the solution is straightforward.
                   </li>
