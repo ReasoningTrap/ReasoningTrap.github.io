@@ -10,7 +10,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="keywords" content="reasoning, rigidity, conditionedmath, AIME">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ConditionedMath AIME Samples</title>
+  <title>ReasoningTrap</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D65ZW4CJYF"></script>
@@ -248,7 +248,7 @@
               <li>
                 <b>(a)</b> Relationship between contamination ratio and <b>p-pass@1</b> reveals
                 that contamination in the reasoning path does not affect the final output up to certain point
-                (approximately $40\%$), while contamination over this point drastically reduces the <b>p-pass@1</b>
+                (approximately 40\%), while contamination over this point drastically reduces the <b>p-pass@1</b>
                 score, indicating that the model is trapped into a wrongful reasoning path and arrived at incorrect
                 output.
               </li>
@@ -370,7 +370,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Let $a,b,c,d,e,f,g,h,i$ be distinct integers from $1$ to $9$, and suppose that $a,b,c,d,e,f$ are
+                  Let a,b,c,d,e,f,g,h,i be distinct integers from 1 to 9, and suppose that a,b,c,d,e,f are
                   consecutive integers. Find the minimum possible positive value of \[\frac{a \cdot b \cdot c - d \cdot
                   e \cdot f}{g \cdot h \cdot i}\].
                 </p>
@@ -404,63 +404,40 @@
 
             <!-- ─────────────  Slide 3  ───────────── -->
             <div class="item item-aime3">
-              <!-- Question -->
-              <h3 class="subtitle has-text-centered">Modified Question</h3>
-              <div class="content" style="font-family: 'Times New Roman'; text-align: center;">
-                <p>
-                  Let \(x_1 \le x_2 \le \cdots \le x_{100}\) be real numbers such that
-                  \(\lvert x_1\rvert + \lvert x_2\rvert + \cdots + \lvert x_{100}\rvert = 1\)
-                  and
-                  \(x_1 + x_2 + \cdots + x_{100} = 0\).
-                  Suppose
-                  \(x_1 = x_2 = \cdots = x_{15} = -\tfrac{1}{100}\)
-                  and
-                  \(x_{77} = x_{78} = \cdots = x_{100} = \tfrac{1}{100}\).
-                  Find the greatest possible value of \(x_{76} - x_{16}\) under these conditions.
+              <h1 class="subtitle has-text-centered">
+                <p style="font-family:Times New Roman"> <b>Modified Question</b>
+                  <br>
+                  Let x_1 \leq x_2 \leq \cdots \leq x_{100} be real numbers such that |x_1| + |x_2| + \cdots +
+                  |x_{100}| = 1 and x_1 + x_2 + \cdots + x_{100} = 0. Suppose that x_1 = x_2 = \cdots = x_{15} =
+                  -\frac{1}{100} and x_{77} = x_{78} = \cdots = x_{100} = \frac{1}{100}, find the greatest possible
+                  value of x_{76} - x_{16} under these conditions.
                 </p>
-              </div>
+              </h1>
 
-              <!-- Solution -->
-              <h3 class="subtitle has-text-centered">Modified Solution</h3>
-              <div class="content" style="font-family: 'Times New Roman';">
-                <ol style="margin-left: 1.5em; text-align: left;">
-                  <li>
-                    The sum of absolute values on
-                    \(x_1,\dots,x_{15}\) and \(x_{77},\dots,x_{100}\) is \(\tfrac{39}{100}\),
-                    so on \(x_{16},\dots,x_{76}\) it must be \(\tfrac{61}{100}\),
-                    and their (signed) sum is \(-\tfrac{9}{100}\).
-                  </li>
-                  <li>
-                    Partition these 61 variables into \(n_-\) entries at \(-u\)
-                    and \(n_+\) entries at \(v\) so that
-                    \(n_-\,u = 0.35\) and \(n_+\,v = 0.26\).
-                  </li>
-                  <li>
-                    Since \(u,v \le 0.01\), we get
-                    \(n_- = \tfrac{0.35}{0.01} = 35\)
-                    and
-                    \(n_+ = 61 - 35 = 26\).
-                  </li>
-                  <li>
-                    Thus \(u = 0.01\) and \(v = 0.01\), giving
-                    \(x_{16} = -0.01\) and \(x_{76} = 0.01\).
-                  </li>
-                  <li>
-                    Therefore the maximum
-                    \[
-                    x_{76} - x_{16}
-                    = 0.01 - (-0.01)
-                    = 0.02.
-                    \]
-                  </li>
+              <h1 class="subtitle has-text-centered">
+                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
+                  <br>
+                <ol style="margin-left:1.2em; text-align: left;">
+                  <li>Sum of absolutes on \( x_1 \ldots x_{15} \) and \( x_{77} \ldots x_{100} \) uses \( \frac{39}{100}
+                    \), so on \( x_{16} \ldots x_{76} \) it's \( \frac{61}{100} \), and their sum must be
+                    \(-\frac{9}{100}\).</li>
+                  <li>Partition the 61 variables into \( n_- \) at \(-u\) and \( n_+ \) at \( v \) so that \( n_- u =
+                    0.35 \) and \( n_+ v = 0.26 \).</li>
+                  <li>The bounds \( u,v \leq 0.01 \) force \( n_- = \frac{0.35}{0.01} = 35 \) and \( n_+ = 61 - 35 = 26
+                    \).</li>
+                  <li>Thus \( u = 0.01 \), \( v = 0.01 \), so \( x_{16} = -0.01 \), \( x_{76} = 0.01 \).</li>
+                  <li>Therefore the maximum \( x_{76} - x_{16} = 0.01 - (-0.01) = 0.02 \).</li>
                 </ol>
-              </div>
+                </p>
+              </h1>
 
               <!-- Answer -->
-              <h3 class="subtitle has-text-centered">Modified Answer</h3>
-              <div class="content" style="font-family: 'Times New Roman'; text-align: center;">
-                <p><strong>Answer:</strong> \[0.02\]</p>
-              </div>
+              <h1 class="subtitle has-text-centered">
+                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
+                  <br>
+                  \[0.02\]
+                </p>
+              </h1>
             </div>
 
 
@@ -469,9 +446,9 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Let $a,b,x,y$ be real numbers with $a>4$ and $b>1$ such that
+                  Let a,b,x,y be real numbers with a>4 and b>1 such that
                   \[\frac{x^2}{a^2}+\frac{y^2}{a^2-16}=1,\quad \text{and}\quad (x,y)=(20,11).\] Find the least possible
-                  value of $a+b$ given these conditions.
+                  value of a+b given these conditions.
                 </p>
               </h1>
 
@@ -540,7 +517,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Find the sum of all positive integers $m$ which are powers of 2 and satisfy that $\frac{13!}{m}$ is a
+                  Find the sum of all positive integers m which are powers of 2 and satisfy that \frac{13!}{m} is a
                   perfect square.
                 </p>
               </h1>
@@ -571,8 +548,8 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Define $f(x)=|| x| - \tfrac{1}{2}|$ and $g(x)=|| x| - \tfrac{1}{4}|$. Find the number of intersections
-                  of the graphs of \[y=4 g(f(\sin(2 \pi x))) \quad\text{ and }\quad x=0.\] (Fix $x=0$ instead of the
+                  Define f(x)=|| x| - \tfrac{1}{2}| and g(x)=|| x| - \tfrac{1}{4}|. Find the number of intersections
+                  of the graphs of \[y=4 g(f(\sin(2 \pi x))) \quad\text{ and }\quad x=0.\] (Fix x=0 instead of the
                   original expression.)
                 </p>
               </h1>
@@ -606,9 +583,9 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Let $p$ be the least prime number for which there exists a positive integer $n$ such that $n^{4}+1$ is
-                  divisible by $p^{2}$. Find the least positive integer $m$ such that $m^{4}+1$ is divisible by $p^{2}$.
-                  Add condition: Only consider $n$ and $m$ such that $m=n$.
+                  Let p be the least prime number for which there exists a positive integer n such that n^{4}+1 is
+                  divisible by p^{2}. Find the least positive integer m such that m^{4}+1 is divisible by p^{2}.
+                  Add condition: Only consider n and m such that m=n.
                 </p>
               </h1>
 
@@ -692,10 +669,10 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Let $p(x)$ be a polynomial of degree 5 such that
+                  Let p(x) be a polynomial of degree 5 such that
                   \[p(n) = \frac{n}{n^2 - 1}\]
-                  for $n = 2,$ 3, 4, $\dots,$ 7. Find $p(8)$. Added condition: Suppose $p(x)$ is actually a polynomial
-                  of degree 1 that fits the given values for $n=2$ and $n=3$. Find $p(8)$.
+                  for n = 2, 3, 4, \dots, 7. Find p(8). Added condition: Suppose p(x) is actually a polynomial
+                  of degree 1 that fits the given values for n=2 and n=3. Find p(8).
                 </p>
               </h1>
 
@@ -730,8 +707,8 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Let $z = 2 + \sqrt{2} - (3 + 3 \sqrt{2})i$, and let $c = 2 - 3i$. Let $w$ be the result when $z$ is
-                  rotated around $c$ by $\pi$ radians counter-clockwise. Find $w$.
+                  Let z = 2 + \sqrt{2} - (3 + 3 \sqrt{2})i, and let c = 2 - 3i. Let w be the result when z is
+                  rotated around c by \pi radians counter-clockwise. Find w.
                 </p>
               </h1>
 
@@ -762,8 +739,8 @@
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
                   Denali and Nate work for a dog walking business and are paid for each dog they walk. Denali is
-                  responsible for $16$ dogs and Nate is responsible for $20$ dogs. If Denali's pay doubles when she
-                  takes on $x$ more dogs from Nate, find $x$.
+                  responsible for 16 dogs and Nate is responsible for 20 dogs. If Denali's pay doubles when she
+                  takes on x more dogs from Nate, find x.
                 </p>
               </h1>
 
@@ -791,17 +768,17 @@
             <!-- ─────────────  Slide 4  ───────────── -->
             <div class="item item-math500-4">
               <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
+                <p style="font-family:Times New Roman; font-size: 1.2em;"> <b>Modified Question</b>
                   <br>
-                  Find the number of integer values of $k$ in the closed interval $[-500,500]$ for which the equation
-                  $\log(kx) = 2 \log(x+2)$ has exactly one real solution. Assume $k\geq 0$.
+                  Find the number of integer values of k in the closed interval [-500,500] for which the equation
+                  \log(kx) = 2 \log(x+2) has exactly one real solution. Assume k\geq 0.
                 </p>
               </h1>
 
               <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
+                <p style="font-family:Times New Roman; font-size: 1.2em;"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em; text-align: left;">
+                <ol style="margin-left:1.2em; text-align: left; font-size: 1.2em;">
                   <li>Domain requires \(k>0\) and \(x>0\).</li>
                   <li>Rewrite \(\log(kx)=2\log(x+2)\) as \(kx=(x+2)^2 \Rightarrow x^2+(4-k)x+4=0\).</li>
                   <li>Discriminant \(D=(k-4)^2-16=k(k-8)\).</li>
@@ -826,8 +803,8 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Let $x,$ $y,$ and $z$ be positive real numbers such that $xyz = 2$. Find the minimum value of \[x^4 +
-                  4y^2 + 4z^4\] given that $x = 1$.
+                  Let x, y, and z be positive real numbers such that xyz = 2. Find the minimum value of \[x^4 +
+                  4y^2 + 4z^4\] given that x = 1.
                 </p>
               </h1>
 
@@ -860,7 +837,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Find all real numbers $x$ such that \[\frac{x^2 + 2x + 1}{x^2 - 1} = 2\] given that $x \neq 1$.
+                  Find all real numbers x such that \[\frac{x^2 + 2x + 1}{x^2 - 1} = 2\] given that x \neq 1.
                 </p>
               </h1>
 
@@ -922,7 +899,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Find the sum of all positive integers $n$ such that \(n^2 + n + 1\) is divisible by 7.
+                  Find the sum of all positive integers n such that \(n^2 + n + 1\) is divisible by 7.
                 </p>
               </h1>
 
@@ -954,7 +931,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Let $f(x) = x^3 - 3x^2 + 2x$. Find all real numbers $x$ such that $f(x) = 0$ and $x > 1$.
+                  Let f(x) = x^3 - 3x^2 + 2x. Find all real numbers x such that f(x) = 0 and x > 1.
                 </p>
               </h1>
 
@@ -1044,7 +1021,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Find the sum of all positive integers $n$ such that \(n^2 + n + 1\) is divisible by 13.
+                  Find the sum of all positive integers n such that \(n^2 + n + 1\) is divisible by 13.
                 </p>
               </h1>
 
@@ -1076,7 +1053,7 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Let $f(x) = \frac{x^2 - 1}{x - 1}$. Find all real numbers $x$ such that $f(x) = 2$ and $x \neq 1$.
+                  Let f(x) = \frac{x^2 - 1}{x - 1}. Find all real numbers x such that f(x) = 2 and x \neq 1.
                 </p>
               </h1>
 
