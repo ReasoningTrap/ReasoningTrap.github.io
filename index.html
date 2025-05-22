@@ -119,33 +119,30 @@
     </div>
   </section>
 
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <div class="teaser-grid">
-          <img class="teaser-image" src="static/images/teaser1.gif" alt="Teaser 1">
-          <img class="teaser-image" src="static/images/teaser2.gif" alt="Teaser 2">
-          <img class="teaser-image" src="static/images/teaser3.gif" alt="Teaser 3">
-        </div>
-      </div>
-    </div>
-  </section>
-
   <style>
     .teaser-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0px 4px;
-      width: 80%;
-      margin: 0 auto;
+      /* 3 equal columns */
+      width: 100%;
+      /* span the full page width */
+      gap: 0;
+      /* no spacing between items  */
     }
 
-    .teaser-image {
+    .teaser-grid img {
       width: 100%;
+      /* each image fills its cell */
       height: auto;
       display: block;
     }
   </style>
+
+  <div class="teaser-grid">
+    <div><img src="images/teaser1.gif" alt="Teaser 1"></div>
+    <div><img src="images/teaser2.gif" alt="Teaser 2"></div>
+    <div><img src="images/teaser3.gif" alt="Teaser 3"></div>
+  </div>
 
   <section class="hero is-white is-small">
     <div class="hero-body">
