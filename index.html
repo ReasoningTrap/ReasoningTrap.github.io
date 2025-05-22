@@ -32,6 +32,53 @@
   <link rel="icon" href="./static/images/icon.png">
   <link rel="stylesheet" href="./static/css/index.css">
 
+  <style>
+    .carousel-navigation {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      z-index: 10;
+    }
+
+    .carousel-navigation .carousel-nav-left,
+    .carousel-navigation .carousel-nav-right {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .carousel-navigation .carousel-nav-left:hover,
+    .carousel-navigation .carousel-nav-right:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .carousel-navigation .carousel-nav-left {
+      left: 10px;
+    }
+
+    .carousel-navigation .carousel-nav-right {
+      right: 10px;
+    }
+
+    .carousel-navigation i {
+      color: #333;
+      font-size: 1.2em;
+    }
+
+    .carousel-extra-padding {
+      position: relative;
+      padding: 0 40px;
+    }
+  </style>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
 </head>
@@ -118,61 +165,35 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <div class="columns is-centered">
-          <div class="column is-one-third">
-            <div class="carousel-extra-padding">
-              <div id="teaser-carousel-1" class="carousel results-carousel">
-                <div class="item">
-                  <img id="teaser" width="100%" src="images/teaser1.png">
-                </div>
-                <div class="item">
-                  <img id="teaser" width="100%" src="images/teaser2.png">
-                </div>
-                <div class="item">
-                  <img id="teaser" width="100%" src="images/teaser3.png">
-                </div>
-              </div>
+        <div class="carousel-extra-padding">
+          <div id="teaser-carousel" class="carousel results-carousel">
+            <div class="item">
+              <img id="teaser" width="100%" src="images/teaser1.png">
+            </div>
+            <div class="item">
+              <img id="teaser" width="100%" src="images/teaser2.png">
+            </div>
+            <div class="item">
+              <img id="teaser" width="100%" src="images/teaser3.png">
             </div>
           </div>
-          <div class="column is-one-third">
-            <div class="carousel-extra-padding">
-              <div id="teaser-carousel-2" class="carousel results-carousel">
-                <div class="item">
-                  <img id="teaser" width="100%" src="images/teaser1.png">
-                </div>
-                <div class="item">
-                  <img id="teaser" width="100%" src="images/teaser2.png">
-                </div>
-                <div class="item">
-                  <img id="teaser" width="100%" src="images/teaser3.png">
-                </div>
-              </div>
+          <div class="carousel-navigation">
+            <div class="carousel-nav-left">
+              <i class="fas fa-chevron-left"></i>
             </div>
-          </div>
-          <div class="column is-one-third">
-            <div class="carousel-extra-padding">
-              <div id="teaser-carousel-3" class="carousel results-carousel">
-                <div class="item">
-                  <img id="teaser" width="100%" src="images/teaser1.png">
-                </div>
-                <div class="item">
-                  <img id="teaser" width="100%" src="images/teaser2.png">
-                </div>
-                <div class="item">
-                  <img id="teaser" width="100%" src="images/teaser3.png">
-                </div>
-              </div>
+            <div class="carousel-nav-right">
+              <i class="fas fa-chevron-right"></i>
             </div>
           </div>
         </div>
-        <h2 class="subtitle has-text-centered">
-          <p style="font-family:Times New Roman"><b>Reasoning Rigidity in Well-Known Math Problem and Logic Puzzle. When
-              solving a subtly modified version of a well-known math problems (AIME) and famous logic puzzles (Fibonacci
-              Rabbit and Tower of Hanoi), advanced reasoning models such as Qwen3-32B and OpenAI o3 default to familiar
-              reasoning template leading to incorrect conclusions.</b></p>
-        </h2>
+      </div>
+    </div>
+  </section>
 
-        <div class="columns is-centered" style="margin-top: 2rem;">
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
           <div class="column is-half">
             <div class="box">
               <img id="main_math" width="100%" src="images/main_math.png">
@@ -458,49 +479,24 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Initialize teaser carousels
-    bulmaCarousel.attach('#teaser-carousel-1', {
+    // Initialize teaser carousel
+    bulmaCarousel.attach('#teaser-carousel', {
       slidesToScroll: 1,
       slidesToShow: 1,
       loop: true,
       autoplay: false,
-      navigation: true,
+      navigation: false, // Disable default navigation
       navigationKeys: true,
       infinite: true
     });
 
-    bulmaCarousel.attach('#teaser-carousel-2', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      loop: true,
-      autoplay: false,
-      navigation: true,
-      navigationKeys: true,
-      infinite: true
+    // Custom navigation
+    const carousel = document.querySelector('#teaser-carousel').bulmaCarousel();
+    document.querySelector('.carousel-nav-left').addEventListener('click', () => {
+      carousel.previous();
     });
-
-    bulmaCarousel.attach('#teaser-carousel-3', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      loop: true,
-      autoplay: false,
-      navigation: true,
-      navigationKeys: true,
-      infinite: true
-    });
-
-    // Synchronize teaser carousels
-    const teaserCarousels = ['#teaser-carousel-1', '#teaser-carousel-2', '#teaser-carousel-3'];
-    teaserCarousels.forEach(carousel => {
-      const carouselInstance = document.querySelector(carousel).bulmaCarousel();
-      carouselInstance.on('slide:ready', function (slide) {
-        const currentIndex = slide.index;
-        teaserCarousels.forEach(otherCarousel => {
-          if (otherCarousel !== carousel) {
-            document.querySelector(otherCarousel).bulmaCarousel().slide(currentIndex);
-          }
-        });
-      });
+    document.querySelector('.carousel-nav-right').addEventListener('click', () => {
+      carousel.next();
     });
 
     // Initialize all carousels
