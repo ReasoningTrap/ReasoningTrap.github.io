@@ -4,73 +4,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Reasoning Model is Stubborn: Diagnosing Instruction Overriding in Reasoning Models">
-  <meta name="keywords" content="Reasoning, Reasoning Rigidity, Math Reasoning">
+  <meta property="og:title" content="Reasoning Model is Stubborn">
+  <meta property="og:description" content="Reasoning Model is Stubborn: Diagnosing Instruction Overriding">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="reasoning, rigidity, conditionedmath, AIME">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reasoning Model is Stubborn: Diagnosing Instruction Overriding in Reasoning Models</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <title>ConditionedMath AIME Samples</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="icon" href="./static/images/icon.png">
   <link rel="stylesheet" href="./static/css/index.css">
 
-  <style>
-    .teaser-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-
-    .teaser-image {
-      width: 70%;
-      transition: opacity 0.3s ease;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .carousel .item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .teaser-image.hidden {
-      display: none;
-    }
-  </style>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/jquery-3.6.4.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 
 <body>
-
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><img id="dataset_icon" width="10%" src="images/sketch style.jpg">
+            <h1 class="title is-1 publication-title"><img id="dataset_icon" width="18%" src="images/sketch style.jpg">
               Reasoning Model is Stubborn:</h1>
             <h3 class="title is-3 publication-title"> Diagnosing Instruction Overriding in Reasoning Models</h3>
             <div class="is-size-5">
@@ -295,17 +255,18 @@
 
       <section class="section" style="background-color:#e4e4f781">
         <div class="container is-max-desktop">
-          <!-- Title -->
+
+          <!-- Section title -->
           <div class="columns is-centered has-text-centered">
             <div class="column">
               <h2 class="title is-3"><b>ConditionedMath</b> AIME Samples</h2>
             </div>
           </div>
 
-          <!-- Three‐part carousel row: Question / Ground Truth Solution / Answer -->
+          <!-- Three‐part carousel row -->
           <div class="columns">
 
-            <!-- Part 1: Question -->
+            <!-- Part 1: Modified Question -->
             <div class="column is-one-third has-text-centered">
               <h3 class="title is-4">Modified Question</h3>
               <div class="carousel-extra-padding">
@@ -318,7 +279,7 @@
                         Melanie’s speed relative to the water is 80 m/min; Sherry’s is 60 m/min. Find D.</p>
                     </div>
                   </div>
-                  <!-- more question items… -->
+                  <!-- …more question items here… -->
                 </div>
               </div>
             </div>
@@ -330,16 +291,14 @@
                 <div id="solution-carousel" class="carousel results-carousel">
                   <div class="item">
                     <div class="box">
-                      <p>Let t be the time they each take. For Sherry:
-                        <em>sqrt(D² + 264²) = 60 t</em>.
-                        For Melanie:
-                        <em>sqrt((D – x)² + 264²) + x = 80 t</em>,
-                        where x is the upstream drift.
-                        Solve these simultaneously to get D = … (full derivation here).
-                      </p>
+                      <p>Let t be the time they each take.
+                        For Sherry: <em>√(D² + 264²) = 60 t</em>.
+                        For Melanie: <em>√((D–x)² + 264²) + x = 80 t</em>,
+                        where x is upstream drift.
+                        Solve for D = … (full derivation).</p>
                     </div>
                   </div>
-                  <!-- more solution items… -->
+                  <!-- …more solution items here… -->
                 </div>
               </div>
             </div>
@@ -354,7 +313,7 @@
                       <p><strong>Answer:</strong> D = 132·(√749 − 7)·√851 / 851</p>
                     </div>
                   </div>
-                  <!-- more answer items… -->
+                  <!-- …more answer items here… -->
                 </div>
               </div>
             </div>
@@ -362,8 +321,6 @@
           </div>
         </div>
       </section>
-
-
 
       <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
@@ -396,63 +353,28 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Initialize teaser carousel
-    bulmaCarousel.attach('#teaser-carousel', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      loop: true,
-      autoplay: false,
-      navigation: true,
-      navigationKeys: true,
-      infinite: true
+    // initialize carousels
+    const [qC] = bulmaCarousel.attach('#question-carousel', {
+      slidesToShow: 1, slidesToScroll: 1,
+      loop: true, navigation: true, infinite: true
+    });
+    const [sC] = bulmaCarousel.attach('#solution-carousel', {
+      slidesToShow: 1, slidesToScroll: 1,
+      loop: true, navigation: true, infinite: true
+    });
+    const [aC] = bulmaCarousel.attach('#answer-carousel', {
+      slidesToShow: 1, slidesToScroll: 1,
+      loop: true, navigation: true, infinite: true
     });
 
-    // Initialize all carousels
-    bulmaCarousel.attach('#question-carousel', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      loop: true,
-      autoplay: false,
-      navigation: true,
-      navigationKeys: true,
-      infinite: true
-    });
-
-    bulmaCarousel.attach('#answer-carousel', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      loop: true,
-      autoplay: false,
-      navigation: true,
-      navigationKeys: true,
-      infinite: true
-    });
-
-    bulmaCarousel.attach('#solution-carousel', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      loop: true,
-      autoplay: false,
-      navigation: true,
-      navigationKeys: true,
-      infinite: true
-    });
-
-    // Synchronize carousels
-    const carousels = ['#question-carousel', '#answer-carousel', '#solution-carousel'];
-    carousels.forEach(carousel => {
-      const carouselInstance = document.querySelector(carousel).bulmaCarousel();
-      carouselInstance.on('slide:ready', function (slide) {
-        const currentIndex = slide.index;
-        carousels.forEach(otherCarousel => {
-          if (otherCarousel !== carousel) {
-            document.querySelector(otherCarousel).bulmaCarousel().slide(currentIndex);
-          }
-        });
-      });
+    // sync them
+    qC.on('before:show', state => {
+      sC.show(state.index);
+      aC.show(state.index);
     });
   });
 </script>
+
 
 </body>
 
