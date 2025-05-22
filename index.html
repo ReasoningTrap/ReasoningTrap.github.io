@@ -212,40 +212,6 @@
   </div>
   </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-five-fifths">
-          <h2 class="title is-3"><img id="painting_icon" width="5%"
-              src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Model Designs: Efficient Training &
-            Flexible Inference </h2>
-        </div>
-      </div>
-
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-six-fifths">
-          <div class="content has-text-justified">
-            <ul>
-              <li>GLIGEN is built upon existing pretrained diffusion models. whose original weights are <b>frozen</b> to
-                preserve vast pre-trained knowledge.</li>
-              <li>A new trainable Gated Self-Attention layer is added at each transformer block to absorb new grounding
-                input.</li>
-              <li>Each grounding token consists of two types of information: <b>semantic</b> of grounded entity (encoded
-                text or image) and <b>spatial location</b> (encoded bounding box or keypoints).</li>
-            </ul>
-          </div>
-          <img id="model" width="50%" src="images/approach_v1.png">
-          <h3 class="subtitle has-text-centered">
-            <p style="font-family:Times New Roman"><b>Figure 2. Gated Self-Attention is used to fuse new grounding
-                tokens.</b></p>
-          </h3>
-
-
-        </div>
-      </div>
-  </section>
-
-
 
   <section class="section" style="background-color:#e4e4f781">
     <div class="columns is-centered has-text-centered">
@@ -314,16 +280,25 @@
           <h2 class="title is-4">
             <font color="#0000ff">Dataset Construction Pipeline</font>
           </h2>
+          <div class="content has-text-justified">
+            <ul>
+              <li>Step1: Create new questions with unusual conditions that are (1) valid, (2)
+                meaningfully different from the original, and (3) solvable without ambiguity.</li>
+              <li>Step2: Verify each question with three criteria: (1) valid, (2)
+                different from the original, (3) solvability. Output answer and solution for the modified question.</li>
+              <li>Two modified versions of a
+                card-guessing problem are shown. While Modif 1 introduces a small tweak that preserves validity and
+                solvability, Modif 2 includes an invalid condition (multiplying a card count by –3), rendering the
+                problem unsolvable.</li>
+              <li>Despite the simplicity of the problem, reasoning models overcomplicate the
+                problem and override the simple logic by defaulting to more complex problem templates (e.g., assuming a
+                two-card setup).</li>
+            </ul>
+          </div>
           <img id="teaser" width="98%" src="images/pipeline.pdf">
           <h1>
             <p style="font-family:Times New Roman"><b>The dataset construction pipeline of \texttt{ConditionedMath}
-                consists of two steps. Step1: Create new questions with unusual conditions that are (1) valid, (2)
-                meaningfully different from the original, and (3) solvable without ambiguity. Two modified versions of a
-                card-guessing problem are shown. While Modif 1 introduces a small tweak that preserves validity and
-                solvability, Modif 2 includes an invalid condition (multiplying a card count by –3), rendering the
-                problem unsolvable. (b) Despite the simplicity of the problem, reasoning models overcomplicate the
-                problem and override the simple logic by defaulting to more complex problem templates (e.g., assuming a
-                two-card setup).</b>
+                consists of two steps.</b>
           </h1>
         </div>
       </div>
