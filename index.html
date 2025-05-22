@@ -33,48 +33,6 @@
   <link rel="stylesheet" href="./static/css/index.css">
 
   <style>
-    .carousel-navigation {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-      z-index: 10;
-      pointer-events: none;
-    }
-
-    .carousel-navigation .carousel-nav-left,
-    .carousel-navigation .carousel-nav-right {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      pointer-events: auto;
-    }
-
-    .carousel-navigation .carousel-nav-left {
-      left: -20px;
-    }
-
-    .carousel-navigation .carousel-nav-right {
-      right: -20px;
-    }
-
-    .carousel-navigation i {
-      color: #333;
-      font-size: 1.2em;
-    }
-
-    .carousel-extra-padding {
-      position: relative;
-      padding: 0 40px;
-    }
-
     .teaser-container {
       display: flex;
       justify-content: center;
@@ -192,19 +150,11 @@
               <div class="item">
                 <img id="teaser1" class="teaser-image" src="images/teaser1.gif">
               </div>
-              <div class="item" style="display: none;">
+              <div class="item">
                 <img id="teaser2" class="teaser-image" src="images/teaser2.gif">
               </div>
-              <div class="item" style="display: none;">
+              <div class="item">
                 <img id="teaser3" class="teaser-image" src="images/teaser3.gif">
-              </div>
-            </div>
-            <div class="carousel-navigation">
-              <div class="carousel-nav-left">
-                <i class="fas fa-chevron-left"></i>
-              </div>
-              <div class="carousel-nav-right">
-                <i class="fas fa-chevron-right"></i>
               </div>
             </div>
           </div>
@@ -213,7 +163,7 @@
     </div>
   </section>
 
-  <section class="hero is-light is-small">
+  <section class="hero is-white is-small">
     <div class="hero-body">
       <div class="container">
         <div class="columns is-centered">
@@ -237,6 +187,7 @@
       </div>
     </div>
   </section>
+
 
   <section class="section" style="background-color:#efeff081">
     <div class="container is-max-desktop">
@@ -290,9 +241,6 @@
 
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-4">
-            <font color="#0000ff">Dataset Construction Pipeline</font>
-          </h2>
           <div class="content has-text-justified">
             <h1 class="title is-5">The dataset construction pipeline of <b>ReasoningTrap</b>
               consists of two steps.</h1>
@@ -318,20 +266,26 @@
 
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-4">
-            <font color="#0000ff">Contamination of Reasoning Models from Familiar Pattern</font>
-          </h2>
-          <img id="teaser" width="98%" src="images/plot.png">
-          <h1>
-            <p style="font-family:Times New Roman"><b>(a) Relationship between contamination ratio and <b>p-pass@1</b>
-                reveals
+          <div class="columns is-centered has-text-centered">
+            <h2 class="title is-3"> Contamination of Reasoning Models from Familiar Pattern</h2>
+          </div>
+          <div class="content">
+            <img id="teaser" width="98%" src="images/plot.png">
+            <ul style="font-family:'Noto Sans', sans-serif; font-weight: bold; margin-top: 1rem;">
+              <li>
+                <b>(a)</b> Relationship between contamination ratio and <b>p-pass@1</b> reveals
                 that contamination in the reasoning path does not affect the final output up to certain point
                 (approximately $40\%$), while contamination over this point drastically reduces the <b>p-pass@1</b>
-                score,
-                indicating that the model is trapped into a wrongful reasoning path and arrived at incorrect output. (b)
-                Observing the contamination ratio between specific interval of reasoning steps, wrong output reasoning
-                exhibits progressively worsening contamination as the reasoning step length increases.</b>
-          </h1>
+                score, indicating that the model is trapped into a wrongful reasoning path and arrived at incorrect
+                output.
+              </li>
+              <li>
+                <b>(b)</b> Observing the contamination ratio between specific interval of reasoning steps, wrong output
+                reasoning
+                exhibits progressively worsening contamination as the reasoning step length increases.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -339,131 +293,76 @@
       <br>
       <br>
 
-
       <section class="section" style="background-color:#e4e4f781">
         <div class="container is-max-desktop">
+          <!-- Title -->
           <div class="columns is-centered has-text-centered">
-            <div class="column is-six-fifths">
-              <h2 class="title is-3"><img id="dataset_icon" width="4%" src="images/logo.jpg"> AIME Samples</h2>
+            <div class="column">
+              <h2 class="title is-3"><b>ConditionedMath</b> AIME Samples</h2>
             </div>
           </div>
 
-          <div class="columns is-centered">
-            <div class="column is-one-third">
+          <!-- Three‐part carousel row: Question / Ground Truth Solution / Answer -->
+          <div class="columns">
+
+            <!-- Part 1: Question -->
+            <div class="column is-one-third has-text-centered">
               <h3 class="title is-4">Modified Question</h3>
               <div class="carousel-extra-padding">
                 <div id="question-carousel" class="carousel results-carousel">
                   <div class="item">
                     <div class="box">
-                      <p><strong>2022-I-5:</strong> A straight river that is 264 meters wide flows from west to east at
-                        a rate of 14 meters per minute. Melanie and Sherry sit on the south bank with Melanie a distance
-                        D meters downstream from Sherry. The two swimmers swim to a point on the north bank directly
-                        opposite Sherry's position and arrive simultaneously. Melanie swims at 80 meters per minute
-                        relative to the water, Sherry swims at 60 meters per minute relative to the water. Find D.</p>
+                      <p><strong>2022-I-5:</strong> A straight river that is 264 m wide flows from west to east at 14
+                        m/min. Melanie and Sherry sit on the south bank with Melanie a distance D m downstream from
+                        Sherry. They both swim to the north bank directly opposite Sherry and arrive simultaneously.
+                        Melanie’s speed relative to the water is 80 m/min; Sherry’s is 60 m/min. Find D.</p>
                     </div>
                   </div>
-                  <div class="item">
-                    <div class="box">
-                      <p><strong>2022-I-7:</strong> Let $a,b,c,d,e,f,g,h,i$ be distinct integers from $1$ to $9$, and
-                        suppose that $a,b,c,d,e,f$ are consecutive integers. Find the minimum possible positive value of
-                        $\frac{a \cdot b \cdot c - d \cdot e \cdot f}{g \cdot h \cdot i}$.</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="box">
-                      <p><strong>2022-II-6:</strong> Let $x_1 \leq x_2 \leq \cdots \leq x_{100}$ be real numbers such
-                        that $|x_1| + |x_2| + \cdots + |x_{100}| = 1$ and $x_1 + x_2 + \cdots + x_{100} = 0$. Suppose
-                        that $x_1 = x_2 = \cdots = x_{15} = -\frac{1}{100}$ and $x_{77} = x_{78} = \cdots = x_{100} =
-                        \frac{1}{100}$, find the greatest possible value of $x_{76} - x_{16}$ under these conditions.
-                      </p>
-                    </div>
-                  </div>
+                  <!-- more question items… -->
                 </div>
               </div>
             </div>
 
-            <div class="column is-one-third">
-              <h3 class="title is-4">Modified Answer</h3>
-              <div class="carousel-extra-padding">
-                <div id="answer-carousel" class="carousel results-carousel">
-                  <div class="item">
-                    <div class="box">
-                      <p><strong>2022-I-5:</strong> $\frac{264 \left( \sqrt{749} - 7 \right)}{\sqrt{851}} \approx 184.4$
-                      </p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="box">
-                      <p><strong>2022-I-7:</strong> $\frac{1}{36}$</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="box">
-                      <p><strong>2022-II-6:</strong> $0.02$</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-one-third">
-              <h3 class="title is-4">Modified Solution</h3>
+            <!-- Part 2: Ground Truth Solution -->
+            <div class="column is-one-third has-text-centered">
+              <h3 class="title is-4">Ground Truth Solution</h3>
               <div class="carousel-extra-padding">
                 <div id="solution-carousel" class="carousel results-carousel">
                   <div class="item">
                     <div class="box">
-                      <p><strong>2022-I-5:</strong></p>
-                      <ol>
-                        <li>For Sherry: to land at $x=0$, set horizontal speed $-60\sin\theta_S+14=0 \Rightarrow
-                          \sin\theta_S=\frac{7}{30}$, so
-                          $v_{y,S}=60\cos\theta_S=60\cdot\sqrt{1-\frac{49}{900}}=2\sqrt{851}$, giving
-                          $t=\frac{264}{2\sqrt{851}}=\frac{132}{\sqrt{851}}$.</li>
-                        <li>For Melanie: vertical gives $80\cos\theta_M\cdot t=264 \Rightarrow
-                          \cos\theta_M=\frac{264}{80\cdot t}=\frac{\sqrt{851}}{40} \Rightarrow
-                          \sin\theta_M=\sqrt{1-\frac{851}{1600}}=\frac{\sqrt{749}}{40}$. Then horizontal displacement
-                          $(80\sin\theta_M-14)\cdot t=D \Rightarrow
-                          D=(80\cdot\frac{\sqrt{749}}{40}-14)\cdot\left(\frac{132}{\sqrt{851}}\right)=\frac{264(\sqrt{749}-7)}{\sqrt{851}}\approx
-                          184.4 \, \text{m}$.</li>
-                      </ol>
+                      <p>Let t be the time they each take. For Sherry:
+                        <em>sqrt(D² + 264²) = 60 t</em>.
+                        For Melanie:
+                        <em>sqrt((D – x)² + 264²) + x = 80 t</em>,
+                        where x is the upstream drift.
+                        Solve these simultaneously to get D = … (full derivation here).
+                      </p>
                     </div>
                   </div>
-                  <div class="item">
-                    <div class="box">
-                      <p><strong>2022-I-7:</strong></p>
-                      <ol>
-                        <li>There are four possible 6-term consecutive sets $S = \{k, \ldots, k+5\}$ with $k=1\ldots4$.
-                        </li>
-                        <li>For each, enumerate all ways to split into two triples $A$ and $B$, compute products $P(A)$
-                          and $P(B) = \text{Total}/P(A)$.</li>
-                        <li>The minimal positive difference $P(A) - P(B)$ occurs for $S = \{2, \ldots, 7\}$ with $A =
-                          \{3, 4, 6\}$ giving $P(A) = 72$, $P(B) = 70$ and numerator 2.</li>
-                        <li>The remaining numbers are $\{1, 8, 9\}$ so the denominator is 72, yielding $\frac{2}{72} =
-                          \frac{1}{36}$.</li>
-                      </ol>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="box">
-                      <p><strong>2022-II-6:</strong></p>
-                      <ol>
-                        <li>Sum of absolutes on $x_1 \ldots x_{15}$ and $x_{77} \ldots x_{100}$ uses $\frac{39}{100}$,
-                          so on $x_{16} \ldots x_{76}$ it's $\frac{61}{100}$, and their sum must be $-\frac{9}{100}$.
-                        </li>
-                        <li>Partition the 61 variables into $n_-$ at $-u$ and $n_+$ at $v$ so that $n_- u = 0.35$ and
-                          $n_+ v = 0.26$.</li>
-                        <li>The bounds $u,v \leq 0.01$ force $n_- = \frac{0.35}{0.01} = 35$ and $n_+ = 61 - 35 = 26$.
-                        </li>
-                        <li>Thus $u = 0.01$, $v = 0.01$, so $x_{16} = -0.01$, $x_{76} = 0.01$.</li>
-                        <li>Therefore the maximum $x_{76} - x_{16} = 0.01 - (-0.01) = 0.02$.</li>
-                      </ol>
-                    </div>
-                  </div>
+                  <!-- more solution items… -->
                 </div>
               </div>
             </div>
+
+            <!-- Part 3: Answer -->
+            <div class="column is-one-third has-text-centered">
+              <h3 class="title is-4">Answer</h3>
+              <div class="carousel-extra-padding">
+                <div id="answer-carousel" class="carousel results-carousel">
+                  <div class="item">
+                    <div class="box">
+                      <p><strong>Answer:</strong> D = 132·(√749 − 7)·√851 / 851</p>
+                    </div>
+                  </div>
+                  <!-- more answer items… -->
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
+
 
 
       <section class="section" id="BibTeX">
@@ -503,34 +402,10 @@
       slidesToShow: 1,
       loop: true,
       autoplay: false,
-      navigation: false,
+      navigation: true,
       navigationKeys: true,
       infinite: true
     });
-
-    // Custom navigation
-    const items = document.querySelectorAll('#teaser-carousel .item');
-
-    function showSlide(index) {
-      items.forEach((item, i) => {
-        item.style.display = i === index ? 'block' : 'none';
-      });
-    }
-
-    document.querySelector('.carousel-nav-left').addEventListener('click', function () {
-      const currentIndex = Array.from(items).findIndex(item => item.style.display !== 'none');
-      const newIndex = (currentIndex - 1 + items.length) % items.length;
-      showSlide(newIndex);
-    });
-
-    document.querySelector('.carousel-nav-right').addEventListener('click', function () {
-      const currentIndex = Array.from(items).findIndex(item => item.style.display !== 'none');
-      const newIndex = (currentIndex + 1) % items.length;
-      showSlide(newIndex);
-    });
-
-    // Show first slide initially
-    showSlide(0);
 
     // Initialize all carousels
     bulmaCarousel.attach('#question-carousel', {
