@@ -122,28 +122,28 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <div class="columns is-centered">
-          <div class="column is-4">
-            <img class="teaser-image" src="static/images/teaser1.gif" alt="Teaser 1">
-          </div>
-          <div class="column is-4">
-            <img class="teaser-image" src="static/images/teaser2.gif" alt="Teaser 2">
-          </div>
-          <div class="column is-4">
-            <img class="teaser-image" src="static/images/teaser3.gif" alt="Teaser 3">
-          </div>
+        <div class="teaser-grid">
+          <img class="teaser-image" src="static/images/teaser1.gif" alt="Teaser 1">
+          <img class="teaser-image" src="static/images/teaser2.gif" alt="Teaser 2">
+          <img class="teaser-image" src="static/images/teaser3.gif" alt="Teaser 3">
         </div>
       </div>
     </div>
   </section>
 
   <style>
+    .teaser-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0px 4px;
+      width: 80%;
+      margin: 0 auto;
+    }
+
     .teaser-image {
-      width: 160%;
+      width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto;
-      transform: translateX(-10%);
     }
   </style>
 
@@ -282,42 +282,76 @@
           <div class="container">
             <div class="carousel-extra-padding">
               <div id="results-carousel" class="carousel results-carousel">
-                <div class="item item-swing_tire">
-                  <video class="carousel-video" id="swing_tire" controls muted loop playsinline height="100%"
-                    poster="static/images/swing_tire.jpg" data-src="./static/videos/swing_tire.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-tennis">
-                  <video class="carousel-video" id="tennis" controls muted loop playsinline height="100%"
-                    poster="static/images/tennis.jpg" data-src="./static/videos/tennis.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-libby">
-                  <video class="carousel-video" id="libby" controls muted loop playsinline height="100%"
-                    poster="static/images/libby.jpg" data-src="./static/videos/libby.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-soapbox">
-                  <video class="carousel-video" id="soapbox" controls muted loop playsinline height="100%"
-                    poster="static/images/soapbox.jpg" data-src="./static/videos/soapbox.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-snowy-trees">
-                  <video class="carousel-video" id="snowy-trees" controls muted loop playsinline height="100%"
-                    poster="static/images/snowy-trees.jpg" data-src="./static/videos/snowy-trees.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-birch">
-                  <video class="carousel-video" id="birch" controls muted loop playsinline height="100%"
-                    poster="static/images/birch.jpg" data-src="./static/videos/birch.mp4" type="video/mp4">
-                  </video>
+                <div class="item item-sample">
+                  <div class="carousel-sample">
+                    <div class="sample-column">
+                      <h3 class="subtitle has-text-centered">Modified Question</h3>
+                      <div class="box">
+                        <p>A straight river that is 264 meters wide flows from west to east at a rate of 14 meters per
+                          minute. Melanie and Sherry sit on the south bank with Melanie a distance D meters downstream
+                          from Sherry. The two swimmers swim to a point on the north bank directly opposite Sherry's
+                          position and arrive simultaneously. Melanie swims at 80 meters per minute relative to the
+                          water, Sherry swims at 60 meters per minute relative to the water. Find D.</p>
+                      </div>
+                    </div>
+                    <div class="sample-column">
+                      <h3 class="subtitle has-text-centered">Modified Solution</h3>
+                      <div class="box">
+                        <ol>
+                          <li>For Sherry: to land at \( x=0 \), set horizontal speed \(-60\sin\theta_S+14=0 \Rightarrow
+                            \sin\theta_S=\frac{7}{30}\), so \(
+                            v_{y,S}=60\cos\theta_S=60\cdot\sqrt{1-\frac{49}{900}}=2\sqrt{851} \), giving \(
+                            t=\frac{264}{2\sqrt{851}}=\frac{132}{\sqrt{851}} \).</li>
+                          <li>For Melanie: vertical gives \( 80\cos\theta_M\cdot t=264 \Rightarrow
+                            \cos\theta_M=\frac{264}{80\cdot t}=\frac{\sqrt{851}}{40} \Rightarrow
+                            \sin\theta_M=\sqrt{1-\frac{851}{1600}}=\frac{\sqrt{749}}{40} \). Then horizontal
+                            displacement \( (80\sin\theta_M-14)\cdot t=D \Rightarrow
+                            D=(80\cdot\frac{\sqrt{749}}{40}-14)\cdot\left(\frac{132}{\sqrt{851}}\right)=\frac{264(\sqrt{749}-7)}{\sqrt{851}}\approx
+                            184.4 \, \text{m} \).</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="sample-column">
+                      <h3 class="subtitle has-text-centered">Modified Answer</h3>
+                      <div class="box">
+                        <p>\(\frac{264 \left( \sqrt{749} - 7 \right)}{\sqrt{851}}\)</p>
+                        <p>184.4</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <p style="margin-top: 5px; text-align: center; margin-bottom: -15px;">Trail visualization</p>
         </div>
       </section>
+
+      <style>
+        .carousel-sample {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        .sample-column {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .sample-column .box {
+          height: 100%;
+          overflow-y: auto;
+        }
+
+        .sample-column ol {
+          margin-left: 1rem;
+        }
+
+        .sample-column p {
+          margin-bottom: 0.5rem;
+        }
+      </style>
 
       <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
@@ -350,15 +384,6 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Attach the teaser carousel
-    const [teaserC] = bulmaCarousel.attach('#teaser-carousel', {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      loop: true,
-      navigation: true,
-      infinite: true
-      // pagination: true,  // You can enable this if you want dots
-    });
 
     // Attach the question carousel
     const [qC] = bulmaCarousel.attach('#question-carousel', {
