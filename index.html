@@ -276,149 +276,99 @@
       <br>
       <br>
       <br>
+  </section>
 
-      <section class="hero is-light is-small">
-        <div class="hero-body">
-          <div class="container">
-            <div class="carousel-extra-padding">
-              <div id="results-carousel" class="carousel results-carousel">
-                <div class="item item-sample">
-                  <div class="carousel-sample">
-                    <div class="sample-column">
-                      <h3 class="subtitle has-text-centered">Modified Question</h3>
-                      <div class="box">
-                        <p>A straight river that is 264 meters wide flows from west to east at a rate of 14 meters per
-                          minute. Melanie and Sherry sit on the south bank with Melanie a distance D meters downstream
-                          from Sherry. The two swimmers swim to a point on the north bank directly opposite Sherry's
-                          position and arrive simultaneously. Melanie swims at 80 meters per minute relative to the
-                          water, Sherry swims at 60 meters per minute relative to the water. Find D.</p>
-                      </div>
-                    </div>
-                    <div class="sample-column">
-                      <h3 class="subtitle has-text-centered">Modified Solution</h3>
-                      <div class="box">
-                        <ol>
-                          <li>For Sherry: to land at \( x=0 \), set horizontal speed \(-60\sin\theta_S+14=0 \Rightarrow
-                            \sin\theta_S=\frac{7}{30}\), so \(
-                            v_{y,S}=60\cos\theta_S=60\cdot\sqrt{1-\frac{49}{900}}=2\sqrt{851} \), giving \(
-                            t=\frac{264}{2\sqrt{851}}=\frac{132}{\sqrt{851}} \).</li>
-                          <li>For Melanie: vertical gives \( 80\cos\theta_M\cdot t=264 \Rightarrow
-                            \cos\theta_M=\frac{264}{80\cdot t}=\frac{\sqrt{851}}{40} \Rightarrow
-                            \sin\theta_M=\sqrt{1-\frac{851}{1600}}=\frac{\sqrt{749}}{40} \). Then horizontal
-                            displacement \( (80\sin\theta_M-14)\cdot t=D \Rightarrow
-                            D=(80\cdot\frac{\sqrt{749}}{40}-14)\cdot\left(\frac{132}{\sqrt{851}}\right)=\frac{264(\sqrt{749}-7)}{\sqrt{851}}\approx
-                            184.4 \, \text{m} \).</li>
-                        </ol>
-                      </div>
-                    </div>
-                    <div class="sample-column">
-                      <h3 class="subtitle has-text-centered">Modified Answer</h3>
-                      <div class="box">
-                        <p>\(\frac{264 \left( \sqrt{749} - 7 \right)}{\sqrt{851}}\)</p>
-                        <p>184.4</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <style>
-        .carousel-sample {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1rem;
-          padding: 1rem;
-        }
+  <section class="hero is-light is-small">
 
-        .sample-column {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .sample-column .box {
-          height: 100%;
-          overflow-y: auto;
-        }
-
-        .sample-column ol {
-          margin-left: 1rem;
-        }
-
-        .sample-column p {
-          margin-bottom: 0.5rem;
-        }
-      </style>
-
-      <section class="section" id="BibTeX">
-        <div class="container is-max-desktop content">
-          <h2 class="title">BibTeX</h2>
-          <pre><code>
-          @article{jang2025reasoning,
-            author      = {Jang, Doohyuk and Kim, Yoonjeon and Park, Chanjae and Ryu, Hyun and Yang, Eunho},
-            title       = {Reasoning Model is Stubborn: Diagnosing Instruction Overriding in Reasoning Models},
-            publisher   = {arXiv:2505.??},
-            year        = {2025},
-          }
-        </div>
-      </section>
-
-      <section class="section" id="Acknowledgement">
-        <div class="container is-max-desktop content">
-          <h2 class="title">Acknowledgement</h2>
-          <p>
-            This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and <a
-              href="https://x-decoder-vl.github.io">X-Decoder</a> and <a href="https://gligen.github.io/">GLIGEN</a>,
-            licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-              Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-        </div>
-      </section>
-
+    <h3 class="subtitle has-text-centered">Modified Question</h3>
+    <div class="box">
+      <p>A straight river that is 264 meters wide flows from west to east at a rate of 14 meters per
+        minute. Melanie and Sherry sit on the south bank with Melanie a distance D meters downstream
+        from Sherry. The two swimmers swim to a point on the north bank directly opposite Sherry's
+        position and arrive simultaneously. Melanie swims at 80 meters per minute relative to the
+        water, Sherry swims at 60 meters per minute relative to the water. Find D.</p>
     </div>
+
+    <div class="sample-column">
+      <h3 class="subtitle has-text-centered">Modified Solution</h3>
+      <div class="box">
+        <ol>
+          <li>For Sherry: to land at \( x=0 \), set horizontal speed \(-60\sin\theta_S+14=0 \Rightarrow
+            \sin\theta_S=\frac{7}{30}\), so \(
+            v_{y,S}=60\cos\theta_S=60\cdot\sqrt{1-\frac{49}{900}}=2\sqrt{851} \), giving \(
+            t=\frac{264}{2\sqrt{851}}=\frac{132}{\sqrt{851}} \).</li>
+          <li>For Melanie: vertical gives \( 80\cos\theta_M\cdot t=264 \Rightarrow
+            \cos\theta_M=\frac{264}{80\cdot t}=\frac{\sqrt{851}}{40} \Rightarrow
+            \sin\theta_M=\sqrt{1-\frac{851}{1600}}=\frac{\sqrt{749}}{40} \). Then horizontal
+            displacement \( (80\sin\theta_M-14)\cdot t=D \Rightarrow
+            D=(80\cdot\frac{\sqrt{749}}{40}-14)\cdot\left(\frac{132}{\sqrt{851}}\right)=\frac{264(\sqrt{749}-7)}{\sqrt{851}}\approx
+            184.4 \, \text{m} \).</li>
+        </ol>
+      </div>
+    </div>
+    <div class="sample-column">
+      <h3 class="subtitle has-text-centered">Modified Answer</h3>
+      <div class="box">
+        <p>\(\frac{264 \left( \sqrt{749} - 7 \right)}{\sqrt{851}}\)</p>
+        <p>184.4</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .carousel-sample {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .sample-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sample-column .box {
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .sample-column ol {
+      margin-left: 1rem;
+    }
+
+    .sample-column p {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+    @article{jang2025reasoning,
+      author      = {Jang, Doohyuk and Kim, Yoonjeon and Park, Chanjae and Ryu, Hyun and Yang, Eunho},
+      title       = {Reasoning Model is Stubborn: Diagnosing Instruction Overriding in Reasoning Models},
+      publisher   = {arXiv:2505.??},
+      year        = {2025},
+    }
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
+<section class="section" id="Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>
+      This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and <a
+        href="https://x-decoder-vl.github.io">X-Decoder</a> and <a href="https://gligen.github.io/">GLIGEN</a>,
+      licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</section>
 
-    // Attach the question carousel
-    const [qC] = bulmaCarousel.attach('#question-carousel', {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      loop: true,
-      navigation: true,
-      infinite: true
-    });
 
-    // Attach the solution carousel
-    const [sC] = bulmaCarousel.attach('#solution-carousel', {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      loop: true,
-      navigation: true,
-      infinite: true
-    });
-
-    // Attach the answer carousel
-    const [aC] = bulmaCarousel.attach('#answer-carousel', {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      loop: true,
-      navigation: true,
-      infinite: true
-    });
-
-    // Optionally sync question/solution/answer, etc.
-    qC.on('before:show', state => {
-      sC.show(state.index);
-      aC.show(state.index);
-    });
-  });
-</script>
 
 
 </body>
