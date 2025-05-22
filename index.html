@@ -124,7 +124,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       /* 3 equal columns */
-      width: 100%;
+      width: 80%;
       /* span the full page width */
       gap: 0;
       /* no spacing between items  */
@@ -225,8 +225,10 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
           <div class="content has-text-justified">
-            <h1 class="title is-5">The dataset construction pipeline of <b>ReasoningTrap</b>
-              consists of two steps.</h1>
+            <div class="columns is-centered has-text-centered">
+              <h1 class="title is-5">The dataset construction pipeline of <b>ReasoningTrap</b>
+                consists of two steps.</h1>
+            </div>
             <ul>
               <li>Step1: Create new questions with unusual conditions that are (1) valid, (2)
                 meaningfully different from the original, and (3) solvable without ambiguity.</li>
@@ -247,10 +249,19 @@
         </div>
       </div>
 
+      <br>
+      <br>
+      <br>
+
+
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Results</h2>
+      </div>
+
       <div class="columns is-centered">
         <div class="column is-full-width">
           <div class="columns is-centered has-text-centered">
-            <h2 class="title is-3"> Contamination of Reasoning Models from Familiar Pattern</h2>
+            <h1 class="title is-3"> Contamination of Reasoning Models from Familiar Pattern</h1>
           </div>
           <div class="content">
             <img id="teaser" width="98%" src="static/images/plot.png">
@@ -284,74 +295,76 @@
   <!-- ─────────────  Section with nicely rendered LaTeX  ───────────── -->
   <section class="hero is-light is-small">
     <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-10">
+      <!-- <div class="columns is-centered">
+        <div class="column is-10"> -->
+      <div class="carousel-extra-padding">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-aime1">
+            <!-- Modified Question -->
+            <h3 class="subtitle has-text-centered">Modified Question</h3>
+            <div class="box">
+              <p>
+                A straight river that is \(264\text{ m}\) wide flows from west to east at a rate of
+                \(14\text{ m/min}\).
+                Melanie and Sherry sit on the south bank with Melanie a distance \(D\) meters downstream from
+                Sherry. The two swimmers head for the point directly opposite Sherry on the north bank and arrive
+                simultaneously. Melanie swims at \(80\text{ m/min}\) relative to the water, and Sherry swims at
+                \(60\text{ m/min}\). Find \(D\).
+              </p>
+            </div>
 
-          <!-- Modified Question -->
-          <h3 class="subtitle has-text-centered">Modified Question</h3>
-          <div class="box">
-            <p>
-              A straight river that is \(264\text{ m}\) wide flows from west to east at a rate of
-              \(14\text{ m/min}\).
-              Melanie and Sherry sit on the south bank with Melanie a distance \(D\) meters downstream from
-              Sherry. The two swimmers head for the point directly opposite Sherry on the north bank and arrive
-              simultaneously. Melanie swims at \(80\text{ m/min}\) relative to the water, and Sherry swims at
-              \(60\text{ m/min}\). Find \(D\).
-            </p>
-          </div>
+            <!-- Modified Solution -->
+            <h3 class="subtitle has-text-centered">Modified Solution</h3>
+            <div class="box">
+              <ol style="margin-left:1.2em">
+                <li>
+                  <b>Sherry.</b> To land at \(x=0\) we need horizontal speed
+                  \(-60\sin\theta_S + 14 = 0 \;\Rightarrow\;
+                  \sin\theta_S = \tfrac{7}{30}\).
+                  Hence
+                  \(v_{y,S} = 60\cos\theta_S
+                  = 60\sqrt{1-\tfrac{49}{900}}
+                  = 2\sqrt{851}\).
+                  The travel time is
+                  \(t = \dfrac{264}{2\sqrt{851}}
+                  = \dfrac{132}{\sqrt{851}}\).
+                </li>
+                <li>
+                  <b>Melanie.</b> Vertical motion gives
+                  \(80\cos\theta_M \, t = 264
+                  \;\Rightarrow\;
+                  \cos\theta_M = \dfrac{264}{80\,t}
+                  = \dfrac{\sqrt{851}}{40}\).
+                  Therefore
+                  \(\sin\theta_M
+                  = \sqrt{1-\dfrac{851}{1600}}
+                  = \dfrac{\sqrt{749}}{40}\).
+                  Horizontal displacement:
+                  \((80\sin\theta_M-14)\,t
+                  = D\),
+                  so
+                  \[
+                  D
+                  = \Bigl(80\cdot\tfrac{\sqrt{749}}{40}-14\Bigr)
+                  \left(\frac{132}{\sqrt{851}}\right)
+                  = \frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
+                  \approx 184.4\ \text{m}.
+                  \]
+                </li>
+              </ol>
+            </div>
 
-          <!-- Modified Solution -->
-          <h3 class="subtitle has-text-centered">Modified Solution</h3>
-          <div class="box">
-            <ol style="margin-left:1.2em">
-              <li>
-                <b>Sherry.</b> To land at \(x=0\) we need horizontal speed
-                \(-60\sin\theta_S + 14 = 0 \;\Rightarrow\;
-                \sin\theta_S = \tfrac{7}{30}\).
-                Hence
-                \(v_{y,S} = 60\cos\theta_S
-                = 60\sqrt{1-\tfrac{49}{900}}
-                = 2\sqrt{851}\).
-                The travel time is
-                \(t = \dfrac{264}{2\sqrt{851}}
-                = \dfrac{132}{\sqrt{851}}\).
-              </li>
-              <li>
-                <b>Melanie.</b> Vertical motion gives
-                \(80\cos\theta_M \, t = 264
-                \;\Rightarrow\;
-                \cos\theta_M = \dfrac{264}{80\,t}
-                = \dfrac{\sqrt{851}}{40}\).
-                Therefore
-                \(\sin\theta_M
-                = \sqrt{1-\dfrac{851}{1600}}
-                = \dfrac{\sqrt{749}}{40}\).
-                Horizontal displacement:
-                \((80\sin\theta_M-14)\,t
-                = D\),
-                so
+            <!-- Modified Answer -->
+            <h3 class="subtitle has-text-centered">Modified Answer</h3>
+            <div class="box has-text-centered">
+              <p style="font-size:1.1em">
                 \[
-                D
-                = \Bigl(80\cdot\tfrac{\sqrt{749}}{40}-14\Bigr)
-                \left(\frac{132}{\sqrt{851}}\right)
-                = \frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                \approx 184.4\ \text{m}.
+                \frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
                 \]
-              </li>
-            </ol>
+              </p>
+              <p>(≈ 184.4 m)</p>
+            </div>
           </div>
-
-          <!-- Modified Answer -->
-          <h3 class="subtitle has-text-centered">Modified Answer</h3>
-          <div class="box has-text-centered">
-            <p style="font-size:1.1em">
-              \[
-              \frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-              \]
-            </p>
-            <p>(≈ 184.4 m)</p>
-          </div>
-
         </div>
       </div>
     </div>
