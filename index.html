@@ -297,6 +297,9 @@
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <h2 class="title is-3"><b>ConditionedMATH AIME</b></h2>
+        </div>
         <div class="carousel-extra-padding">
           <div id="results-carousel" class="carousel results-carousel">
             <!-- ─────────────  Slide 1  ───────────── -->
@@ -367,60 +370,34 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  A straight river that is
-                  \(264\,\text{m}\) wide flows from west
-                  to east at \(14\,\text{m/min}\).
-                  Melanie and Sherry sit on the south bank with Melanie a distance \(D\) metres downstream from
-                  Sherry. Each heads for the point directly opposite Sherry and they arrive simultaneously.
-                  Melanie swims at \(80\,\text{m/min}\) relative to the water, while Sherry swims at
-                  \(60\,\text{m/min}\). Find \(D\).
+                  Let $a,b,c,d,e,f,g,h,i$ be distinct integers from $1$ to $9$, and suppose that $a,b,c,d,e,f$ are
+                  consecutive integers. Find the minimum possible positive value of \[\frac{a \cdot b \cdot c - d \cdot
+                  e \cdot f}{g \cdot h \cdot i}\].
+                </p>
               </h1>
 
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
                 <ol style="margin-left:1.2em">
-                  <li>
-                    <strong>Sherry.</strong> To land at \(x=0\) we need horizontal speed
-                    \(-60\sin\theta_S + 14 = 0 \Longrightarrow
-                    \sin\theta_S = \tfrac{7}{30}\).
-                    Hence
-                    \(v_{y,S}=60\cos\theta_S
-                    =60\sqrt{1-\tfrac{49}{900}}
-                    =2\sqrt{851}\).
-                    Time:
-                    \(t=\dfrac{264}{2\sqrt{851}}=\dfrac{132}{\sqrt{851}}\).
-                  </li>
-                  <li>
-                    <strong>Melanie.</strong> Vertical motion:
-                    \(80\cos\theta_M\,t=264
-                    \Longrightarrow
-                    \cos\theta_M=\dfrac{\sqrt{851}}{40}\),
-                    so
-                    \(\sin\theta_M=\dfrac{\sqrt{749}}{40}\).
-                    Horizontal displacement:
-                    \((80\sin\theta_M-14)t=D\), hence
-                    \[
-                    D
-                    =\Bigl(80\cdot\tfrac{\sqrt{749}}{40}-14\Bigr)
-                    \left(\frac{132}{\sqrt{851}}\right)
-                    =\frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                    \approx 184.4~\text{m}.
-                    \]
-                  </li>
+                  <li>There are four possible 6‒term consecutive sets \( S = \{k, \ldots, k+5\} \) with \( k=1\ldots4
+                    \).</li>
+                  <li>For each, enumerate all ways to split into two triples \( A \) and \( B \), compute products \(
+                    P(A) \) and \( P(B) = \text{Total}/P(A) \).</li>
+                  <li>The minimal positive difference \( P(A) - P(B) \) occurs for \( S = \{2, \ldots, 7\} \) with \( A
+                    = \{3, 4, 6\} \) giving \( P(A) = 72 \), \( P(B) = 70 \) and numerator 2.</li>
+                  <li>The remaining numbers are \(\{1, 8, 9\}\) so the denominator is 72, yielding \(\frac{2}{72} =
+                    \frac{1}{36}\).</li>
                 </ol>
+                </p>
               </h1>
-
 
               <!-- Answer -->
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Answer</b>
                   <br>
-                  \[
-                  \frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                  \]
-                  <br>
-                  ≈ 184.4&nbsp;m
+                  \[\frac{1}{36}\]
+                </p>
               </h1>
             </div>
 
@@ -430,63 +407,38 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  A straight river that is
-                  \(264\,\text{m}\) wide flows from west
-                  to east at \(14\,\text{m/min}\).
-                  Melanie and Sherry sit on the south bank with Melanie a distance \(D\) metres downstream from
-                  Sherry. Each heads for the point directly opposite Sherry and they arrive simultaneously.
-                  Melanie swims at \(80\,\text{m/min}\) relative to the water, while Sherry swims at
-                  \(60\,\text{m/min}\). Find \(D\).
+                  Let $x_1 \leq x_2 \leq \cdots \leq x_{100}$ be real numbers such that $|x_1| + |x_2| + \cdots +
+                  |x_{100}| = 1$ and $x_1 + x_2 + \cdots + x_{100} = 0$. Suppose that $x_1 = x_2 = \cdots = x_{15} =
+                  -\frac{1}{100}$ and $x_{77} = x_{78} = \cdots = x_{100} = \frac{1}{100}$, find the greatest possible
+                  value of $x_{76} - x_{16}$ under these conditions.
+                </p>
               </h1>
 
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
                 <ol style="margin-left:1.2em">
-                  <li>
-                    <strong>Sherry.</strong> To land at \(x=0\) we need horizontal speed
-                    \(-60\sin\theta_S + 14 = 0 \Longrightarrow
-                    \sin\theta_S = \tfrac{7}{30}\).
-                    Hence
-                    \(v_{y,S}=60\cos\theta_S
-                    =60\sqrt{1-\tfrac{49}{900}}
-                    =2\sqrt{851}\).
-                    Time:
-                    \(t=\dfrac{264}{2\sqrt{851}}=\dfrac{132}{\sqrt{851}}\).
-                  </li>
-                  <li>
-                    <strong>Melanie.</strong> Vertical motion:
-                    \(80\cos\theta_M\,t=264
-                    \Longrightarrow
-                    \cos\theta_M=\dfrac{\sqrt{851}}{40}\),
-                    so
-                    \(\sin\theta_M=\dfrac{\sqrt{749}}{40}\).
-                    Horizontal displacement:
-                    \((80\sin\theta_M-14)t=D\), hence
-                    \[
-                    D
-                    =\Bigl(80\cdot\tfrac{\sqrt{749}}{40}-14\Bigr)
-                    \left(\frac{132}{\sqrt{851}}\right)
-                    =\frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                    \approx 184.4~\text{m}.
-                    \]
-                  </li>
+                  <li>Sum of absolutes on \( x_1 \ldots x_{15} \) and \( x_{77} \ldots x_{100} \) uses \( \frac{39}{100}
+                    \), so on \( x_{16} \ldots x_{76} \) it's \( \frac{61}{100} \), and their sum must be
+                    \(-\frac{9}{100}\).</li>
+                  <li>Partition the 61 variables into \( n_- \) at \(-u\) and \( n_+ \) at \( v \) so that \( n_- u =
+                    0.35 \) and \( n_+ v = 0.26 \).</li>
+                  <li>The bounds \( u,v \leq 0.01 \) force \( n_- = \frac{0.35}{0.01} = 35 \) and \( n_+ = 61 - 35 = 26
+                    \).</li>
+                  <li>Thus \( u = 0.01 \), \( v = 0.01 \), so \( x_{16} = -0.01 \), \( x_{76} = 0.01 \).</li>
+                  <li>Therefore the maximum \( x_{76} - x_{16} = 0.01 - (-0.01) = 0.02 \).</li>
                 </ol>
+                </p>
               </h1>
-
 
               <!-- Answer -->
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Answer</b>
                   <br>
-                  \[
-                  \frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                  \]
-                  <br>
-                  ≈ 184.4&nbsp;m
+                  \[0.02\]
+                </p>
               </h1>
             </div>
-
 
 
             <!-- ─────────────  Slide 4  ───────────── -->
@@ -494,60 +446,36 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  A straight river that is
-                  \(264\,\text{m}\) wide flows from west
-                  to east at \(14\,\text{m/min}\).
-                  Melanie and Sherry sit on the south bank with Melanie a distance \(D\) metres downstream from
-                  Sherry. Each heads for the point directly opposite Sherry and they arrive simultaneously.
-                  Melanie swims at \(80\,\text{m/min}\) relative to the water, while Sherry swims at
-                  \(60\,\text{m/min}\). Find \(D\).
+                  Let $a,b,x,y$ be real numbers with $a>4$ and $b>1$ such that
+                  \[\frac{x^2}{a^2}+\frac{y^2}{a^2-16}=1,\quad \text{and}\quad (x,y)=(20,11).\] Find the least possible
+                  value of $a+b$ given these conditions.
+                </p>
               </h1>
 
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
                 <ol style="margin-left:1.2em">
-                  <li>
-                    <strong>Sherry.</strong> To land at \(x=0\) we need horizontal speed
-                    \(-60\sin\theta_S + 14 = 0 \Longrightarrow
-                    \sin\theta_S = \tfrac{7}{30}\).
-                    Hence
-                    \(v_{y,S}=60\cos\theta_S
-                    =60\sqrt{1-\tfrac{49}{900}}
-                    =2\sqrt{851}\).
-                    Time:
-                    \(t=\dfrac{264}{2\sqrt{851}}=\dfrac{132}{\sqrt{851}}\).
-                  </li>
-                  <li>
-                    <strong>Melanie.</strong> Vertical motion:
-                    \(80\cos\theta_M\,t=264
-                    \Longrightarrow
-                    \cos\theta_M=\dfrac{\sqrt{851}}{40}\),
-                    so
-                    \(\sin\theta_M=\dfrac{\sqrt{749}}{40}\).
-                    Horizontal displacement:
-                    \((80\sin\theta_M-14)t=D\), hence
-                    \[
-                    D
-                    =\Bigl(80\cdot\tfrac{\sqrt{749}}{40}-14\Bigr)
-                    \left(\frac{132}{\sqrt{851}}\right)
-                    =\frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                    \approx 184.4~\text{m}.
-                    \]
-                  </li>
+                  <li>Plugging \((x,y)=(20,11)\) into \(\frac{x^2}{a^2} + \frac{y^2}{a^2-16}=1\) gives \(\frac{400}{a^2}
+                    + \frac{121}{a^2-16}=1\).</li>
+                  <li>Multiply through: \(400(a^2-16)+121a^2 = a^2(a^2-16) \Rightarrow a^4-537a^2+6400=0\).</li>
+                  <li>Let \(t=a^2\), so \(t=\frac{537\pm\sqrt{262769}}{2}\).</li>
+                  <li>The solution \(>16\) is \(t=\frac{537+\sqrt{262769}}{2}\), hence
+                    \(a=\sqrt{\left(\frac{537+\sqrt{262769}}{2}\right)}\).</li>
+                  <li>Since \(b>1\) is free, the infimum of \(a+b\) is attained as \(b\to1^+\), giving
+                    \(\inf(a+b)=1+\sqrt{\left(\frac{537+\sqrt{262769}}{2}\right)} \approx 23.912\ldots\).</li>
                 </ol>
+                </p>
               </h1>
-
 
               <!-- Answer -->
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Answer</b>
                   <br>
-                  \[
-                  \frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                  \]
+                  \[1 + \sqrt{\frac{537+\sqrt{262769}}{2}}\]
                   <br>
-                  ≈ 184.4&nbsp;m
+                  ≈ 23.9
+                </p>
               </h1>
             </div>
 
@@ -557,60 +485,30 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  A straight river that is
-                  \(264\,\text{m}\) wide flows from west
-                  to east at \(14\,\text{m/min}\).
-                  Melanie and Sherry sit on the south bank with Melanie a distance \(D\) metres downstream from
-                  Sherry. Each heads for the point directly opposite Sherry and they arrive simultaneously.
-                  Melanie swims at \(80\,\text{m/min}\) relative to the water, while Sherry swims at
-                  \(60\,\text{m/min}\). Find \(D\).
+                  Two men and two women stand equally spaced around a circle in random order. What is the probability
+                  that every man stands diametrically opposite a woman?
+                </p>
               </h1>
 
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
                 <ol style="margin-left:1.2em">
-                  <li>
-                    <strong>Sherry.</strong> To land at \(x=0\) we need horizontal speed
-                    \(-60\sin\theta_S + 14 = 0 \Longrightarrow
-                    \sin\theta_S = \tfrac{7}{30}\).
-                    Hence
-                    \(v_{y,S}=60\cos\theta_S
-                    =60\sqrt{1-\tfrac{49}{900}}
-                    =2\sqrt{851}\).
-                    Time:
-                    \(t=\dfrac{264}{2\sqrt{851}}=\dfrac{132}{\sqrt{851}}\).
-                  </li>
-                  <li>
-                    <strong>Melanie.</strong> Vertical motion:
-                    \(80\cos\theta_M\,t=264
-                    \Longrightarrow
-                    \cos\theta_M=\dfrac{\sqrt{851}}{40}\),
-                    so
-                    \(\sin\theta_M=\dfrac{\sqrt{749}}{40}\).
-                    Horizontal displacement:
-                    \((80\sin\theta_M-14)t=D\), hence
-                    \[
-                    D
-                    =\Bigl(80\cdot\tfrac{\sqrt{749}}{40}-14\Bigr)
-                    \left(\frac{132}{\sqrt{851}}\right)
-                    =\frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                    \approx 184.4~\text{m}.
-                    \]
-                  </li>
+                  <li>Label the 4 seats 1–4 around the circle; opposites are (1,3) and (2,4). Total seatings=4!=24.</li>
+                  <li>For both men to be opposite women they must occupy one opposite pair: choose the pair in 2 ways,
+                    arrange the 2 men in it in 2! ways, and place the 2 women in the remaining seats in 2! ways, giving
+                    2 · 2 · 2 = 8 favorable.</li>
+                  <li>Thus P = \(\frac{8}{24} = \frac{1}{3}\).</li>
                 </ol>
+                </p>
               </h1>
-
 
               <!-- Answer -->
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Answer</b>
                   <br>
-                  \[
-                  \frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                  \]
-                  <br>
-                  ≈ 184.4&nbsp;m
+                  \[\frac{1}{3}\]
+                </p>
               </h1>
             </div>
           </div>
