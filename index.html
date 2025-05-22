@@ -39,6 +39,8 @@
   <script src="./static/js/lazy.js"></script>
   <script src="./static/js/faster.js"></script>
   <script src="./static/js/index.js"></script>
+
+
 </head>
 
 <body>
@@ -451,6 +453,13 @@
   </section>
 
   <style>
+    .results-carousel .item {
+      height: auto !important;
+      /* overrides the JS-injected 100% */
+      padding: 1.5rem;
+      /* optional spacing */
+    }
+
     .carousel-sample {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
