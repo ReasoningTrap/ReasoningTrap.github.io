@@ -44,9 +44,9 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Reasoning Model is Stubborn:</h1>
-            <h3 class="title is-3 publication-title"> <img id="dataset_icon" width="3%"
-                src="images/sketch style.jpg">Diagnosing Instruction Overriding in Reasoning Models</h3>
+            <h1 class="title is-1 publication-title"><img id="dataset_icon" width="3%" src="images/sketch style.jpg">
+              Reasoning Model is Stubborn:</h1>
+            <h3 class="title is-3 publication-title"> Diagnosing Instruction Overriding in Reasoning Models</h3>
             <div class="is-size-5">
               <span class="author-block">
                 <a href="https://jadohu.github.io/" style="color:#f68946;font-weight:normal;">Doohyuk
@@ -97,6 +97,16 @@
                     <span>Code</span>
                   </a>
                 </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/ReasoningTrap" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa-solid fa-circle-down"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+
               </div>
             </div>
           </div>
@@ -186,15 +196,14 @@
               <li>Two modified versions of a
                 card-guessing problem are shown. While Modif 1 introduces a small tweak that preserves validity and
                 solvability, Modif 2 includes an invalid condition (multiplying a card count by –3), rendering the
-                problem unsolvable.</li>
-              <li>Despite the simplicity of the problem, reasoning models overcomplicate the
+                problem unsolvable. Despite the simplicity of the problem, reasoning models overcomplicate the
                 problem and override the simple logic by defaulting to more complex problem templates (e.g., assuming a
                 two-card setup).</li>
             </ul>
           </div>
           <img id="teaser" width="98%" src="images/pipeline.png">
           <h1>
-            <p style="font-family:Times New Roman"><b>The dataset construction pipeline of \texttt{ConditionedMath}
+            <p style="font-family:Times New Roman"><b>The dataset construction pipeline of <b>ReasoningTrap</b>
                 consists of two steps.</b>
           </h1>
         </div>
