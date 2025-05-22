@@ -77,6 +77,22 @@
       position: relative;
       padding: 0 40px;
     }
+
+    .teaser-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .teaser-image {
+      width: 55%;
+      transition: opacity 0.3s ease;
+    }
+
+    .teaser-image.hidden {
+      display: none;
+    }
   </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -165,24 +181,26 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <div class="carousel-extra-padding">
-          <div id="teaser-carousel" class="carousel results-carousel">
-            <div class="item">
-              <img id="teaser" width="100%" src="images/teaser1.png">
+        <div class="teaser-container">
+          <div class="carousel-extra-padding">
+            <div id="teaser-carousel" class="carousel results-carousel">
+              <div class="item">
+                <img id="teaser" class="teaser-image" width="100%" src="images/teaser1.png">
+              </div>
+              <div class="item" style="display: none;">
+                <img id="teaser" class="teaser-image" width="100%" src="images/teaser2.png">
+              </div>
+              <div class="item" style="display: none;">
+                <img id="teaser" class="teaser-image" width="100%" src="images/teaser3.png">
+              </div>
             </div>
-            <div class="item">
-              <img id="teaser" width="100%" src="images/teaser2.png">
-            </div>
-            <div class="item">
-              <img id="teaser" width="100%" src="images/teaser3.png">
-            </div>
-          </div>
-          <div class="carousel-navigation">
-            <div class="carousel-nav-left">
-              <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="carousel-nav-right">
-              <i class="fas fa-chevron-right"></i>
+            <div class="carousel-navigation">
+              <div class="carousel-nav-left">
+                <i class="fas fa-chevron-left"></i>
+              </div>
+              <div class="carousel-nav-right">
+                <i class="fas fa-chevron-right"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -485,19 +503,35 @@
       slidesToShow: 1,
       loop: true,
       autoplay: false,
-      navigation: false, // Disable default navigation
+      navigation: false,
       navigationKeys: true,
       infinite: true
     });
 
     // Custom navigation
     const carousel = document.querySelector('#teaser-carousel').bulmaCarousel();
+    const items = document.querySelectorAll('#teaser-carousel .item');
+
+    function showSlide(index) {
+      items.forEach((item, i) => {
+        item.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
     document.querySelector('.carousel-nav-left').addEventListener('click', () => {
-      carousel.previous();
+      const currentIndex = Array.from(items).findIndex(item => item.style.display !== 'none');
+      const newIndex = (currentIndex - 1 + items.length) % items.length;
+      showSlide(newIndex);
     });
+
     document.querySelector('.carousel-nav-right').addEventListener('click', () => {
-      carousel.next();
+      const currentIndex = Array.from(items).findIndex(item => item.style.display !== 'none');
+      const newIndex = (currentIndex + 1) % items.length;
+      showSlide(newIndex);
     });
+
+    // Show first slide initially
+    showSlide(0);
 
     // Initialize all carousels
     bulmaCarousel.attach('#question-carousel', {
