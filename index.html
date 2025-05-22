@@ -39,6 +39,7 @@
       transform: translateY(-50%);
       width: 100%;
       z-index: 10;
+      pointer-events: none;
     }
 
     .carousel-navigation .carousel-nav-left,
@@ -53,19 +54,15 @@
       justify-content: center;
       cursor: pointer;
       transition: background-color 0.3s;
-    }
-
-    .carousel-navigation .carousel-nav-left:hover,
-    .carousel-navigation .carousel-nav-right:hover {
-      background: rgba(255, 255, 255, 1);
+      pointer-events: auto;
     }
 
     .carousel-navigation .carousel-nav-left {
-      left: 10px;
+      left: -20px;
     }
 
     .carousel-navigation .carousel-nav-right {
-      right: 10px;
+      right: -20px;
     }
 
     .carousel-navigation i {
@@ -86,7 +83,7 @@
     }
 
     .teaser-image {
-      width: 55%;
+      width: 70%;
       transition: opacity 0.3s ease;
       display: block;
       margin: 0 auto;
@@ -115,7 +112,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><img id="dataset_icon" width="3%" src="images/sketch style.jpg">
+            <h1 class="title is-1 publication-title"><img id="dataset_icon" width="10%" src="images/sketch style.jpg">
               Reasoning Model is Stubborn:</h1>
             <h3 class="title is-3 publication-title"> Diagnosing Instruction Overriding in Reasoning Models</h3>
             <div class="is-size-5">
@@ -193,13 +190,13 @@
           <div class="carousel-extra-padding">
             <div id="teaser-carousel" class="carousel results-carousel">
               <div class="item">
-                <img id="teaser" class="teaser-image" width="100%" src="images/teaser1.gif">
+                <img id="teaser1" class="teaser-image" src="images/teaser1.gif">
               </div>
               <div class="item" style="display: none;">
-                <img id="teaser" class="teaser-image" width="100%" src="images/teaser2.gif">
+                <img id="teaser2" class="teaser-image" src="images/teaser2.gif">
               </div>
               <div class="item" style="display: none;">
-                <img id="teaser" class="teaser-image" width="100%" src="images/teaser3.gif">
+                <img id="teaser3" class="teaser-image" src="images/teaser3.gif">
               </div>
             </div>
             <div class="carousel-navigation">
@@ -512,7 +509,6 @@
     });
 
     // Custom navigation
-    const carousel = document.querySelector('#teaser-carousel').bulmaCarousel();
     const items = document.querySelectorAll('#teaser-carousel .item');
 
     function showSlide(index) {
@@ -521,13 +517,13 @@
       });
     }
 
-    document.querySelector('.carousel-nav-left').addEventListener('click', () => {
+    document.querySelector('.carousel-nav-left').addEventListener('click', function () {
       const currentIndex = Array.from(items).findIndex(item => item.style.display !== 'none');
       const newIndex = (currentIndex - 1 + items.length) % items.length;
       showSlide(newIndex);
     });
 
-    document.querySelector('.carousel-nav-right').addEventListener('click', () => {
+    document.querySelector('.carousel-nav-right').addEventListener('click', function () {
       const currentIndex = Array.from(items).findIndex(item => item.style.display !== 'none');
       const newIndex = (currentIndex + 1) % items.length;
       showSlide(newIndex);
