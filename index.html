@@ -549,11 +549,24 @@
 
     function addMessageToChatHistory(sender, message, imageSrc) {
       const chatHistory = document.querySelector('.chat-history');
+
+      // Create and append new chat row
       const chatRow = createChatRow(sender, message, imageSrc);
       chatHistory.appendChild(chatRow);
       chatHistory.scrollTop = chatHistory.scrollHeight;
 
-      MathJax.typesetPromise([chatRow]);
+      // ✅ Trigger MathJax rendering specifically for this new row
+      if (window.MathJax && MathJax.typesetPromise) {
+        MathJax.typesetPromise([chatRow])
+          .then(() => {
+            console.log("MathJax rendered successfully.");
+          })
+          .catch((err) => {
+            console.error("MathJax rendering error:", err.message);
+          });
+      } else {
+        console.warn("MathJax is not loaded or typesetPromise is not available.");
+      }
     }
     function clearChatHistory() {
       const chatHistory = document.querySelector('.chat-history');
