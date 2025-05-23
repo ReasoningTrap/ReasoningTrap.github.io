@@ -519,7 +519,9 @@
       var pre_text = document.createElement("pre");
       pre_text.style = "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
       pre_text.innerHTML = text;
-
+      if (window.MathJax) {
+        MathJax.typesetPromise([pre_text]);
+      }
       var strong = document.createElement("strong");
       strong.innerHTML = sender;
       var br = document.createElement("br");
@@ -555,18 +557,6 @@
       chatHistory.appendChild(chatRow);
       chatHistory.scrollTop = chatHistory.scrollHeight;
 
-      // ✅ Trigger MathJax rendering specifically for this new row
-      if (window.MathJax && MathJax.typesetPromise) {
-        MathJax.typesetPromise([chatRow])
-          .then(() => {
-            console.log("MathJax rendered successfully.");
-          })
-          .catch((err) => {
-            console.error("MathJax rendering error:", err.message);
-          });
-      } else {
-        console.warn("MathJax is not loaded or typesetPromise is not available.");
-      }
     }
     function clearChatHistory() {
       const chatHistory = document.querySelector('.chat-history');
@@ -586,7 +576,7 @@
             "Find D."
           ],
           ["Modified Solution",
-            "1. <b>Sherry:</b><br>" +
+            "<h1>1. <b>Sherry:</b><br>" +
             "- To land at \(x=0\) we need horizontal speed: \\(-60\\sin\\theta_S + 14 = 0 \\Rightarrow \\sin\\theta_S = \\frac{7}{30}\\)<br>" +
             "- Hence, \(v_{y,S} = 60\\cos\\theta_S = 60\\sqrt{1 - \\frac{49}{900}} = 2\\sqrt{851}\)<br>" +
             "- Time: \(t = \\frac{264}{2\\sqrt{851}} = \\frac{132}{\\sqrt{851}}\)<br><br>" +
