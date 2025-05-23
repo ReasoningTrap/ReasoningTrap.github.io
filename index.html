@@ -707,8 +707,8 @@
               <h1 class="subtitle has-text-centered">
                 <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
-                  Let z = 2 + \sqrt{2} - (3 + 3 \sqrt{2})i, and let c = 2 - 3i. Let w be the result when z is
-                  rotated around c by \pi radians counter-clockwise. Find w.
+                  Let \[z = 2 + \sqrt{2} - (3 + 3 \sqrt{2})i,\] and let \[c = 2 - 3i.\] Let w be the result when z is
+                  rotated around c by \[\pi\] radians counter-clockwise. Find w.
                 </p>
               </h1>
 
@@ -768,17 +768,17 @@
             <!-- ─────────────  Slide 4  ───────────── -->
             <div class="item item-math500-4">
               <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman; font-size: 1.2em;"> <b>Modified Question</b>
+                <p style="font-family:Times New Roman"> <b>Modified Question</b>
                   <br>
                   Find the number of integer values of k in the closed interval [-500,500] for which the equation
-                  \log(kx) = 2 \log(x+2) has exactly one real solution. Assume k\geq 0.
+                  \[\log(kx) = 2 \log(x+2)\] has exactly one real solution. Assume \[k\geq 0\].
                 </p>
               </h1>
 
               <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman; font-size: 1.2em;"> <b>Modified Solution</b>
+                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
                   <br>
-                <ol style="margin-left:1.2em; text-align: left; font-size: 1.2em;">
+                <ol style="margin-left:1.2em; text-align: left">
                   <li>Domain requires \(k>0\) and \(x>0\).</li>
                   <li>Rewrite \(\log(kx)=2\log(x+2)\) as \(kx=(x+2)^2 \Rightarrow x^2+(4-k)x+4=0\).</li>
                   <li>Discriminant \(D=(k-4)^2-16=k(k-8)\).</li>
@@ -1311,6 +1311,40 @@
       </div>
   </section>
 
+
+  <section class="section">
+    <div class="container mt-5">
+      <!-- <h2 class="text-center mb-5">Who's GPT-4's favorite? Battles between State-of-the-Art Chatbots</h2> -->
+      <!-- Selection -->
+      <div class="form-row" style="justify-content: flex-end;">
+        <div class="form-group col-md-1">
+          <div class="col-md-2" style="width: 100%"><label>&nbsp;</label></div>
+          <div class="btn-group" role="group" aria-label="Left and Right Controller"
+            style="width: 100%;align-items: flex-end;justify-content: center;flex-direction: row;display: flex;">
+            <button type="button" class="form-control btn btn-primary" id="prev-question"><i
+                class="material-icons">keyboard_arrow_left</i></button>
+            <button type="button" class="form-control btn btn-primary" id="next-question"><i
+                class="material-icons">keyboard_arrow_right</i></button>
+
+          </div>
+        </div>
+      </div>
+      <!-- Question Card -->
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div class="card mb-4" style="width: 100%; display: flex; align-items: center;">
+          <!-- <p><b>Description:</b> Monalisa is a famous painting by Leonardo da Vinci. </p> -->
+
+          <div class="card-body" id="selected-question" style="display: flex; height: 80vh;">
+            <div class="chat-history">
+              <!-- Add your chat messages here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
   <style>
     .carousel-sample {
       display: grid;
@@ -1405,6 +1439,123 @@
   </div>
 </section>
 
-</body>
+<script>
+  // Handle message showing
+  function createChatRow(sender, text, imageSrc) {
+    var article = document.createElement("article");
+    article.className = "media"
 
-</html>
+    var figure = document.createElement("figure");
+    figure.className = "media-left";
+
+    var span = document.createElement("span");
+    span.className = "icon is-large";
+
+    var icon = document.createElement("i");
+    icon.className = "fas fas fa-2x" + (sender === "User" ? " fa-user " : sender === "LLaVA" ? " fa-robot" : "");
+
+    var media = document.createElement("div");
+    media.className = "media-content";
+
+    var content = document.createElement("div");
+    content.className = "content";
+
+    var para = document.createElement("p");
+
+    // wrap text in pre tag to preserve whitespace and line breaks
+    var pre_text = document.createElement("pre");
+    pre_text.style = "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
+    var paraText = document.createTextNode(text);
+    pre_text.appendChild(paraText);
+
+    var strong = document.createElement("strong");
+    strong.innerHTML = sender;
+    var br = document.createElement("br");
+
+    para.appendChild(strong);
+    para.appendChild(br);
+    para.appendChild(pre_text);
+
+    // Add image if imageSrc is provided
+    if (imageSrc) {
+      var img = document.createElement("img");
+      img.src = imageSrc;
+      img.style = "max-width: 100%; max-height: 300px;"; // Adjust the style as needed
+      para.appendChild(img);
+    }
+
+    content.appendChild(para);
+    media.appendChild(content);
+    span.appendChild(icon);
+    figure.appendChild(span);
+    if (sender !== "Description") {
+      article.appendChild(figure);
+    };
+    article.appendChild(media);
+    return article;
+  }
+
+  function addMessageToChatHistory(sender, message, imageSrc) {
+    const chatHistory = document.querySelector('.chat-history');
+    const chatRow = createChatRow(sender, message, imageSrc);
+    chatHistory.appendChild(chatRow);
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+  }
+
+  function clearChatHistory() {
+    const chatHistory = document.querySelector('.chat-history');
+    chatHistory.innerHTML = "";
+  }
+
+  // 
+  const conversations = [
+    {
+      "description": "river_swimmer_problem",
+      "turns": [
+        [
+          "Modified Question",
+          `<b>Modified Question</b><br>
+          A straight river that is \(264\,\text{m}\) wide flows from west to east at \(14\,\text{m/min}\).
+          Melanie and Sherry sit on the south bank with Melanie a distance \(D\) metres downstream from Sherry. 
+          Each heads for the point directly opposite Sherry and they arrive simultaneously.
+          Melanie swims at \(80\,\text{m/min}\) relative to the water, while Sherry swims at \(60\,\text{m/min}\). 
+          Find \(D\).`
+        ],
+        [
+          "Modified Solution",
+          `<h1 class="subtitle has-text-centered">
+            <p style="font-family:Times New Roman"> <b>Modified Solution</b><br>
+            <ol style="margin-left:1.2em; text-align: left;">
+              <li>
+                <strong>Sherry.</strong> To land at \(x=0\) we need horizontal speed \(-60\sin\theta_S + 14 = 0 \Longrightarrow \sin\theta_S = \tfrac{7}{30}\).
+                Hence \(v_{y,S}=60\cos\theta_S =60\sqrt{1-\tfrac{49}{900}} =2\sqrt{851}\).
+                Time: \(t=\dfrac{264}{2\sqrt{851}}=\dfrac{132}{\sqrt{851}}\).
+              </li>
+              <li>
+                <strong>Melanie.</strong> Vertical motion: \(80\cos\theta_M\,t=264 \Longrightarrow \cos\theta_M=\dfrac{\sqrt{851}}{40}\),
+                so \(\sin\theta_M=\dfrac{\sqrt{749}}{40}\).
+                Horizontal displacement: \((80\sin\theta_M-14)t=D\), hence
+                \[D =\Bigl(80\cdot\tfrac{\sqrt{749}}{40}-14\Bigr) \left(\frac{132}{\sqrt{851}}\right) =\frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}} \approx 184.4~\text{m}.\]
+              </li>
+            </ol>
+          </p>
+          </h1>`
+        ],
+        [
+          "Modified Answer",
+          `<h1 class="subtitle has-text-centered">
+            <p style="font-family:Times New Roman"><b>Modified Answer</b><br>
+            \[\frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}\]<br>
+            ≈ 184.4&nbsp;m
+          </p>
+          </h1>`
+        ]
+      ]
+    }
+  ];
+
+</script>
+
+</body >
+
+</html >
