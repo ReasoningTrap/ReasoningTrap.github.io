@@ -522,12 +522,10 @@
       var pre_text = document.createElement("pre");
       pre_text.style = "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
 
-      // Replace LaTeX delimiters with MathJax delimiters
-      text = text.replace(/\\\(/g, '$$').replace(/\\\)/g, '$$');
-      text = text.replace(/\\\[/g, '$$$').replace(/\\\]/g, '$$$');
 
-      var paraText = document.createTextNode(text);
-      pre_text.appendChild(paraText);
+      // var paraText = document.createTextNode(text);
+      // pre_text.appendChild(paraText);
+      pre_text.innerHTML = text;
 
       var strong = document.createElement("strong");
       strong.innerHTML = sender;
