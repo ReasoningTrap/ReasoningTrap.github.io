@@ -193,6 +193,25 @@
   </section>
 
   <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4"><img id="painting_icon" width="4%"
+            src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"> What is Reasoning Rigidity in Reasoning
+          Models? </h2>
+
+        <div>
+          <img id="rigidity" width="98%" src="static/images/rigidity.png">
+        </div>
+
+        <p style="font-family:Times New Roman"><b>Reasoning models often exhibit a problematic reliance on familiar
+            reasoning patterns, a phenomenon we term reasoning rigidity. Despite explicit instructions from users, these
+            models often override clearly stated conditions with three patterns: (i) Interpretation Overload, (ii) Input
+            Distrust, and (iii) Partial Instruction Attention. </b>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <!-- Results. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
@@ -276,6 +295,10 @@
       <div class="hero-body">
         <div class="container">
           <div class="columns is-centered">
+            <div class="columns is-centered has-text-centered">
+              <h1 class="title is-5"> Reasoning Models have Lower Accuracy on Mathematical & Logical Reasoning due to
+                Reasoning Rigidity </h1>
+            </div>
             <div class="column is-four-fifths">
               <div class="box">
                 <img id="main_math" width="160%" src="static/images/main_math.png">
@@ -291,865 +314,34 @@
                       Models</b></p>
                 </h3>
               </div>
+              <div class="columns is-centered has-text-centered">
+                <h1 class="title is-5"> Various RL objectives Worsen Reasoning Rigidity </h1>
+              </div>
+              <div class="box" style="margin-top: 2rem;">
+                <img id="main_puzzle" width="160%" src="static/images/rl_strategies.png">
+                <h3 class="subtitle has-text-centered">
+                  <p style="font-family:Times New Roman"><b>Reasoning Models Trained with Different RL Objectives All
+                      Suffer from Reasoning Rigidity</b></p>
+                </h3>
+              </div>
+              <div class="columns is-centered has-text-centered">
+                <h1 class="title is-5"> Reasoning Rigidity is Observed Across Varying Model Sizes </h1>
+              </div>
+              <div class="box" style="margin-top: 2rem;">
+                <img id="main_puzzle" width="160%" src="static/images/model_sizes.png">
+                <h3 class="subtitle has-text-centered">
+                  <p style="font-family:Times New Roman"><b>Reasoning Models Trained with Different Model Sizes All
+                      Suffer from Reasoning Rigidity</b></p>
+                </h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
   </section>
 
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-3"><b>ConditionedMATH AIME</b></h2>
-        </div>
-        <div class="carousel-extra-padding">
-          <div id="results-carousel" class="carousel results-carousel">
-            <!-- ─────────────  Slide 1  ───────────── -->
-            <div class="item item-aime1">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  A straight river that is
-                  \(264\,\text{m}\) wide flows from west
-                  to east at \(14\,\text{m/min}\).
-                  Melanie and Sherry sit on the south bank with Melanie a distance \(D\) metres downstream from
-                  Sherry. Each heads for the point directly opposite Sherry and they arrive simultaneously.
-                  Melanie swims at \(80\,\text{m/min}\) relative to the water, while Sherry swims at
-                  \(60\,\text{m/min}\). Find \(D\).
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>
-                    <strong>Sherry.</strong> To land at \(x=0\) we need horizontal speed
-                    \(-60\sin\theta_S + 14 = 0 \Longrightarrow
-                    \sin\theta_S = \tfrac{7}{30}\).
-                    Hence
-                    \(v_{y,S}=60\cos\theta_S
-                    =60\sqrt{1-\tfrac{49}{900}}
-                    =2\sqrt{851}\).
-                    Time:
-                    \(t=\dfrac{264}{2\sqrt{851}}=\dfrac{132}{\sqrt{851}}\).
-                  </li>
-                  <li>
-                    <strong>Melanie.</strong> Vertical motion:
-                    \(80\cos\theta_M\,t=264
-                    \Longrightarrow
-                    \cos\theta_M=\dfrac{\sqrt{851}}{40}\),
-                    so
-                    \(\sin\theta_M=\dfrac{\sqrt{749}}{40}\).
-                    Horizontal displacement:
-                    \((80\sin\theta_M-14)t=D\), hence
-                    \[
-                    D
-                    =\Bigl(80\cdot\tfrac{\sqrt{749}}{40}-14\Bigr)
-                    \left(\frac{132}{\sqrt{851}}\right)
-                    =\frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                    \approx 184.4~\text{m}.
-                    \]
-                  </li>
-                </ol>
-              </h1>
-
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[
-                  \frac{264\bigl(\sqrt{749}-7\bigr)}{\sqrt{851}}
-                  \]
-                  <br>
-                  ≈ 184.4&nbsp;m
-              </h1>
-            </div>
-
-
-            <!-- ─────────────  Slide 2  ───────────── -->
-            <div class="item item-aime2">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Let a,b,c,d,e,f,g,h,i be distinct integers from 1 to 9, and suppose that a,b,c,d,e,f are
-                  consecutive integers. Find the minimum possible positive value of \[\frac{a \cdot b \cdot c - d \cdot
-                  e \cdot f}{g \cdot h \cdot i}\].
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>There are four possible 6‒term consecutive sets \( S = \{k, \ldots, k+5\} \) with \( k=1\ldots4
-                    \).</li>
-                  <li>For each, enumerate all ways to split into two triples \( A \) and \( B \), compute products \(
-                    P(A) \) and \( P(B) = \text{Total}/P(A) \).</li>
-                  <li>The minimal positive difference \( P(A) - P(B) \) occurs for \( S = \{2, \ldots, 7\} \) with \( A
-                    = \{3, 4, 6\} \) giving \( P(A) = 72 \), \( P(B) = 70 \) and numerator 2.</li>
-                  <li>The remaining numbers are \(\{1, 8, 9\}\) so the denominator is 72, yielding \(\frac{2}{72} =
-                    \frac{1}{36}\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[\frac{1}{36}\]
-                </p>
-              </h1>
-            </div>
-
-
-            <!-- ─────────────  Slide 3  ───────────── -->
-            <div class="item item-aime3">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Let x_1 \leq x_2 \leq \cdots \leq x_{100} be real numbers such that |x_1| + |x_2| + \cdots +
-                  |x_{100}| = 1 and x_1 + x_2 + \cdots + x_{100} = 0. Suppose that x_1 = x_2 = \cdots = x_{15} =
-                  -\frac{1}{100} and x_{77} = x_{78} = \cdots = x_{100} = \frac{1}{100}, find the greatest possible
-                  value of x_{76} - x_{16} under these conditions.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Sum of absolutes on \( x_1 \ldots x_{15} \) and \( x_{77} \ldots x_{100} \) uses \( \frac{39}{100}
-                    \), so on \( x_{16} \ldots x_{76} \) it's \( \frac{61}{100} \), and their sum must be
-                    \(-\frac{9}{100}\).</li>
-                  <li>Partition the 61 variables into \( n_- \) at \(-u\) and \( n_+ \) at \( v \) so that \( n_- u =
-                    0.35 \) and \( n_+ v = 0.26 \).</li>
-                  <li>The bounds \( u,v \leq 0.01 \) force \( n_- = \frac{0.35}{0.01} = 35 \) and \( n_+ = 61 - 35 = 26
-                    \).</li>
-                  <li>Thus \( u = 0.01 \), \( v = 0.01 \), so \( x_{16} = -0.01 \), \( x_{76} = 0.01 \).</li>
-                  <li>Therefore the maximum \( x_{76} - x_{16} = 0.01 - (-0.01) = 0.02 \).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[0.02\]
-                </p>
-              </h1>
-            </div>
-
-
-            <!-- ─────────────  Slide 4  ───────────── -->
-            <div class="item item-aime4">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Let a,b,x,y be real numbers with a>4 and b>1 such that
-                  \[\frac{x^2}{a^2}+\frac{y^2}{a^2-16}=1,\quad \text{and}\quad (x,y)=(20,11).\] Find the least possible
-                  value of a+b given these conditions.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Plugging \((x,y)=(20,11)\) into \(\frac{x^2}{a^2} + \frac{y^2}{a^2-16}=1\) gives \(\frac{400}{a^2}
-                    + \frac{121}{a^2-16}=1\).</li>
-                  <li>Multiply through: \(400(a^2-16)+121a^2 = a^2(a^2-16) \Rightarrow a^4-537a^2+6400=0\).</li>
-                  <li>Let \(t=a^2\), so \(t=\frac{537\pm\sqrt{262769}}{2}\).</li>
-                  <li>The solution \(>16\) is \(t=\frac{537+\sqrt{262769}}{2}\), hence
-                    \(a=\sqrt{\left(\frac{537+\sqrt{262769}}{2}\right)}\).</li>
-                  <li>Since \(b>1\) is free, the infimum of \(a+b\) is attained as \(b\to1^+\), giving
-                    \(\inf(a+b)=1+\sqrt{\left(\frac{537+\sqrt{262769}}{2}\right)} \approx 23.912\ldots\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[1 + \sqrt{\frac{537+\sqrt{262769}}{2}}\]
-                  <br>
-                  ≈ 23.9
-                </p>
-              </h1>
-            </div>
-
-
-            <!-- ─────────────  Slide 5  ───────────── -->
-            <div class="item item-aime5">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Two men and two women stand equally spaced around a circle in random order. What is the probability
-                  that every man stands diametrically opposite a woman?
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Label the 4 seats 1–4 around the circle; opposites are (1,3) and (2,4). Total seatings=4!=24.</li>
-                  <li>For both men to be opposite women they must occupy one opposite pair: choose the pair in 2 ways,
-                    arrange the 2 men in it in 2! ways, and place the 2 women in the remaining seats in 2! ways, giving
-                    2 · 2 · 2 = 8 favorable.</li>
-                  <li>Thus P = \(\frac{8}{24} = \frac{1}{3}\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[\frac{1}{3}\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 6  ───────────── -->
-            <div class="item item-aime6">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Find the sum of all positive integers m which are powers of 2 and satisfy that \frac{13!}{m} is a
-                  perfect square.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>\(\left\lfloor \frac{13}{2} \right\rfloor + \left\lfloor \frac{13}{4} \right\rfloor + \left\lfloor
-                    \frac{13}{8} \right\rfloor = 6 + 3 + 1 = 10\)</li>
-                  <li>\(10 - k\), \(k \in \{0, 2, 4, 6, 8, 10\}\)</li>
-                  <li>\(2^0 + 2^2 + 2^4 + 2^6 + 2^8 + 2^{10} = 1 + 4 + 16 + 64 + 256 + 1024 = 1365\)</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[1365\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 7  ───────────── -->
-            <div class="item item-aime7">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Define f(x)=|| x| - \tfrac{1}{2}| and g(x)=|| x| - \tfrac{1}{4}|. Find the number of intersections
-                  of the graphs of \[y=4 g(f(\sin(2 \pi x))) \quad\text{ and }\quad x=0.\] (Fix x=0 instead of the
-                  original expression.)
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Set \( x = 0 \). Then \( y = 4g(f(\sin(2\pi \cdot 0))) = 4g(f(0)) \).</li>
-                  <li>Compute \( f(0) = \left| \left| 0 \right| - \frac{1}{2} \right| = \left| -\frac{1}{2} \right| =
-                    \frac{1}{2} \).</li>
-                  <li>Compute \( g\left(\frac{1}{2}\right) = \left| \left| \frac{1}{2} \right| - \frac{1}{4} \right| =
-                    \left| \frac{1}{4} \right| = \frac{1}{4} \).</li>
-                  <li>Thus \( y = 4 \cdot \frac{1}{4} = 1 \).</li>
-                  <li>Therefore there is exactly one intersection point at \( (0, 1) \).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[1\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 8  ───────────── -->
-            <div class="item item-aime8">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Let p be the least prime number for which there exists a positive integer n such that n^{4}+1 is
-                  divisible by p^{2}. Find the least positive integer m such that m^{4}+1 is divisible by p^{2}.
-                  Add condition: Only consider n and m such that m=n.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Since \( n^4 \equiv -1 \mod p^2 \) forces \( p \equiv 1 \mod 8 \), the least such \( p \) is 17.
-                  </li>
-                  <li>Mod 17, we have \( 2^4 = 16 \equiv -1 \), and \( f(x) = x^4 + 1 \) has \( f'(2) = 4 \cdot 2^3
-                    \not\equiv 0 \mod 17 \), so by Hensel's lemma, there is a unique lift modulo \( 17^2 \): \( x = 2 +
-                    17k \).</li>
-                  <li>Expanding \((2+17k)^4+1 \equiv 17(1+32k) \equiv 0 \mod 289 \) gives \( k \equiv 9 \mod 17 \), so
-                    the least positive solution is \( n = m = 2 + 17 \cdot 9 = 155 \).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[155\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 9  ───────────── -->
-            <div class="item item-aime9">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Among the 900 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf
-                  clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy
-                  hearts. Suppose the 234 residents who own exactly three of these things also own a candy store, which
-                  means all four items. Find the number of residents who own all four of these things.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Let \( n_k \) be the number of residents owning exactly \( k \) items.</li>
-                  <li>Modified gives \( n_2 = 437 \) and those 234 with exactly three now own all four, so \( n_3 = 0 \)
-                    and let \( x = n_4 \).</li>
-                  <li>From \( n_1 + n_2 + n_3 + n_4 = 900 \), \( n_1 = 900 - 437 - x \).</li>
-                  <li>Also the total item‑count is \( 195 + 367 + 562 + 900 = 2024 \), so \( n_1 + 2 \cdot 437 + 3 \cdot
-                    0 + 4x = 2024 \).</li>
-                  <li>Substituting \( n_1 \) yields:
-                    \((900 - 437 - x) + 874 + 4x = 2024 \implies 3x = 687 \implies x = 229\)</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[229\]
-                </p>
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-3"><b>ConditionedMATH MATH500</b></h2>
-        </div>
-        <div class="carousel-extra-padding">
-          <div id="results-carousel" class="carousel results-carousel">
-            <!-- ─────────────  Slide 1  ───────────── -->
-            <div class="item item-math500-1">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Let p(x) be a polynomial of degree 5 such that
-                  \[p(n) = \frac{n}{n^2 - 1}\]
-                  for n = 2, 3, 4, \dots, 7. Find p(8). Added condition: Suppose p(x) is actually a polynomial
-                  of degree 1 that fits the given values for n=2 and n=3. Find p(8).
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>\(m = \frac{\frac{3}{8} - \frac{2}{3}}{3 - 2} = \frac{9}{24} - \frac{16}{24} = -\frac{7}{24}\)
-                  </li>
-                  <li>Line: \(p(x) = mx + b\)</li>
-                  <li>Use \(p(2) = \frac{2}{3}\):
-                    \[-\frac{7}{24} \cdot 2 + b = \frac{2}{3} \Rightarrow b = \frac{2}{3} + \frac{7}{12} = \frac{5}{4}\]
-                  </li>
-                  <li>Then
-                    \[p(8) = -\frac{7}{24} \cdot 8 + \frac{5}{4} = -\frac{56}{24} + \frac{5}{4} = -\frac{7}{3} +
-                    \frac{5}{4} = -\frac{28}{12} + \frac{15}{12} = -\frac{13}{12}\]</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[-\frac{13}{12}\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 2  ───────────── -->
-            <div class="item item-math500-2">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Let \[z = 2 + \sqrt{2} - (3 + 3 \sqrt{2})i,\] and let \[c = 2 - 3i.\] Let w be the result when z is
-                  rotated around c by \[\pi\] radians counter-clockwise. Find w.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>\(w = c + (z - c)e^{i\pi} = c - (z - c)\)</li>
-                  <li>Compute \(z - c = (2 + \sqrt{2} - 2) + (-(3 + 3\sqrt{2}) + 3)i = \sqrt{2} - 3\sqrt{2}i =
-                    \sqrt{2}(1 - 3i)\)</li>
-                  <li>Thus \(w = 2 - 3i - \sqrt{2}(1 - 3i) = (2 - \sqrt{2}) + (3\sqrt{2} - 3)i\)</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[(2 - \sqrt{2}) + (3\sqrt{2} - 3)i\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 3  ───────────── -->
-            <div class="item item-math500-3">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Denali and Nate work for a dog walking business and are paid for each dog they walk. Denali is
-                  responsible for 16 dogs and Nate is responsible for 20 dogs. If Denali's pay doubles when she
-                  takes on x more dogs from Nate, find x.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Let p be the pay per dog.</li>
-                  <li>Initially Denali earns 16p.</li>
-                  <li>After taking x dogs, she earns (16+x)p, which doubles her pay: (16+x)p = 2 · 16p = 32p.</li>
-                  <li>Hence 16 + x = 32 and x = 16.</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[16\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 4  ───────────── -->
-            <div class="item item-math500-4">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Find the number of integer values of k in the closed interval [-500,500] for which the equation
-                  \[\log(kx) = 2 \log(x+2)\] has exactly one real solution. Assume \[k\geq 0\].
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left">
-                  <li>Domain requires \(k>0\) and \(x>0\).</li>
-                  <li>Rewrite \(\log(kx)=2\log(x+2)\) as \(kx=(x+2)^2 \Rightarrow x^2+(4-k)x+4=0\).</li>
-                  <li>Discriminant \(D=(k-4)^2-16=k(k-8)\).</li>
-                  <li>Exactly one real solution with \(x>0\) occurs only when \(D=0\) and root>0.</li>
-                  <li>\(D=0\Rightarrow k=0\) or \(8\), but \(k>0\Rightarrow k=8\), giving double root
-                    \(x=\frac{k-4}{2}=2>0\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[1\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 5  ───────────── -->
-            <div class="item item-math500-5">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Let x, y, and z be positive real numbers such that xyz = 2. Find the minimum value of \[x^4 +
-                  4y^2 + 4z^4\] given that x = 1.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Since \(x = 1\) and \(xyz = 2\), we have \(yz = 2\), so \(y = \frac{2}{z}\).</li>
-                  <li>Substitute into the target: \(f(z) = 1^4 + 4y^2 + 4z^4 = 1 + 4\left(\frac{2}{z}\right)^2 + 4z^4 =
-                    1 + \frac{16}{z^2} + 4z^4\).</li>
-                  <li>Compute \(f'(z) = -\frac{32}{z^3} + 16z^3\) and set to zero: \(16z^3 = \frac{32}{z^3} \Rightarrow
-                    z^6 = 2 \Rightarrow z = 2^{1/6}\). Then \(y = \frac{2}{z} = 2^{5/6}\).</li>
-                  <li>The minimum is \(f(2^{1/6}) = 1 + \frac{16}{2^{1/3}} + 4 \times 2^{2/3} = 1 + 8 \times 2^{2/3} + 4
-                    \times 2^{2/3} = 1 + 12 \times 2^{2/3}\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[1 + 12 \cdot 2^{2/3}\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 6  ───────────── -->
-            <div class="item item-math500-6">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Find all real numbers x such that \[\frac{x^2 + 2x + 1}{x^2 - 1} = 2\] given that x \neq 1.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Since \(x \neq 1\), we can multiply both sides by \(x^2 - 1\): \(x^2 + 2x + 1 = 2(x^2 - 1)\).</li>
-                  <li>Expand and simplify: \(x^2 + 2x + 1 = 2x^2 - 2 \Rightarrow -x^2 + 2x + 3 = 0\).</li>
-                  <li>Multiply by -1: \(x^2 - 2x - 3 = 0\).</li>
-                  <li>Factor: \((x - 3)(x + 1) = 0\).</li>
-                  <li>Solutions: \(x = 3\) or \(x = -1\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[x = 3 \text{ or } x = -1\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 7  ───────────── -->
-            <div class="item item-math500-7">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  A circle has radius 5 and center at the origin. Find the area of the region inside the circle but
-                  outside
-                  the square with vertices at \((\pm 3, \pm 3)\).
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Area of circle: \(\pi r^2 = 25\pi\).</li>
-                  <li>Area of square: \(6 \times 6 = 36\).</li>
-                  <li>Desired area = Circle area - Square area = \(25\pi - 36\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[25\pi - 36\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 8  ───────────── -->
-            <div class="item item-math500-8">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Find the sum of all positive integers n such that \(n^2 + n + 1\) is divisible by 7.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Note that \(n^2 + n + 1 = (n + 1)^2\).</li>
-                  <li>We need \((n + 1)^2 \equiv 0 \pmod{7}\).</li>
-                  <li>This means \(n + 1 \equiv 0 \pmod{7}\).</li>
-                  <li>So \(n \equiv 6 \pmod{7}\).</li>
-                  <li>The positive integers satisfying this are 6, 13, 20, ..., 97.</li>
-                  <li>Sum = \(\frac{14}{2}(6 + 97) = 721\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[721\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 9  ───────────── -->
-            <div class="item item-math500-9">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Let f(x) = x^3 - 3x^2 + 2x. Find all real numbers x such that f(x) = 0 and x > 1.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Factor: \(f(x) = x(x^2 - 3x + 2) = x(x - 1)(x - 2)\).</li>
-                  <li>Set \(f(x) = 0\): \(x(x - 1)(x - 2) = 0\).</li>
-                  <li>Solutions: \(x = 0, 1, 2\).</li>
-                  <li>Only \(x = 2\) satisfies \(x > 1\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[x = 2\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 10  ───────────── -->
-            <div class="item item-math500-10">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Find the number of ways to arrange the letters in "MISSISSIPPI" if the first letter must be 'M' and
-                  the
-                  last letter must be 'I'.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Fix M at start and I at end.</li>
-                  <li>Remaining letters: ISSISSIP (2 I's, 4 S's, 2 P's).</li>
-                  <li>Number of arrangements = \(\frac{8!}{2!4!2!} = 420\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[420\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 11  ───────────── -->
-            <div class="item item-math500-11">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  A triangle has sides of length 5, 6, and 7. Find the radius of its circumscribed circle.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Use the formula \(R = \frac{abc}{4K}\) where \(K\) is the area.</li>
-                  <li>Find area using Heron's formula: \(s = 9\), \(K = \sqrt{9(4)(3)(2)} = 6\sqrt{6}\).</li>
-                  <li>Thus \(R = \frac{5 \times 6 \times 7}{4 \times 6\sqrt{6}} = \frac{35}{4\sqrt{6}}\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[\frac{35}{4\sqrt{6}}\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 12  ───────────── -->
-            <div class="item item-math500-12">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Find the sum of all positive integers n such that \(n^2 + n + 1\) is divisible by 13.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>We need \(n^2 + n + 1 \equiv 0 \pmod{13}\).</li>
-                  <li>Complete the square: \((n + 7)^2 \equiv 48 \pmod{13}\).</li>
-                  <li>Since 48 ≡ 9 mod 13, we need \((n + 7)^2 \equiv 9 \pmod{13}\).</li>
-                  <li>Thus \(n + 7 \equiv \pm 3 \pmod{13}\).</li>
-                  <li>Solutions: \(n \equiv 9\) or \(n \equiv 3 \pmod{13}\).</li>
-                  <li>Sum = 3 + 9 + 16 + 22 + 29 + 35 = 114.</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[114\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 13  ───────────── -->
-            <div class="item item-math500-13">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Let f(x) = \frac{x^2 - 1}{x - 1}. Find all real numbers x such that f(x) = 2 and x \neq 1.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Since \(x \neq 1\), we can simplify: \(f(x) = x + 1\).</li>
-                  <li>Set \(f(x) = 2\): \(x + 1 = 2\).</li>
-                  <li>Thus \(x = 1\), but this contradicts \(x \neq 1\).</li>
-                  <li>Therefore, there are no solutions.</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  No solutions
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 14  ───────────── -->
-            <div class="item item-math500-14">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  Find the number of ways to arrange 5 red balls and 3 blue balls in a row if no two blue balls can be
-                  adjacent.
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>First arrange the 5 red balls: 1 way.</li>
-                  <li>There are 6 possible positions for the blue balls (before, between, and after red balls).</li>
-                  <li>Choose 3 positions from 6: \(\binom{6}{3} = 20\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[20\]
-                </p>
-              </h1>
-            </div>
-
-            <!-- ─────────────  Slide 15  ───────────── -->
-            <div class="item item-math500-15">
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Question</b>
-                  <br>
-                  A circle has radius 4 and center at the origin. Find the area of the region inside the circle but
-                  outside
-                  the square with vertices at \((\pm 2, \pm 2)\).
-                </p>
-              </h1>
-
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Solution</b>
-                  <br>
-                <ol style="margin-left:1.2em; text-align: left;">
-                  <li>Area of circle: \(\pi r^2 = 16\pi\).</li>
-                  <li>Area of square: \(4 \times 4 = 16\).</li>
-                  <li>Desired area = Circle area - Square area = \(16\pi - 16\).</li>
-                </ol>
-                </p>
-              </h1>
-
-              <!-- Answer -->
-              <h1 class="subtitle has-text-centered">
-                <p style="font-family:Times New Roman"> <b>Modified Answer</b>
-                  <br>
-                  \[16\pi - 16\]
-                </p>
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="hero is-light is-small">
     <div class="hero-body">
@@ -1459,7 +651,7 @@
       span.className = "icon is-large";
 
       var icon = document.createElement("i");
-      icon.className = "fas fas fa-2x" + (sender === "Modified Question" ? " fa-question-circle " : sender === "Modified Solution" ? " fa-pencil" : sender === "Modified Answer" ? " fa-check-square " : "");
+      icon.className = "fas fas fa-2x" + (sender === "Modified Question" ? " fa-question-circle " : sender === "Modified Solution" ? " fa-pencil " : sender === "Modified Answer" ? " fa-check-square " : "");
 
       var media = document.createElement("div");
       media.className = "media-content";
@@ -1540,17 +732,17 @@
           ],
           ["Modified Solution",
             "1. Sherry:\n" +
-            "   - To land at x=0 we need horizontal speed \\(-60\\sin\\theta_S + 14 = 0 \\implies \\sin\\theta_S = \\frac{7}{30}\\)\n" +
-            "   - Hence \\(v_{y,S} = 60\\cos\\theta_S = 60\\sqrt{1-\\frac{49}{900}} = 2\\sqrt{851}\\)\n" +
-            "   - Time: \\(t = \\frac{264}{2\\sqrt{851}} = \\frac{132}{\\sqrt{851}}\\)\n\n" +
+            "   - To land at x=0 we need horizontal speed \(-60\sin\theta_S + 14 = 0 \implies \sin\theta_S = \frac{7}{30}\)\n" +
+            "   - Hence \(v_{y,S} = 60\cos\theta_S = 60\sqrt{1-\frac{49}{900}} = 2\sqrt{851}\)\n" +
+            "   - Time: \(t = \frac{264}{2\sqrt{851}} = \frac{132}{\sqrt{851}}\)\n\n" +
             "2. Melanie:\n" +
-            "   - Vertical motion: \\(80\\cos\\theta_M t = 264 \\implies \\cos\\theta_M = \\frac{\\sqrt{851}}{40}\\)\n" +
-            "   - So \\(\\sin\\theta_M = \\frac{\\sqrt{749}}{40}\\)\n" +
-            "   - Horizontal displacement: \\((80\\sin\\theta_M-14)t = D\\)\n" +
-            "   - Hence \\(D = (80\\cdot\\frac{\\sqrt{749}}{40}-14)(\\frac{132}{\\sqrt{851}}) = \\frac{264(\\sqrt{749}-7)}{\\sqrt{851}} \\approx 184.4\\) m"
+            "   - Vertical motion: \(80\cos\theta_M t = 264 \implies \cos\theta_M = \frac{\sqrt{851}}{40}\)\n" +
+            "   - So \(\sin\theta_M = \frac{\sqrt{749}}{40}\)\n" +
+            "   - Horizontal displacement: \((80\sin\theta_M-14)t = D\)\n" +
+            "   - Hence \(D = (80\cdot\frac{\sqrt{749}}{40}-14)(\frac{132}{\sqrt{851}}) = \frac{264(\sqrt{749}-7)}{\sqrt{851}} \approx 184.4\) m"
           ],
           ["Modified Answer",
-            "\\(\\frac{264(\\sqrt{749}-7)}{\\sqrt{851}} \\approx 184.4\\) m"
+            "\(\frac{264(\sqrt{749}-7)}{\sqrt{851}} \approx 184.4\) m"
           ]
         ]
       },
@@ -1559,16 +751,16 @@
         "turns": [
           ["Modified Question",
             "Let a,b,c,d,e,f,g,h,i be distinct integers from 1 to 9, and suppose that a,b,c,d,e,f are " +
-            "consecutive integers. Find the minimum possible positive value of \\(\\frac{a \\cdot b \\cdot c - d \\cdot e \\cdot f}{g \\cdot h \\cdot i}\\)."
+            "consecutive integers. Find the minimum possible positive value of \(\frac{a \cdot b \cdot c - d \cdot e \cdot f}{g \cdot h \cdot i}\)."
           ],
           ["Modified Solution",
-            "1. There are four possible 6-term consecutive sets \\( S = \\{k, \\ldots, k+5\\} \\) with \\( k=1\\ldots4 \\).\n" +
-            "2. For each, enumerate all ways to split into two triples \\( A \\) and \\( B \\), compute products \\( P(A) \\) and \\( P(B) = \\text{Total}/P(A) \\).\n" +
-            "3. The minimal positive difference \\( P(A) - P(B) \\) occurs for \\( S = \\{2, \\ldots, 7\\} \\) with \\( A = \\{3, 4, 6\\} \\) giving \\( P(A) = 72 \\), \\( P(B) = 70 \\) and numerator 2.\n" +
-            "4. The remaining numbers are \\(\\{1, 8, 9\\}\\) so the denominator is 72, yielding \\(\\frac{2}{72} = \\frac{1}{36}\\)."
+            "1. There are four possible 6-term consecutive sets \( S = \{k, \ldots, k+5\} \) with \( k=1\ldots4 \).\n" +
+            "2. For each, enumerate all ways to split into two triples \( A \) and \( B \), compute products \( P(A) \) and \( P(B) = \text{Total}/P(A) \).\n" +
+            "3. The minimal positive difference \( P(A) - P(B) \) occurs for \( S = \{2, \ldots, 7\} \) with \( A = \{3, 4, 6\} \) giving \( P(A) = 72 \), \( P(B) = 70 \) and numerator 2.\n" +
+            "4. The remaining numbers are \(\{1, 8, 9\}\) so the denominator is 72, yielding \(\frac{2}{72} = \frac{1}{36}\)."
           ],
           ["Modified Answer",
-            "\\(\\frac{1}{36}\\)"
+            "\(\frac{1}{36}\)"
           ]
         ]
       },
@@ -1576,17 +768,17 @@
         "description": "slide3",
         "turns": [
           ["Modified Question",
-            "Let \\(x_1 \\leq x_2 \\leq \\cdots \\leq x_{100}\\) be real numbers such that \\(|x_1| + |x_2| + \\cdots + |x_{100}| = 1\\) and \\(x_1 + x_2 + \\cdots + x_{100} = 0\\). Suppose that \\(x_1 = x_2 = \\cdots = x_{15} = -\\frac{1}{100}\\) and \\(x_{77} = x_{78} = \\cdots = x_{100} = \\frac{1}{100}\\), find the greatest possible value of \\(x_{76} - x_{16}\\) under these conditions."
+            "Let \(x_1 \leq x_2 \leq \cdots \leq x_{100}\) be real numbers such that \(|x_1| + |x_2| + \cdots + |x_{100}| = 1\) and \(x_1 + x_2 + \cdots + x_{100} = 0\). Suppose that \(x_1 = x_2 = \cdots = x_{15} = -\frac{1}{100}\) and \(x_{77} = x_{78} = \cdots = x_{100} = \frac{1}{100}\), find the greatest possible value of \(x_{76} - x_{16}\) under these conditions."
           ],
           ["Modified Solution",
-            "1. Sum of absolutes on \\(x_1 \\ldots x_{15}\\) and \\(x_{77} \\ldots x_{100}\\) uses \\(\\frac{39}{100}\\), so on \\(x_{16} \\ldots x_{76}\\) it's \\(\\frac{61}{100}\\), and their sum must be \\(-\\frac{9}{100}\\).\n" +
-            "2. Partition the 61 variables into \\(n_-\\) at \\(-u\\) and \\(n_+\\) at \\(v\\) so that \\(n_- u = 0.35\\) and \\(n_+ v = 0.26\\).\n" +
-            "3. The bounds \\(u,v \\leq 0.01\\) force \\(n_- = \\frac{0.35}{0.01} = 35\\) and \\(n_+ = 61 - 35 = 26\\).\n" +
-            "4. Thus \\(u = 0.01\\), \\(v = 0.01\\), so \\(x_{16} = -0.01\\), \\(x_{76} = 0.01\\).\n" +
-            "5. Therefore the maximum \\(x_{76} - x_{16} = 0.01 - (-0.01) = 0.02\\)."
+            "1. Sum of absolutes on \(x_1 \ldots x_{15}\) and \(x_{77} \ldots x_{100}\) uses \(\frac{39}{100}\), so on \(x_{16} \ldots x_{76}\) it's \(\frac{61}{100}\), and their sum must be \(-\frac{9}{100}\).\n" +
+            "2. Partition the 61 variables into \(n_-\) at \(-u\) and \(n_+\) at \(v\) so that \(n_- u = 0.35\) and \(n_+ v = 0.26\).\n" +
+            "3. The bounds \(u,v \leq 0.01\) force \(n_- = \frac{0.35}{0.01} = 35\) and \(n_+ = 61 - 35 = 26\).\n" +
+            "4. Thus \(u = 0.01\), \(v = 0.01\), so \(x_{16} = -0.01\), \(x_{76} = 0.01\).\n" +
+            "5. Therefore the maximum \(x_{76} - x_{16} = 0.01 - (-0.01) = 0.02\)."
           ],
           ["Modified Answer",
-            "\\(0.02\\)"
+            "\(0.02\)"
           ]
         ]
       },
@@ -1594,17 +786,17 @@
         "description": "slide4",
         "turns": [
           ["Modified Question",
-            "Let a,b,x,y be real numbers with a>4 and b>1 such that \\(\\frac{x^2}{a^2}+\\frac{y^2}{a^2-16}=1\\), and \\((x,y)=(20,11)\\). Find the least possible value of a+b given these conditions."
+            "Let a,b,x,y be real numbers with a>4 and b>1 such that \(\frac{x^2}{a^2}+\frac{y^2}{a^2-16}=1\), and \((x,y)=(20,11)\). Find the least possible value of a+b given these conditions."
           ],
           ["Modified Solution",
-            "1. Plugging \\((x,y)=(20,11)\\) into \\(\\frac{x^2}{a^2} + \\frac{y^2}{a^2-16}=1\\) gives \\(\\frac{400}{a^2} + \\frac{121}{a^2-16}=1\\).\n" +
-            "2. Multiply through: \\(400(a^2-16)+121a^2 = a^2(a^2-16) \\Rightarrow a^4-537a^2+6400=0\\).\n" +
-            "3. Let \\(t=a^2\\), so \\(t=\\frac{537\\pm\\sqrt{262769}}{2}\\).\n" +
-            "4. The solution \\(>16\\) is \\(t=\\frac{537+\\sqrt{262769}}{2}\\), hence \\(a=\\sqrt{\\left(\\frac{537+\\sqrt{262769}}{2}\\right)}\\).\n" +
-            "5. Since \\(b>1\\) is free, the infimum of \\(a+b\\) is attained as \\(b\\to1^+\\), giving \\(\\inf(a+b)=1+\\sqrt{\\left(\\frac{537+\\sqrt{262769}}{2}\\right)} \\approx 23.912\\ldots\\)."
+            "1. Plugging \((x,y)=(20,11)\) into \(\frac{x^2}{a^2} + \frac{y^2}{a^2-16}=1\) gives \(\frac{400}{a^2} + \frac{121}{a^2-16}=1\).\n" +
+            "2. Multiply through: \(400(a^2-16)+121a^2 = a^2(a^2-16) \Rightarrow a^4-537a^2+6400=0\).\n" +
+            "3. Let \(t=a^2\), so \(t=\frac{537\pm\sqrt{262769}}{2}\).\n" +
+            "4. The solution \(>16\) is \(t=\frac{537+\sqrt{262769}}{2}\), hence \(a=\sqrt{\left(\frac{537+\sqrt{262769}}{2}\right)}\).\n" +
+            "5. Since \(b>1\) is free, the infimum of \(a+b\) is attained as \(b\to1^+\), giving \(\inf(a+b)=1+\sqrt{\left(\frac{537+\sqrt{262769}}{2}\right)} \approx 23.912\ldots\)."
           ],
           ["Modified Answer",
-            "\\(1 + \\sqrt{\\frac{537+\\sqrt{262769}}{2}}\\)\n≈ 23.9"
+            "\(1 + \sqrt{\frac{537+\sqrt{262769}}{2}}\)\n≈ 23.9"
           ]
         ]
       },
@@ -1617,10 +809,10 @@
           ["Modified Solution",
             "1. Label the 4 seats 1–4 around the circle; opposites are (1,3) and (2,4). Total seatings=4!=24.\n" +
             "2. For both men to be opposite women they must occupy one opposite pair: choose the pair in 2 ways, arrange the 2 men in it in 2! ways, and place the 2 women in the remaining seats in 2! ways, giving 2 · 2 · 2 = 8 favorable.\n" +
-            "3. Thus P = \\(\\frac{8}{24} = \\frac{1}{3}\\)."
+            "3. Thus P = \(\frac{8}{24} = \frac{1}{3}\)."
           ],
           ["Modified Answer",
-            "\\(\\frac{1}{3}\\)"
+            "\(\frac{1}{3}\)"
           ]
         ]
       },
@@ -1628,15 +820,15 @@
         "description": "slide6",
         "turns": [
           ["Modified Question",
-            "Find the sum of all positive integers m which are powers of 2 and satisfy that \\(\\frac{13!}{m}\\) is a perfect square."
+            "Find the sum of all positive integers m which are powers of 2 and satisfy that \(\frac{13!}{m}\) is a perfect square."
           ],
           ["Modified Solution",
-            "1. \\(\\left\\lfloor \\frac{13}{2} \\right\\rfloor + \\left\\lfloor \\frac{13}{4} \\right\\rfloor + \\left\\lfloor \\frac{13}{8} \\right\\rfloor = 6 + 3 + 1 = 10\\)\n" +
-            "2. \\(10 - k\\), \\(k \\in \\{0, 2, 4, 6, 8, 10\\}\\)\n" +
-            "3. \\(2^0 + 2^2 + 2^4 + 2^6 + 2^8 + 2^{10} = 1 + 4 + 16 + 64 + 256 + 1024 = 1365\\)"
+            "1. \(\left\lfloor \frac{13}{2} \right\rfloor + \left\lfloor \frac{13}{4} \right\rfloor + \left\lfloor \frac{13}{8} \right\rfloor = 6 + 3 + 1 = 10\)\n" +
+            "2. \(10 - k\), \(k \in \{0, 2, 4, 6, 8, 10\}\)\n" +
+            "3. \(2^0 + 2^2 + 2^4 + 2^6 + 2^8 + 2^{10} = 1 + 4 + 16 + 64 + 256 + 1024 = 1365\)"
           ],
           ["Modified Answer",
-            "\\(1365\\)"
+            "\(1365\)"
           ]
         ]
       },
@@ -1644,17 +836,17 @@
         "description": "slide7",
         "turns": [
           ["Modified Question",
-            "Define \\(f(x)=|| x| - \\tfrac{1}{2}|\\) and \\(g(x)=|| x| - \\tfrac{1}{4}|\\). Find the number of intersections of the graphs of \\(y=4 g(f(\\sin(2 \\pi x)))\\) and \\(x=0\\). (Fix x=0 instead of the original expression.)"
+            "Define \(f(x)=|| x| - \tfrac{1}{2}|\) and \(g(x)=|| x| - \tfrac{1}{4}|\). Find the number of intersections of the graphs of \(y=4 g(f(\sin(2 \pi x)))\) and \(x=0\). (Fix x=0 instead of the original expression.)"
           ],
           ["Modified Solution",
-            "1. Set \\(x = 0\\). Then \\(y = 4g(f(\\sin(2\\pi \\cdot 0))) = 4g(f(0))\\).\n" +
-            "2. Compute \\(f(0) = \\left| \\left| 0 \\right| - \\frac{1}{2} \\right| = \\left| -\\frac{1}{2} \\right| = \\frac{1}{2}\\).\n" +
-            "3. Compute \\(g\\left(\\frac{1}{2}\\right) = \\left| \\left| \\frac{1}{2} \\right| - \\frac{1}{4} \\right| = \\left| \\frac{1}{4} \\right| = \\frac{1}{4}\\).\n" +
-            "4. Thus \\(y = 4 \\cdot \\frac{1}{4} = 1\\).\n" +
-            "5. Therefore there is exactly one intersection point at \\((0, 1)\\)."
+            "1. Set \(x = 0\). Then \(y = 4g(f(\sin(2\pi \cdot 0))) = 4g(f(0))\).\n" +
+            "2. Compute \(f(0) = \left| \left| 0 \right| - \frac{1}{2} \right| = \left| -\frac{1}{2} \right| = \frac{1}{2}\).\n" +
+            "3. Compute \(g\left(\frac{1}{2}\right) = \left| \left| \frac{1}{2} \right| - \frac{1}{4} \right| = \left| \frac{1}{4} \right| = \frac{1}{4}\).\n" +
+            "4. Thus \(y = 4 \cdot \frac{1}{4} = 1\).\n" +
+            "5. Therefore there is exactly one intersection point at \((0, 1)\)."
           ],
           ["Modified Answer",
-            "\\(1\\)"
+            "\(1\)"
           ]
         ]
       },
@@ -1662,15 +854,15 @@
         "description": "slide8",
         "turns": [
           ["Modified Question",
-            "Let p be the least prime number for which there exists a positive integer n such that \\(n^{4}+1\\) is divisible by \\(p^{2}\\). Find the least positive integer m such that \\(m^{4}+1\\) is divisible by \\(p^{2}\\). Add condition: Only consider n and m such that m=n."
+            "Let p be the least prime number for which there exists a positive integer n such that \(n^{4}+1\) is divisible by \(p^{2}\). Find the least positive integer m such that \(m^{4}+1\) is divisible by \(p^{2}\). Add condition: Only consider n and m such that m=n."
           ],
           ["Modified Solution",
-            "1. Since \\(n^4 \\equiv -1 \\mod p^2\\) forces \\(p \\equiv 1 \\mod 8\\), the least such \\(p\\) is 17.\n" +
-            "2. Mod 17, we have \\(2^4 = 16 \\equiv -1\\), and \\(f(x) = x^4 + 1\\) has \\(f'(2) = 4 \\cdot 2^3 \\not\\equiv 0 \\mod 17\\), so by Hensel's lemma, there is a unique lift modulo \\(17^2\\): \\(x = 2 + 17k\\).\n" +
-            "3. Expanding \\((2+17k)^4+1 \\equiv 17(1+32k) \\equiv 0 \\mod 289\\) gives \\(k \\equiv 9 \\mod 17\\), so the least positive solution is \\(n = m = 2 + 17 \\cdot 9 = 155\\)."
+            "1. Since \(n^4 \equiv -1 \mod p^2\) forces \(p \equiv 1 \mod 8\), the least such \(p\) is 17.\n" +
+            "2. Mod 17, we have \(2^4 = 16 \equiv -1\), and \(f(x) = x^4 + 1\) has \(f'(2) = 4 \cdot 2^3 \not\equiv 0 \mod 17\), so by Hensel's lemma, there is a unique lift modulo \(17^2\): \(x = 2 + 17k\).\n" +
+            "3. Expanding \((2+17k)^4+1 \equiv 17(1+32k) \equiv 0 \mod 289\) gives \(k \equiv 9 \mod 17\), so the least positive solution is \(n = m = 2 + 17 \cdot 9 = 155\)."
           ],
           ["Modified Answer",
-            "\\(155\\)"
+            "\(155\)"
           ]
         ]
       },
@@ -1681,77 +873,355 @@
             "Among the 900 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. Suppose the 234 residents who own exactly three of these things also own a candy store, which means all four items. Find the number of residents who own all four of these things."
           ],
           ["Modified Solution",
-            "1. Let \\(n_k\\) be the number of residents owning exactly \\(k\\) items.\n" +
-            "2. Modified gives \\(n_2 = 437\\) and those 234 with exactly three now own all four, so \\(n_3 = 0\\) and let \\(x = n_4\\).\n" +
-            "3. From \\(n_1 + n_2 + n_3 + n_4 = 900\\), \\(n_1 = 900 - 437 - x\\).\n" +
-            "4. Also the total item‑count is \\(195 + 367 + 562 + 900 = 2024\\), so \\(n_1 + 2 \\cdot 437 + 3 \\cdot 0 + 4x = 2024\\).\n" +
-            "5. Substituting \\(n_1\\) yields: \\((900 - 437 - x) + 874 + 4x = 2024 \\implies 3x = 687 \\implies x = 229\\)"
+            "1. Let \(n_k\) be the number of residents owning exactly \(k\) items.\n" +
+            "2. Modified gives \(n_2 = 437\) and those 234 with exactly three now own all four, so \(n_3 = 0\) and let \(x = n_4\).\n" +
+            "3. From \(n_1 + n_2 + n_3 + n_4 = 900\), \(n_1 = 900 - 437 - x\).\n" +
+            "4. Also the total item‑count is \(195 + 367 + 562 + 900 = 2024\), so \(n_1 + 2 \cdot 437 + 3 \cdot 0 + 4x = 2024\).\n" +
+            "5. Substituting \(n_1\) yields: \((900 - 437 - x) + 874 + 4x = 2024 \implies 3x = 687 \implies x = 229\)"
           ],
           ["Modified Answer",
-            "\\(229\\)"
+            "\(229\)"
           ]
         ]
       },
       {
-        "description": "monalisa with dog head",
+        "description": "math500-1",
         "turns": [
-          ["User", "", "/static/images/monalisa-fun.jpg"],
-          ["User", "Do you know who drew this painting?​"],
-          ["LLaVA", "The painting depicts a dog in a humorous situation, where it appears to be wearing a woman's dress and standing in front of a landscape. Although the artist of the painting is not explicitly identified, it could be a reference to the famous artist Da Vinci, known for his artistic works, including the Mona Lisa. The painting is likely a creative and comical take on the traditional portrait style, replacing a human figure with a dog dressed in a woman's clothing, making it an interesting and amusing visual piece.​"]
+          ["Modified Question",
+            "Let p(x) be a polynomial of degree 5 such that\n" +
+            "\[p(n) = \frac{n}{n^2 - 1}\]\n" +
+            "for n = 2, 3, 4, \dots, 7. Find p(8). Added condition: Suppose p(x) is actually a polynomial of degree 1 that fits the given values for n=2 and n=3. Find p(8)."
+          ],
+          ["Modified Solution",
+            "1. \(m = \frac{\frac{3}{8} - \frac{2}{3}}{3 - 2} = \frac{9}{24} - \frac{16}{24} = -\frac{7}{24}\)\n" +
+            "2. Line: \(p(x) = mx + b\)\n" +
+            "3. Use \(p(2) = \frac{2}{3}\):\n" +
+            "   \[-\frac{7}{24} \cdot 2 + b = \frac{2}{3} \Rightarrow b = \frac{2}{3} + \frac{7}{12} = \frac{5}{4}\]\n" +
+            "4. Then\n" +
+            "   \[p(8) = -\frac{7}{24} \cdot 8 + \frac{5}{4} = -\frac{56}{24} + \frac{5}{4} = -\frac{7}{3} + \frac{5}{4} = -\frac{28}{12} + \frac{15}{12} = -\frac{13}{12}\]"
+          ],
+          ["Modified Answer",
+            "\[-\frac{13}{12}\]"
+          ]
         ]
       },
       {
-        "description": "Titanic Rose and Jack",
+        "description": "math500-2",
         "turns": [
-          ["User", "", "/static/images/titanic.jpg"],
-          ["User", "What's the ending of this movie?​​"],
-          ["LLaVA", "​In the image, a young woman is leaning on a man in front of a beautiful sunset, with both of them standing on a boat. They appear to be enjoying a romantic moment together. The scene suggests that they could be depicted as the characters Jack and Rose from the popular movie Titanic. In the movie, their romance blossoms aboard the fictional ocean liner Titanic, with the pair ultimately sharing a passionate kiss as the ship sinks into the ocean. The ending of the movie is known for its emotional and heartfelt scenes, where the characters are forced to say goodbye to each other as they are separated by the sinking ship. The image evokes a sense of romance and nostalgia, paying tribute to the iconic love story portrayed in the movie Titanic.​"]
+          ["Modified Question",
+            "Let \[z = 2 + \sqrt{2} - (3 + 3 \sqrt{2})i,\] and let \[c = 2 - 3i.\] Let w be the result when z is rotated around c by \[\pi\] radians counter-clockwise. Find w."
+          ],
+          ["Modified Solution",
+            "1. \(w = c + (z - c)e^{i\pi} = c - (z - c)\)\n" +
+            "2. Compute \(z - c = (2 + \sqrt{2} - 2) + (-(3 + 3\sqrt{2}) + 3)i = \sqrt{2} - 3\sqrt{2}i = \sqrt{2}(1 - 3i)\)\n" +
+            "3. Thus \(w = 2 - 3i - \sqrt{2}(1 - 3i) = (2 - \sqrt{2}) + (3\sqrt{2} - 3)i\)"
+          ],
+          ["Modified Answer",
+            "\[(2 - \sqrt{2}) + (3\sqrt{2} - 3)i\]"
+          ]
         ]
       },
       {
-        "description": "Fridge",
+        "description": "math500-3",
         "turns": [
-          ["User", "", "/static/images/fridge.jpg"],
-          ["User", "What are the meals that I can cook with these?​​"],
-          ["LLaVA", "With the variety of food items stored in the refrigerator, you can prepare several meals. For example, you can create a fruit salad using the strawberries, blueberries, and carrots. Additionally, you can make a delicious smoothie using the fruits and vegetables, which would be a healthy and nutritious snack or breakfast option. The milk and eggs can be used to create various dishes, such as a milk-based smoothie, a baked casserole, or scrambled eggs. The juice can also be used to make a fresh fruit and juice mix or as a refreshing homemade popsicle. The possibilities are vast, and the meals you can create will depend on your preferences and dietary needs.​​"],
-          ["User", "I would like to do the fruit salad.  Show me the recipe.​"],
-          ["LLaVA",
-            `Certainly! Here's a simple fruit salad recipe using the items in your refrigerator:​
-
-Ingredients:​
-- 2 cups fresh strawberries, sliced​
-- 1 cup fresh blueberries​
-- 1 large carrot, grated​
-- Juice of half a lemon​
-- A handful of chopped fresh parsley or mint​
-- A few ice cubes​
-- Optional: honey or maple syrup (adjust to taste)​
-
-Instructions:​
-1. In a large bowl, combine the sliced strawberries, blueberries, and carrot. Gently toss them together to mix.​
-2. Drizzle the juice of half a lemon over the fruit and vegetables to prevent them from oxidizing and add a refreshing citrus flavor.​
-3. Sprinkle the chopped fresh parsley or mint over the fruit and gently toss once more.​
-4. If desired, add a drizzle of honey or maple syrup for a touch of sweetness. Adjust the amount according to your taste preferences.​
-5. Cover the bowl and refrigerate the fruit salad for at least 30 minutes or up to a few hours. This allows the flavors to meld and creates a more refreshing salad.​
-6. Serve the fruit salad in cups or bowls, garnished with a sprinkle of fresh parsley or mint, if desired.​
-
-This fruit salad recipe is perfect for a healthy snack or side dish, and with the variety of ingredients available in your refrigerator, it should be easy to put together quickly.`]]
+          ["Modified Question",
+            "Denali and Nate work for a dog walking business and are paid for each dog they walk. Denali is responsible for 16 dogs and Nate is responsible for 20 dogs. If Denali's pay doubles when she takes on x more dogs from Nate, find x."
+          ],
+          ["Modified Solution",
+            "1. Let p be the pay per dog.\n" +
+            "2. Initially Denali earns 16p.\n" +
+            "3. After taking x dogs, she earns (16+x)p, which doubles her pay: (16+x)p = 2 · 16p = 32p.\n" +
+            "4. Hence 16 + x = 32 and x = 16."
+          ],
+          ["Modified Answer",
+            "\[16\]"
+          ]
+        ]
       },
       {
-        "description": "Beautiful View",
+        "description": "math500-4",
         "turns": [
-          ["User", "", "/static/images/view.jpg"],
-          ["User", "What are the things I should be cautious about when I visit here?​​"],
-          ["LLaVA", "When visiting this peaceful location with a pier extending over a serene lake, surrounded by mountains, there are several things to be cautious about. First, pay attention to the weather conditions, as sudden changes in weather, especially strong winds or storms, can cause the water to become rough and pose risks to the stability of the pier. Second, be mindful of the structural integrity of the pier; avoid overloading it with too many people or excessive weight, as this could potentially damage the pier or cause it to collapse. Additionally, be aware of the surrounding wildlife and respect their space; do not harm or disturb them in any way. Finally, if you decide to go fishing, ensure that you adhere to any local fishing regulations and use appropriate fishing techniques to keep the lake ecosystem healthy and maintain the balance of the food chain.​​"],
-          ["User", "Compose an engaging travel blog post about my trip to this place, highlighting the beautiful sceneries, joyful experiences, and include possible anecdotes.​​"],
-          ["LLaVA",
-            `Traveling to this picturesque location with a serene lake and mountains in the background was a refreshing and rejuvenating experience. The pier extending over the calm water provided an excellent vantage point from which to appreciate the breathtaking scenery. As I stood on the pier, I couldn't help but feel a deep connection with nature, taking a moment to soak in the peaceful atmosphere.​
-
-One of the highlights of my trip was undoubtedly the fishing experience. The area is teeming with life, and I was thrilled to land a sizeable catch, despite the modest size of the lake. The joy of fishing in such a beautiful setting was truly rewarding, and it allowed me to take a break from my busy life and truly immerse myself in the tranquility of nature.​
-
-While exploring the surrounding area, I came across a family of birds that had built a nest close to the pier, adding to the charm of the location. Interacting with the wildlife and observing their behavior was an enriching experience that I'll cherish for years to come.​
-
-In conclusion, this idyllic destination provided me with an opportunity to unwind and recharge, surrounded by mesmerizing natural beauty and the gentle sounds of water and wildlife. If you're looking for a serene escape from the hustle and bustle of everyday life, this pier overlooking the lake is the perfect place to find solace and reconnect with nature.`
+          ["Modified Question",
+            "Find the number of integer values of k in the closed interval [-500,500] for which the equation\n" +
+            "\[\log(kx) = 2 \log(x+2)\]\n" +
+            "has exactly one real solution. Assume \[k\geq 0\]."
+          ],
+          ["Modified Solution",
+            "1. Domain requires \(k>0\) and \(x>0\).\n" +
+            "2. Rewrite \(\log(kx)=2\log(x+2)\) as \(kx=(x+2)^2 \Rightarrow x^2+(4-k)x+4=0\).\n" +
+            "3. Discriminant \(D=(k-4)^2-16=k(k-8)\).\n" +
+            "4. Exactly one real solution with \(x>0\) occurs only when \(D=0\) and root>0.\n" +
+            "5. \(D=0\Rightarrow k=0\) or \(8\), but \(k>0\Rightarrow k=8\), giving double root \(x=\frac{k-4}{2}=2>0\)."
+          ],
+          ["Modified Answer",
+            "\[1\]"
+          ]
+        ]
+      },
+      {
+        "description": "math500-5",
+        "turns": [
+          ["Modified Question",
+            "Let x, y, and z be positive real numbers such that xyz = 2. Find the minimum value of \[x^4 + 4y^2 + 4z^4\] given that x = 1."
+          ],
+          ["Modified Solution",
+            "1. Since \(x = 1\) and \(xyz = 2\), we have \(yz = 2\), so \(y = \frac{2}{z}\).\n" +
+            "2. Substitute into the target: \(f(z) = 1^4 + 4y^2 + 4z^4 = 1 + 4\left(\frac{2}{z}\right)^2 + 4z^4 = 1 + \frac{16}{z^2} + 4z^4\).\n" +
+            "3. Compute \(f'(z) = -\frac{32}{z^3} + 16z^3\) and set to zero: \(16z^3 = \frac{32}{z^3} \Rightarrow z^6 = 2 \Rightarrow z = 2^{1/6}\). Then \(y = \frac{2}{z} = 2^{5/6}\).\n" +
+            "4. The minimum is \(f(2^{1/6}) = 1 + \frac{16}{2^{1/3}} + 4 \times 2^{2/3} = 1 + 8 \times 2^{2/3} + 4 \times 2^{2/3} = 1 + 12 \times 2^{2/3}\)."
+          ],
+          ["Modified Answer",
+            "\[1 + 12 \cdot 2^{2/3}\]"
+          ]
+        ]
+      },
+      {
+        "description": "math500-6",
+        "turns": [
+          ["Modified Question",
+            "Find all real numbers x such that \[\frac{x^2 + 2x + 1}{x^2 - 1} = 2\] given that x \neq 1."
+          ],
+          ["Modified Solution",
+            "1. Since \(x \neq 1\), we can multiply both sides by \(x^2 - 1\): \(x^2 + 2x + 1 = 2(x^2 - 1)\).\n" +
+            "2. Expand and simplify: \(x^2 + 2x + 1 = 2x^2 - 2 \Rightarrow -x^2 + 2x + 3 = 0\).\n" +
+            "3. Multiply by -1: \(x^2 - 2x - 3 = 0\).\n" +
+            "4. Factor: \((x - 3)(x + 1) = 0\).\n" +
+            "5. Solutions: \(x = 3\) or \(x = -1\)."
+          ],
+          ["Modified Answer",
+            "\[x = 3 \text{ or } x = -1\]"
+          ]
+        ]
+      },
+      {
+        "description": "math500-7",
+        "turns": [
+          ["Modified Question",
+            "A circle has radius 5 and center at the origin. Find the area of the region inside the circle but outside the square with vertices at \((\pm 3, \pm 3)\)."
+          ],
+          ["Modified Solution",
+            "1. Area of circle: \(\pi r^2 = 25\pi\).\n" +
+            "2. Area of square: \(6 \times 6 = 36\).\n" +
+            "3. Desired area = Circle area - Square area = \(25\pi - 36\)."
+          ],
+          ["Modified Answer",
+            "\[25\pi - 36\]"
+          ]
+        ]
+      },
+      {
+        "description": "math500-8",
+        "turns": [
+          ["Modified Question",
+            "Find the sum of all positive integers n such that \(n^2 + n + 1\) is divisible by 7."
+          ],
+          ["Modified Solution",
+            "1. Note that \(n^2 + n + 1 = (n + 1)^2\).\n" +
+            "2. We need \((n + 1)^2 \equiv 0 \pmod{7}\).\n" +
+            "3. This means \(n + 1 \equiv 0 \pmod{7}\).\n" +
+            "4. So \(n \equiv 6 \pmod{7}\).\n" +
+            "5. The positive integers satisfying this are 6, 13, 20, ..., 97.\n" +
+            "6. Sum = \(\frac{14}{2}(6 + 97) = 721\)."
+          ],
+          ["Modified Answer",
+            "\[721\]"
+          ]
+        ]
+      },
+      {
+        "description": "math500-9",
+        "turns": [
+          ["Modified Question",
+            "Let f(x) = x^3 - 3x^2 + 2x. Find all real numbers x such that f(x) = 0 and x > 1."
+          ],
+          ["Modified Solution",
+            "1. Factor: \(f(x) = x(x^2 - 3x + 2) = x(x - 1)(x - 2)\).\n" +
+            "2. Set \(f(x) = 0\): \(x(x - 1)(x - 2) = 0\).\n" +
+            "3. Solutions: \(x = 0, 1, 2\).\n" +
+            "4. Only \(x = 2\) satisfies \(x > 1\)."
+          ],
+          ["Modified Answer",
+            "\[x = 2\]"
+          ]
+        ]
+      },
+      {
+        "description": "math500-10",
+        "turns": [
+          ["Modified Question",
+            "Find the number of ways to arrange the letters in \"MISSISSIPPI\" if the first letter must be 'M' and the last letter must be 'I'."
+          ],
+          ["Modified Solution",
+            "1. Fix M at start and I at end.\n" +
+            "2. Remaining letters: ISSISSIP (2 I's, 4 S's, 2 P's).\n" +
+            "3. Number of arrangements = \(\frac{8!}{2!4!2!} = 420\)."
+          ],
+          ["Modified Answer",
+            "\[420\]"
+          ]
+        ]
+      },
+      {
+        "description": "math500-11",
+        "turns": [
+          ["Modified Question",
+            "A triangle has sides of length 5, 6, and 7. Find the radius of its circumscribed circle."
+          ],
+          ["Modified Solution",
+            "1. Use the formula \(R = \frac{abc}{4K}\) where \(K\) is the area.\n" +
+            "2. Find area using Heron's formula: \(s = 9\), \(K = \sqrt{9(4)(3)(2)} = 6\sqrt{6}\).\n" +
+            "3. Thus \(R = \frac{5 \times 6 \times 7}{4 \times 6\sqrt{6}} = \frac{35}{4\sqrt{6}}\)."
+          ],
+          ["Modified Answer",
+            "\[\frac{35}{4\sqrt{6}}\]"
+          ]
+        ]
+      },
+      {
+        "description": "math500-12",
+        "turns": [
+          ["Modified Question",
+            "Find the sum of all positive integers n such that \(n^2 + n + 1\) is divisible by 13."
+          ],
+          ["Modified Solution",
+            "1. We need \(n^2 + n + 1 \equiv 0 \pmod{13}\).\n" +
+            "2. Complete the square: \((n + 7)^2 \equiv 48 \pmod{13}\).\n" +
+            "3. Since 48 ≡ 9 mod 13, we need \((n + 7)^2 \equiv 9 \pmod{13}\).\n" +
+            "4. Thus \(n + 7 \equiv \pm 3 \pmod{13}\).\n" +
+            "5. Solutions: \(n \equiv 9\) or \(n \equiv 3 \pmod{13}\).\n" +
+            "6. Sum = 3 + 9 + 16 + 22 + 29 + 35 = 114."
+          ],
+          ["Modified Answer",
+            "\[114\]"
+          ]
+        ]
+      },
+      {
+        "description": "math500-13",
+        "turns": [
+          ["Modified Question",
+            "Let f(x) = \frac{x^2 - 1}{x - 1}. Find all real numbers x such that f(x) = 2 and x \neq 1."
+          ],
+          ["Modified Solution",
+            "1. Since \(x \neq 1\), we can simplify: \(f(x) = x + 1\).\n" +
+            "2. Set \(f(x) = 2\): \(x + 1 = 2\).\n" +
+            "3. Thus \(x = 1\), but this contradicts \(x \neq 1\).\n" +
+            "4. Therefore, there are no solutions."
+          ],
+          ["Modified Answer",
+            "No solutions"
+          ]
+        ]
+      },
+      {
+        "description": "math500-14",
+        "turns": [
+          ["Modified Question",
+            "Find the number of ways to arrange 5 red balls and 3 blue balls in a row if no two blue balls can be adjacent."
+          ],
+          ["Modified Solution",
+            "1. First arrange the 5 red balls: 1 way.\n" +
+            "2. There are 6 possible positions for the blue balls (before, between, and after red balls).\n" +
+            "3. Choose 3 positions from 6: \(\binom{6}{3} = 20\)."
+          ],
+          ["Modified Answer",
+            "\[20\]"
+          ]
+        ]
+      },
+      {
+        "description": "math500-15",
+        "turns": [
+          ["Modified Question",
+            "A circle has radius 4 and center at the origin. Find the area of the region inside the circle but outside the square with vertices at \((\pm 2, \pm 2)\)."
+          ],
+          ["Modified Solution",
+            "1. Area of circle: \(\pi r^2 = 16\pi\).\n" +
+            "2. Area of square: \(4 \times 4 = 16\).\n" +
+            "3. Desired area = Circle area - Square area = \(16\pi - 16\)."
+          ],
+          ["Modified Answer",
+            "\[16\pi - 16\]"
+          ]
+        ]
+      },
+      {
+        "description": "puzzletrivial-1",
+        "turns": [
+          ["Modified Question",
+            "An underground parking garage with an infinite number of parking spaces is partially full. A new car arrives—what can the attendant do to make space?"
+          ],
+          ["Modified Solution",
+            "1. The garage is only partially full, meaning there are empty spaces available.\n" +
+            "2. Since there are empty spaces, the attendant can simply direct the new car to any available empty space.\n" +
+            "3. No need for complex rearrangement since the garage is not full."
+          ],
+          ["Modified Answer",
+            "Move the new car to any empty parking space."
+          ]
+        ]
+      },
+      {
+        "description": "puzzletrivial-2",
+        "turns": [
+          ["Modified Question",
+            "A runaway trolley is heading down the tracks away from five people upwards of the track. You are near a lever that can switch the trolley to another track. How might pulling the lever impact the five people's lives?"
+          ],
+          ["Modified Solution",
+            "1. The trolley is moving away from the five people, not towards them.\n" +
+            "2. Since the trolley is moving in the opposite direction, it poses no threat to the five people.\n" +
+            "3. Pulling the lever would have no impact on the five people's safety."
+          ],
+          ["Modified Answer",
+            "No, as the trolley is heading down the tracks in the opposite direction to the five people up the track."
+          ]
+        ]
+      },
+      {
+        "description": "puzzletrivial-3",
+        "turns": [
+          ["Modified Question",
+            "There are 12 coins, and one is rumored to be heavier than the rest. You have a perfect balance scale to determine which coin it is. However, all coins are actually identical. Which coin is heavier?"
+          ],
+          ["Modified Solution",
+            "1. The question states that all coins are actually identical.\n" +
+            "2. Despite the rumor about one coin being heavier, the reality is that all coins weigh the same.\n" +
+            "3. No matter how many times you use the balance scale, it will always show equal weights."
+          ],
+          ["Modified Answer",
+            "None—they all weigh the same."
+          ]
+        ]
+      },
+      {
+        "description": "puzzletrivial-4",
+        "turns": [
+          ["Modified Question",
+            "In a long line of ancient scrolls, one contains the secret to immortality whose position is known. The scrolls are sorted in increasing magical power. You must find the secret scroll using the fewest inspections possible."
+          ],
+          ["Modified Solution",
+            "1. The position of the secret scroll is already known.\n" +
+            "2. Since we know exactly where the scroll is, we only need one inspection.\n" +
+            "3. No need for binary search or multiple inspections since the location is given."
+          ],
+          ["Modified Answer",
+            "1, position of the secret scroll is known."
+          ]
+        ]
+      },
+      {
+        "description": "puzzletrivial-5",
+        "turns": [
+          ["Modified Question",
+            "How do you measure exactly 3 gallons of water with only a 3-gallon, 5-gallon, 4-gallon, and 2-gallon jug if you are a clever gardener?"
+          ],
+          ["Modified Solution",
+            "1. You have a 3-gallon jug available.\n" +
+            "2. Since you need exactly 3 gallons, and you have a 3-gallon jug, the solution is straightforward.\n" +
+            "3. Simply fill up the 3-gallon jug to get exactly 3 gallons."
+          ],
+          ["Modified Answer",
+            "Fill up the 3-gallon jug"
           ]
         ]
       },
