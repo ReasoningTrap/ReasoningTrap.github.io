@@ -126,24 +126,10 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-10">
-          <div class="teaser-grid">
-            <div><img src="static/images/teaser1.gif" alt="Teaser 1"></div>
-            <div><img src="static/images/teaser2.gif" alt="Teaser 2"></div>
-            <div><img src="static/images/teaser3.gif" alt="Teaser 3"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="hero is-light is-small">
+  <section class="hero is-white is-small">
     <div class="hero-body">
       <div class="container">
-        <div class="carousel-extra-padding">
+        <div class="carousel-extra-padding" style="width: 80%; margin: 0 auto;">
 
           <div id="results-carousel" class="carousel results-carousel">
             <!-- ─────────────  Slide 1  ───────────── -->
@@ -166,24 +152,6 @@
       </div>
     </div>
   </section>
-
-  <style>
-    .teaser-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      /* 3 equal columns */
-      width: 130%;
-      /* span the full page width */
-      gap: 0;
-      margin: 0 auto;
-    }
-
-    .teaser-grid img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  </style>
 
   <section class="section" style="background-color:#efeff081">
     <div class="container is-max-desktop">
@@ -215,16 +183,14 @@
   </section>
 
 
-  </div>
-  </div>
-  </section>
-
   <section class="section">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
         <h2 class="title is-4"><img id="painting_icon" width="4%"
             src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"> What is Reasoning Rigidity in Reasoning
-          Models? </h2>
+          Models?
+        </h2>
 
         <div>
           <img id="rigidity" width="98%" src="static/images/rigidity.png">
@@ -234,16 +200,13 @@
             reasoning patterns, a phenomenon we term reasoning rigidity. Despite explicit instructions from users, these
             models often override clearly stated conditions with three patterns: (i) Interpretation Overload, (ii) Input
             Distrust, and (iii) Partial Instruction Attention. </b>
-      </div>
-    </div>
-  </section>
+        </p>
+        <br>
+        <br>
+        <br>
 
-  <section class="section">
-    <!-- Results. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
         <h2 class="title is-3"><img id="painting_icon" width="3%"
-            src="https://cdn-icons-png.flaticon.com/512/3515/3515174.png"> Dataset Construction</h2>
+            src="https://cdn-icons-png.flaticon.com/512/3515/3515174.png"> Diagnostic Set Construction</h2>
       </div>
     </div>
     <!-- </div> -->
@@ -322,11 +285,16 @@
       <div class="hero-body">
         <div class="container">
           <div class="columns is-centered">
-            <div class="columns is-centered has-text-centered">
-              <h1 class="title is-5"> Reasoning Models have Lower Accuracy on Mathematical & Logical Reasoning due to
-                Reasoning Rigidity </h1>
-            </div>
             <div class="column is-four-fifths">
+
+              <br>
+              <br>
+
+              <div class="columns is-centered has-text-centered">
+                <h1 class="title is-5"> Reasoning Models have Lower Accuracy on Mathematical & Logical Reasoning due to
+                  Reasoning Rigidity </h1>
+              </div>
+
               <div class="box">
                 <img id="main_math" width="160%" src="static/images/main_math.png">
                 <h3 class="subtitle has-text-centered">
@@ -341,6 +309,10 @@
                       Models</b></p>
                 </h3>
               </div>
+
+              <br>
+              <br>
+
               <div class="columns is-centered has-text-centered">
                 <h1 class="title is-5"> Various RL objectives Worsen Reasoning Rigidity </h1>
               </div>
@@ -351,6 +323,10 @@
                       Suffer from Reasoning Rigidity</b></p>
                 </h3>
               </div>
+
+              <br>
+              <br>
+
               <div class="columns is-centered has-text-centered">
                 <h1 class="title is-5"> Reasoning Rigidity is Observed Across Varying Model Sizes </h1>
               </div>
@@ -381,7 +357,6 @@
                 class="material-icons">keyboard_arrow_left</i></button>
             <button type="button" class="form-control btn btn-primary" id="next-question"><i
                 class="material-icons">keyboard_arrow_right</i></button>
-
           </div>
         </div>
       </div>
