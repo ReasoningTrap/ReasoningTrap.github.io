@@ -1517,15 +1517,31 @@
     // 
     const conversations = [
       {
-        "description": "monalisa",
+        "description": "slide1",
         "turns": [
-          // ["Description", "Please read the description and answer the question."],
-          ["User", "", "/static/images/monalisa.jpg"],
-          ["User", "Do you know who drew this painting?​"],
-          ["LLaVA",
-            "The painting depicts a woman, commonly believed to be Mona Lisa, the famous artwork by Leonardo da Vinci. " +
-            "It is a portrait painting that showcases the woman's enigmatic smile and has become one of the most famous and iconic art pieces in the world. " +
-            "The original work is displayed in the Louvre Museum in Paris, and it is known for its intricate details, use of oil paint, and the artist's innovative techniques that contributed to its enduring appeal and mystery.​​"
+          ["User",
+            "Modified Question:\n" +
+            "A straight river that is 264 m wide flows from west to east at 14 m/min. " +
+            "Melanie and Sherry sit on the south bank with Melanie a distance D metres downstream from Sherry. " +
+            "Each heads for the point directly opposite Sherry and they arrive simultaneously. " +
+            "Melanie swims at 80 m/min relative to the water, while Sherry swims at 60 m/min. " +
+            "Find D."
+          ],
+          ["User",
+            "Modified Solution:\n" +
+            "1. Sherry:\n" +
+            "   - To land at x=0 we need horizontal speed -60sinθS + 14 = 0 ⟹ sinθS = 7/30\n" +
+            "   - Hence vy,S = 60cosθS = 60√(1-49/900) = 2√851\n" +
+            "   - Time: t = 264/(2√851) = 132/√851\n\n" +
+            "2. Melanie:\n" +
+            "   - Vertical motion: 80cosθM t = 264 ⟹ cosθM = √851/40\n" +
+            "   - So sinθM = √749/40\n" +
+            "   - Horizontal displacement: (80sinθM-14)t = D\n" +
+            "   - Hence D = (80·√749/40-14)(132/√851) = 264(√749-7)/√851 ≈ 184.4 m"
+          ],
+          ["User",
+            "Modified Answer:\n" +
+            "264(√749-7)/√851 ≈ 184.4 m"
           ]
         ]
       },
