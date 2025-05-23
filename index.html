@@ -553,12 +553,7 @@
       chatHistory.appendChild(chatRow);
       chatHistory.scrollTop = chatHistory.scrollHeight;
 
-      // ✅ Ensure MathJax re-renders the new content
-      if (window.MathJax) {
-        MathJax.typesetPromise([chatRow])
-          .then(() => console.log("MathJax rendered"))
-          .catch((err) => console.error("MathJax error:", err.message));
-      }
+      MathJax.typesetPromise([chatRow]);
     }
     function clearChatHistory() {
       const chatHistory = document.querySelector('.chat-history');
@@ -589,7 +584,7 @@
             "- Hence, \(D = \\left(80 \\cdot \\frac{\\sqrt{749}}{40} - 14\\right) \\cdot \\left(\\frac{132}{\\sqrt{851}}\\right) = \\frac{264(\\sqrt{749} - 7)}{\\sqrt{851}} \\approx 184.4\,\\text{m}\)"
           ],
           ["Modified Answer",
-            "\(\frac{264(\sqrt{749}-7)}{\sqrt{851}} \approx 184.4\) m"
+            "\\(\\frac{264(\\sqrt{749}-7)}{\\sqrt{851}} \\approx 184.4\\) m"
           ]
         ]
       },
