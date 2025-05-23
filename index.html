@@ -521,10 +521,6 @@
       // wrap text in pre tag to preserve whitespace and line breaks
       var pre_text = document.createElement("pre");
       pre_text.style = "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
-
-
-      // var paraText = document.createTextNode(text);
-      // pre_text.appendChild(paraText);
       pre_text.innerHTML = text;
 
       var strong = document.createElement("strong");
@@ -585,18 +581,18 @@
             "Find D."
           ],
           ["Modified Solution",
-            "1. Sherry:\n" +
-            "   - To land at x=0 we need horizontal speed \(-60\\sin\\theta_S + 14 = 0 \implies \\sin\\theta_S = \\frac{7}{30}\)\n" +
-            "   - Hence \(v_{y,S} = 60\\cos\\theta_S = 60\\sqrt{1-\\frac{49}{900}} = 2\\sqrt{851}\)\n" +
-            "   - Time: \(t = \\frac{264}{2\\sqrt{851}} = \\frac{132}{\\sqrt{851}}\)\n\n" +
-            "2. Melanie:\n" +
-            "   - Vertical motion: \(80\\cos\\theta_M t = 264 \implies \\cos\\theta_M = \\frac{\\sqrt{851}}{40}\)\n" +
-            "   - So \(\sin\theta_M = \\frac{\\sqrt{749}}{40}\)\n" +
-            "   - Horizontal displacement: \((80\\sin\\theta_M-14)t = D\)\n" +
-            "   - Hence \(D = (80\\cdot\\frac{\\sqrt{749}}{40}-14)(\\frac{132}{\\sqrt{851}}) = \\frac{264(\\sqrt{749}-7)}{\\sqrt{851}} \\approx 184.4\) m"
+            "1. <b>Sherry:</b><br>" +
+            "- To land at \(x=0\) we need horizontal speed: \\(-60\\sin\\theta_S + 14 = 0 \\Rightarrow \\sin\\theta_S = \\frac{7}{30}\\)<br>" +
+            "- Hence, \(v_{y,S} = 60\\cos\\theta_S = 60\\sqrt{1 - \\frac{49}{900}} = 2\\sqrt{851}\)<br>" +
+            "- Time: \(t = \\frac{264}{2\\sqrt{851}} = \\frac{132}{\\sqrt{851}}\)<br><br>" +
+            "2. <b>Melanie:</b><br>" +
+            "- Vertical motion: \(80\\cos\\theta_M t = 264 \\Rightarrow \\cos\\theta_M = \\frac{\\sqrt{851}}{40}\)<br>" +
+            "- So, \(\\sin\\theta_M = \\frac{\\sqrt{749}}{40}\)<br>" +
+            "- Horizontal displacement: \\((80\\sin\\theta_M - 14)t = D\\)<br>" +
+            "- Hence, \(D = \\left(80 \\cdot \\frac{\\sqrt{749}}{40} - 14\\right) \\cdot \\left(\\frac{132}{\\sqrt{851}}\\right) = \\frac{264(\\sqrt{749} - 7)}{\\sqrt{851}} \\approx 184.4\,\\text{m}\)"
           ],
           ["Modified Answer",
-            "\(\\frac{264(\\sqrt{749}-7)}{\\sqrt{851}} \\approx 184.4\) m"
+            "\(\frac{264(\sqrt{749}-7)}{\sqrt{851}} \approx 184.4\) m"
           ]
         ]
       },
