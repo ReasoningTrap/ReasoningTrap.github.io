@@ -129,7 +129,7 @@
   <section class="hero is-white is-small">
     <div class="hero-body">
       <div class="container">
-        <div class="carousel-extra-padding" style="width: 80%; margin: 0 auto;">
+        <div class="carousel-extra-padding" style="width: 55%; margin: 0 auto;">
 
           <div id="results-carousel" class="carousel results-carousel">
             <!-- ─────────────  Slide 1  ───────────── -->
@@ -551,8 +551,12 @@
       const chatRow = createChatRow(sender, message, imageSrc);
       chatHistory.appendChild(chatRow);
       chatHistory.scrollTop = chatHistory.scrollHeight;
-    }
 
+      // 🔁 Re-render LaTeX equations
+      if (window.MathJax) {
+        MathJax.typeset();
+      }
+    }
     function clearChatHistory() {
       const chatHistory = document.querySelector('.chat-history');
       chatHistory.innerHTML = "";
