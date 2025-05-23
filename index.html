@@ -196,19 +196,18 @@
 
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <div class="box">
-          <img id="rigidity" width="98%" src="static/images/rigidity.png">
-          <h3 class="subtitle has-text-centered">
-            <p style="font-family:Times New Roman"><b>Reasoning models often exhibit a problematic reliance on
-                familiar
-                reasoning patterns, a phenomenon we term reasoning rigidity. Despite explicit instructions from users,
-                these
-                models often override clearly stated conditions with three patterns: (i) Interpretation Overload, (ii)
-                Input
-                Distrust, and (iii) Partial Instruction Attention. </b>
-            </p>
-          </h3>
-        </div>
+        <img id="pipeline" width="98%" src="static/images/rigidity.png">
+        <h3 class="subtitle has-text-centered">
+          <p style="font-family:Times New Roman"><b>Reasoning models often exhibit a problematic reliance on
+              familiar
+              reasoning patterns, a phenomenon we term reasoning rigidity. Despite explicit instructions from users,
+              these
+              models often override clearly stated conditions with three patterns: (i) Interpretation Overload, (ii)
+              Input
+              Distrust, and (iii) Partial Instruction Attention. </b>
+          </p>
+        </h3>
+
       </div>
     </div>
 
@@ -496,7 +495,7 @@
       span.className = "icon is-large";
 
       var icon = document.createElement("i");
-      icon.className = "fas fas fa-2x" + (sender === "Modified Question" ? " fa-question-circle " : sender === "Modified Solution" ? " fa-pencil " : sender === "Modified Answer" ? " fa-check-square " : "");
+      icon.className = "fas fas fa-2x" + (sender === "Modified Question" ? " fa-question-circle " : sender === "Modified Solution" ? " fa-info-circle " : sender === "Modified Answer" ? " fa-check-square " : "");
 
       var media = document.createElement("div");
       media.className = "media-content";
