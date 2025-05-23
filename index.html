@@ -521,6 +521,11 @@
       // wrap text in pre tag to preserve whitespace and line breaks
       var pre_text = document.createElement("pre");
       pre_text.style = "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
+
+      // Replace LaTeX delimiters with MathJax delimiters
+      text = text.replace(/\\\(/g, '$$').replace(/\\\)/g, '$$');
+      text = text.replace(/\\\[/g, '$$$').replace(/\\\]/g, '$$$');
+
       var paraText = document.createTextNode(text);
       pre_text.appendChild(paraText);
 
@@ -557,9 +562,11 @@
       chatHistory.appendChild(chatRow);
       chatHistory.scrollTop = chatHistory.scrollHeight;
 
-      // 🔁 Re-render LaTeX equations
+      // Re-render LaTeX equations with MathJax
       if (window.MathJax) {
-        MathJax.typeset();
+        MathJax.typesetPromise().catch(function (err) {
+          console.log('MathJax error: ' + err.message);
+        });
       }
     }
     function clearChatHistory() {
@@ -581,17 +588,17 @@
           ],
           ["Modified Solution",
             "1. Sherry:\n" +
-            "   - To land at x=0 we need horizontal speed \(-60\sin\theta_S + 14 = 0 \implies \sin\theta_S = \frac{7}{30}\)\n" +
-            "   - Hence \(v_{y,S} = 60\cos\theta_S = 60\sqrt{1-\frac{49}{900}} = 2\sqrt{851}\)\n" +
-            "   - Time: \(t = \frac{264}{2\sqrt{851}} = \frac{132}{\sqrt{851}}\)\n\n" +
+            "   - To land at x=0 we need horizontal speed \(-60\\sin\\theta_S + 14 = 0 \implies \\sin\\theta_S = \\frac{7}{30}\)\n" +
+            "   - Hence \(v_{y,S} = 60\\cos\\theta_S = 60\\sqrt{1-\\frac{49}{900}} = 2\\sqrt{851}\)\n" +
+            "   - Time: \(t = \\frac{264}{2\\sqrt{851}} = \\frac{132}{\\sqrt{851}}\)\n\n" +
             "2. Melanie:\n" +
-            "   - Vertical motion: \(80\cos\theta_M t = 264 \implies \cos\theta_M = \frac{\sqrt{851}}{40}\)\n" +
-            "   - So \(\sin\theta_M = \frac{\sqrt{749}}{40}\)\n" +
-            "   - Horizontal displacement: \((80\sin\theta_M-14)t = D\)\n" +
-            "   - Hence \(D = (80\cdot\frac{\sqrt{749}}{40}-14)(\frac{132}{\sqrt{851}}) = \frac{264(\sqrt{749}-7)}{\sqrt{851}} \approx 184.4\) m"
+            "   - Vertical motion: \(80\\cos\\theta_M t = 264 \implies \\cos\\theta_M = \\frac{\\sqrt{851}}{40}\)\n" +
+            "   - So \(\sin\theta_M = \\frac{\\sqrt{749}}{40}\)\n" +
+            "   - Horizontal displacement: \((80\\sin\\theta_M-14)t = D\)\n" +
+            "   - Hence \(D = (80\\cdot\\frac{\\sqrt{749}}{40}-14)(\\frac{132}{\\sqrt{851}}) = \\frac{264(\\sqrt{749}-7)}{\\sqrt{851}} \\approx 184.4\) m"
           ],
           ["Modified Answer",
-            "\(\frac{264(\sqrt{749}-7)}{\sqrt{851}} \approx 184.4\) m"
+            "\(\\frac{264(\\sqrt{749}-7)}{\\sqrt{851}} \\approx 184.4\) m"
           ]
         ]
       },
