@@ -576,13 +576,8 @@
 
     /* now that it’s in the DOM, typeset */
     if (window.MathJax) MathJax.typesetPromise([row]);
-    pane.style.height = "auto";
-    const cap = window.innerHeight * 0.6;  // 60 vh
-    if (pane.scrollHeight > cap) {
-      pane.style.height = "60vh";
-      pane.scrollTop = pane.scrollHeight;
-    }
-    // history.scrollTop = history.scrollHeight;
+
+    history.scrollTop = history.scrollHeight;
   }
   function clearHistory() {
     const pane = document.querySelector('.chat-history');
