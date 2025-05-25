@@ -541,6 +541,14 @@
       var para = document.createElement("p");
 
       // wrap text in pre tag to preserve whitespace and line breaks
+      const text = `
+        Inline math: \\( a^2 + b^2 = c^2 \\)
+
+        Block math:
+        $$
+        \\int_0^1 x^2 \\, dx = \\frac{1}{3}
+        $$
+        `;
       var pre_text = document.createElement("pre");
       pre_text.style = "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
       pre_text.innerHTML = text;
