@@ -1115,6 +1115,15 @@
       // scroll to the top of the chat history
       document.querySelector('.chat-history').scrollTop = 0;
     }
+    createChatRow("Modified Solution", `
+      1. To land at \\(x=0\\), Sherry needs horizontal speed: \\(-60\\sin\\theta_S + 14 = 0 \\Rightarrow \\sin\\theta_S = \\frac{7}{30}\\)\\n
+      2. Hence, \\(v_{y,S} = 60\\cos\\theta_S = 60\\sqrt{1 - \\frac{49}{900}} = 2\\sqrt{851}\\)\\n
+      3. Time: \\(t = \\frac{264}{2\\sqrt{851}} = \\frac{132}{\\sqrt{851}}\\)\\n\\n
+      4. Melanie: \\(80\\cos\\theta_M \\cdot t = 264 \\Rightarrow \\cos\\theta_M = \\frac{\\sqrt{851}}{40}\\)\\n
+      5. So \\(\\sin\\theta_M = \\frac{\\sqrt{749}}{40}\\)\\n
+      6. Horizontal: \\((80\\sin\\theta_M - 14)t = D\\)\\n
+      7. Final: \\(D = \\frac{264(\\sqrt{749} - 7)}{\\sqrt{851}}\\)
+      `);
 
     // Initialize the displayed image
     update_dialog_demo();
