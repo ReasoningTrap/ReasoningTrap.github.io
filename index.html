@@ -437,6 +437,21 @@
     .carousel .item .box {
       margin: 0 2rem;
     }
+
+    /* cap but don’t force a fixed height */
+    .chat-history {
+      max-height: 60vh;
+      /* upper bound */
+      height: auto;
+      /* let it shrink / grow naturally */
+      overflow-y: auto;
+      /* scrollbar appears only when needed */
+
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      background: #fafafa;
+    }
   </style>
 
   <script>
@@ -569,8 +584,11 @@
     history.scrollTop = history.scrollHeight;
   }
   function clearHistory() {
-    document.querySelector(".chat-history").innerHTML = "";
+    const pane = document.querySelector('.chat-history');
+    pane.innerHTML = '';
+    pane.style.height = '';   // remove old inline height so CSS ‘auto’ wins
   }
+
 
   /* ---------- demo data ---------- */
   const conversations = [
@@ -1205,6 +1223,7 @@ have exactly one real solution?"
         ["Modified Answer", "Fill the 3-gallon jug."]
       ]
     },
+
   ];
 
   /* ---------- simple slideshow ---------- */
