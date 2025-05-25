@@ -494,107 +494,98 @@
   </button>
 </div>
 
-<!-- ------- the supplied script goes below ------- -->
+
 <script>
-  /* --------- helpers to build a chat row --------- */
+  /* ---------- build a single chat row ---------- */
   function createChatRow(sender, text, imageSrc) {
-    var article = document.createElement("article");
+    const article = document.createElement("article");
     article.className = "media";
 
-    var figure = document.createElement("figure");
-    figure.className = "media-left";
+    /* icon column (skip for 'Description') */
+    if (sender !== "Description") {
+      const figure = document.createElement("figure");
+      figure.className = "media-left";
+      const span = document.createElement("span");
+      span.className = "icon is-large";
+      const icon = document.createElement("i");
+      icon.className =
+        "fas fa-2x" +
+        (sender === "Modified Question"
+          ? " fa-question-circle"
+          : sender === "Modified Solution"
+            ? " fa-info-circle"
+            : sender === "Modified Answer"
+              ? " fa-check-square"
+              : "");
+      span.appendChild(icon);
+      figure.appendChild(span);
+      article.appendChild(figure);
+    }
 
-    var span = document.createElement("span");
-    span.className = "icon is-large";
-
-    var icon = document.createElement("i");
-    icon.className =
-      "fas fa-2x" +
-      (sender === "Modified Question"
-        ? " fa-question-circle "
-        : sender === "Modified Solution"
-          ? " fa-info-circle "
-          : sender === "Modified Answer"
-            ? " fa-check-square "
-            : "");
-
-    var media = document.createElement("div");
+    /* text content */
+    const media = document.createElement("div");
     media.className = "media-content";
 
-    var content = document.createElement("div");
-    content.className = "content";
+    const box = document.createElement("div");
+    box.className = "content";
+    box.style.padding = "12px";
+    box.style.borderRadius = "8px";
+    box.style.marginBottom = "10px";
+    box.style.backgroundColor =
+      sender === "Modified Question"
+        ? "#fff8e1"
+        : sender === "Modified Solution"
+          ? "#e1f5fe"
+          : sender === "Modified Answer"
+            ? "#e8f5e9"
+            : "white";
 
-    if (sender === "Modified Question") {
-      content.style.backgroundColor = "#fff8e1"; /* light yellow */
-    } else if (sender === "Modified Solution") {
-      content.style.backgroundColor = "#e1f5fe"; /* light blue  */
-    } else if (sender === "Modified Answer") {
-      content.style.backgroundColor = "#e8f5e9"; /* light green */
-    }
+    const p = document.createElement("p");
+    p.innerHTML = `<strong>${sender}</strong><br>${text}`;
 
-    content.style.padding = "12px";
-    content.style.borderRadius = "8px";
-    content.style.marginBottom = "10px";
-
-    var para = document.createElement("p");
-    var pre_text = document.createElement("pre");
-    pre_text.style =
-      "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
-    pre_text.innerHTML = text;
-    if (window.MathJax) MathJax.typesetPromise([pre_text]);
-
-    var strong = document.createElement("strong");
-    strong.innerHTML = sender;
-    var br = document.createElement("br");
-
-    para.appendChild(strong);
-    para.appendChild(br);
-    para.appendChild(pre_text);
-
-    /* image support (optional) */
     if (imageSrc) {
-      var img = document.createElement("img");
+      const img = document.createElement("img");
       img.src = imageSrc;
-      img.style = "max-width: 100%; max-height: 300px;";
-      para.appendChild(img);
+      img.style.maxWidth = "100%";
+      img.style.maxHeight = "300px";
+      p.appendChild(img);
     }
 
-    /* typeset LaTeX once more after adding everything */
-    if (window.MathJax) MathJax.typesetPromise([pre_text]);
-
-    content.appendChild(para);
-    media.appendChild(content);
-    span.appendChild(icon);
-    figure.appendChild(span);
-    if (sender !== "Description") article.appendChild(figure);
+    box.appendChild(p);
+    media.appendChild(box);
     article.appendChild(media);
     return article;
   }
 
-  function addMessageToChatHistory(sender, message, imageSrc) {
-    const chatHistory = document.querySelector(".chat-history");
-    chatHistory.appendChild(createChatRow(sender, message, imageSrc));
-    chatHistory.scrollTop = chatHistory.scrollHeight;
-  }
+  /* ---------- helpers ---------- */
+  function addMessage(sender, msg, img) {
+    const history = document.querySelector(".chat-history");
+    const row = createChatRow(sender, msg, img);
+    history.appendChild(row);
 
-  function clearChatHistory() {
+    /* now that it’s in the DOM, typeset */
+    if (window.MathJax) MathJax.typesetPromise([row]);
+
+    history.scrollTop = history.scrollHeight;
+  }
+  function clearHistory() {
     document.querySelector(".chat-history").innerHTML = "";
   }
 
-  /* -------- demo conversation data -------- */
+  /* ---------- demo data ---------- */
   const conversations = [
     {
       description: "slide1",
       turns: [
         [
           "Modified Question",
-          "A straight river that is 264 m wide flows from west to east at 14 m/min.<br>Melanie and Sherry sit on the south bank with Melanie a distance D&nbsp;metres downstream from Sherry.<br>Each heads for the point directly opposite Sherry and they arrive simultaneously.<br>Melanie swims at 80&nbsp;m/min relative to the water, while Sherry swims at 60&nbsp;m/min.<br>Find&nbsp;D."
+          "A straight river that is 264&nbsp;m wide flows from west to east at 14&nbsp;m/min.<br>Melanie and Sherry sit on the south bank with Melanie a distance D metres downstream from Sherry.<br>Each heads for the point directly opposite Sherry and they arrive simultaneously.<br>Melanie swims at 80&nbsp;m/min relative to the water, while Sherry swims at 60&nbsp;m/min.<br>Find&nbsp;D."
         ],
         [
           "Modified Solution",
-          "1.&nbsp;<b>Sherry:</b><br>- To land at \\(x=0\\) we need horizontal speed: \\(-60\\sin\\theta_S + 14 = 0 \\Rightarrow \\sin\\theta_S = \\frac{7}{30}\\)<br>- Hence, \\(v_{y,S} = 60\\cos\\theta_S = 60\\sqrt{1 - \\frac{49}{900}} = 2\\sqrt{851}\\)<br>- Time: \\(t = \\frac{264}{2\\sqrt{851}} = \\frac{132}{\\sqrt{851}}\\)<br><br>2.&nbsp;<b>Melanie:</b><br>- Vertical motion: \\(80\\cos\\theta_M t = 264 \\Rightarrow \\cos\\theta_M = \\frac{\\sqrt{851}}{40}\\)<br>- So, \\(\\sin\\theta_M = \\frac{\\sqrt{749}}{40}\\)<br>- Horizontal displacement: \\((80\\sin\\theta_M - 14)t = D\\)<br>- Hence, \\(D = \\left(80 \\cdot \\frac{\\sqrt{749}}{40} - 14\\right) \\cdot \\left(\\frac{132}{\\sqrt{851}}\\right) = \\frac{264(\\sqrt{749} - 7)}{\\sqrt{851}} \\approx 184.4\\,\\text{m}\\)"
+          "1.&nbsp;<b>Sherry:</b> To land at \\(x=0\\) we need horizontal speed \\(-60\\sin\\theta_S+14=0 \\Rightarrow \\sin\\theta_S=\\dfrac{7}{30}\\).<br>Hence \\(v_{y,S}=60\\cos\\theta_S=60\\sqrt{1-\\dfrac{49}{900}}=2\\sqrt{851}\\).<br>Time \\(t=\\dfrac{264}{2\\sqrt{851}}=\\dfrac{132}{\\sqrt{851}}\\).<br><br>2.&nbsp;<b>Melanie:</b> Vertical motion \\(80\\cos\\theta_M t = 264 \\Rightarrow \\cos\\theta_M=\\dfrac{\\sqrt{851}}{40}\\).<br>So \\(\\sin\\theta_M=\\dfrac{\\sqrt{749}}{40}\\).<br>Horizontal displacement \\((80\\sin\\theta_M-14)t=D\\).<br>Therefore \\(D=\\left(80\\cdot\\dfrac{\\sqrt{749}}{40}-14\\right)\\!\\left(\\dfrac{132}{\\sqrt{851}}\\right)=\\dfrac{264(\\sqrt{749}-7)}{\\sqrt{851}}\\approx184.4\\,\\text{m}\\)."
         ],
-        ["Modified Answer", "\\(\\frac{264(\\sqrt{749}-7)}{\\sqrt{851}} \\approx 184.4\\,\\text{m}\\)"]
+        ["Modified Answer", "\\(\\dfrac{264(\\sqrt{749}-7)}{\\sqrt{851}}\\approx184.4\\,\\text{m}\\)"]
       ]
     },
     {
@@ -602,44 +593,35 @@
       turns: [
         [
           "Modified Question",
-          "Let a,b,c,d,e,f,g,h,i be distinct integers from&nbsp;1 to&nbsp;9, and suppose that a,b,c,d,e,f are consecutive integers.<br>Find the minimum positive value of \\(\\dfrac{a b c - d e f}{g h i}\\)."
+          "Let \\(a,b,c,d,e,f,g,h,i\\) be distinct integers from 1–9, and suppose that \\(a,b,c,d,e,f\\) are consecutive. Find the minimum positive value of \\(\\dfrac{abc-def}{ghi}\\)."
         ],
         [
           "Modified Solution",
-          "1.&nbsp;There are four possible 6-term consecutive sets \\(S = \\{k,\\dots,k+5\\}\\) with \\(k=1\\ldots4\\).<br>2.&nbsp;For each, enumerate all ways to split into two triples, compute the triple products, and their difference.<br>3.&nbsp;The minimum numerator 2 occurs for \\(S = \\{2,\\dots,7\\}\\) with \(A=\\{3,4,6\\}\\) (product 72) versus the complement (product 70).<br>4.&nbsp;The remaining digits are \\(\\{1,8,9\\}\\), so the denominator is 72 and the fraction is \\(\\frac{1}{36}\\)."
+          "Enumerate four possible 6-consecutive sets \\(\\{k,\\dots,k+5\\}\\). For \\(\\{2,3,4,5,6,7\\}\\) the split \\(\\{3,4,6\\}\\) vs. complement gives numerator 2. The remaining digits are \\(\\{1,8,9\\}\\), product 72, so the fraction is \\(\\tfrac{1}{36}\\)."
         ],
-        ["Modified Answer", "\\(\\frac{1}{36}\\)"]
+        ["Modified Answer", "\\(\\tfrac{1}{36}\\)"]
       ]
     }
   ];
 
-  /* -------- slideshow logic -------- */
-  let currentIndex = 0;
-
-  function updateDialog() {
-    clearChatHistory();
-    conversations[currentIndex].turns.forEach((t) =>
-      addMessageToChatHistory(...t)
-    );
-    document.querySelector(".chat-history").scrollTop = 0;
+  /* ---------- simple slideshow ---------- */
+  let idx = 0;
+  function render() {
+    clearHistory();
+    conversations[idx].turns.forEach((t) => addMessage(...t));
   }
 
-  document
-    .getElementById("prev-question")
-    .addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + conversations.length) % conversations.length;
-      updateDialog();
-    });
+  document.getElementById("prev-question").onclick = () => {
+    idx = (idx - 1 + conversations.length) % conversations.length;
+    render();
+  };
+  document.getElementById("next-question").onclick = () => {
+    idx = (idx + 1) % conversations.length;
+    render();
+  };
 
-  document
-    .getElementById("next-question")
-    .addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % conversations.length;
-      updateDialog();
-    });
-
-  /* initial render */
-  updateDialog();
+  /* initial load */
+  render();
 </script>
   <!-- <script>
     // Handle message showing
