@@ -441,16 +441,12 @@
     /* cap but don’t force a fixed height */
     .chat-history {
       max-height: 60vh;
-      /* upper bound */
+      /* grows until it hits 60 % of viewport */
       height: auto;
-      /* let it shrink / grow naturally */
+      /* collapses on short slides            */
       overflow-y: auto;
-      /* scrollbar appears only when needed */
-
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem;
-      background: #fafafa;
+      /* scrollbar only when needed           */
+      margin-bottom: 1rem;
     }
   </style>
 
@@ -541,22 +537,36 @@
     const media = document.createElement("div");
     media.className = "media-content";
 
-    const box = document.createElement("div");
-    box.className = "content";
-    box.style.padding = "12px";
-    box.style.borderRadius = "8px";
-    box.style.marginBottom = "10px";
-    box.style.backgroundColor =
-      sender === "Modified Question"
+    // const box = document.createElement("div");
+    // box.className = "content";
+    //box.style.padding = "12px";
+    //box.style.borderRadius = "8px";
+    //box.style.marginBottom = "10px";
+    //box.style.backgroundColor =
+    //sender === "Modified Question"
+    //  ? "#fff8e1"
+    //  : sender === "Modified Solution"
+    //    ? "#e1f5fe"
+    //  : sender === "Modified Answer"
+    //    ? "#e8f5e9"
+    //    : "white";
+    const msg = document.createElement("div");
+    msg.style.cssText = `
+    padding: 8px 0;
+    background-color: ${sender === "Modified Question"
         ? "#fff8e1"
         : sender === "Modified Solution"
           ? "#e1f5fe"
           : sender === "Modified Answer"
             ? "#e8f5e9"
-            : "white";
+            : "transparent"
+      };
+  `;
 
-    const p = document.createElement("p");
-    p.innerHTML = `<strong>${sender}</strong><br>${text}`;
+    msg.innerHTML = `<strong>${sender}</strong><br>${text}`;
+
+    // const p = document.createElement("p");
+    // p.innerHTML = `<strong>${sender}</strong><br>${text}`;
 
     if (imageSrc) {
       const img = document.createElement("img");
@@ -580,8 +590,13 @@
 
     /* now that it’s in the DOM, typeset */
     if (window.MathJax) MathJax.typesetPromise([row]);
+    pane.style.height = "auto";
+    const cap = window.innerHeight * 0.6;  // 60 vh
+    if (pane.scrollHeight > cap) {
+      pane.style.height = "60vh";
+      pane.scrollTop = pane.scrollHeight;
+    }
 
-    history.scrollTop = history.scrollHeight;
   }
   function clearHistory() {
     const pane = document.querySelector('.chat-history');
