@@ -440,13 +440,17 @@
 
     /* cap but don’t force a fixed height */
     .chat-history {
+      max-width: 460px;
+      /* ← choose the width you like */
+      width: 100%;
+      /* shrinks on narrow screens   */
+
       max-height: 60vh;
-      /* grows until it hits 60 % of viewport */
       height: auto;
-      /* collapses on short slides            */
       overflow-y: auto;
-      /* scrollbar only when needed           */
-      margin-bottom: 1rem;
+
+      margin: 0 auto;
+      /* ← centers the block         */
     }
   </style>
 
