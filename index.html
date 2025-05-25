@@ -601,7 +601,610 @@
         ],
         ["Modified Answer", "\\(\\tfrac{1}{36}\\)"]
       ]
-    }
+    },
+    {
+      description: "slide3",
+      turns: [
+        [
+          "Modified Question",
+          "Let \\(x_1 \\le x_2 \\le \\dots \\le x_{100}\\) be real numbers with \\(|x_1|+\\dots+|x_{100}|=1\\) and  \\(x_1+\\dots+x_{100}=0\\). Assume \\(x_1=\\dots=x_{15}=-\\tfrac{1}{100}\\) and \\(x_{77}=\\dots=x_{100}=\\tfrac{1}{100}\\).  Find the greatest possible value of \\(x_{76}-x_{16}\\)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;The extremes use \\(39/100\\) of the absolute-sum budget, leaving \\(61/100\\) for indices 16–76 whose total must be \\(-9/100\\).<br>\
+  2.&nbsp;Let \\(n_-\\) of them equal \\(-u\\) and \\(n_+\\) equal \\(v\\) (both \\(\\le0.01\\)).  Then \\(n_-u=0.35\\) and \\(n_+v=0.26\\).<br>\
+  3.&nbsp;With the \\(0.01\\) upper bound we force \\(n_-=35\\) and \\(n_+=26\\).  Thus \\(u=v=0.01\\).<br>\
+  4.&nbsp;Hence \\(x_{16}=-0.01\\) and \\(x_{76}=0.01\\).<br>\
+  5.&nbsp;Maximum difference: \\(0.01-(-0.01)=0.02\\)."
+        ],
+        ["Modified Answer", "0.02"]
+      ]
+    },
+    /* ---------- slide 4 ---------- */
+    {
+      description: "slide4",
+      turns: [
+        [
+          "Modified Question",
+          "Let a,b,x,y be real numbers with a&nbsp;> 4 and b&nbsp;> 1 such that \\(\\frac{x^2}{a^2}+\\frac{y^2}{a^2-16}=1\\), and \\((x,y)=(20,11)\\). Find the least possible value of a&nbsp;+&nbsp;b given these conditions."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Plugging \\((x,y)=(20,11)\\) into \\(\\frac{x^2}{a^2}+\\frac{y^2}{a^2-16}=1\\) gives \\(\\frac{400}{a^2}+\\frac{121}{a^2-16}=1\\).<br>\
+2.&nbsp;Multiply through: \\(400(a^2-16)+121a^2=a^2(a^2-16)\\Rightarrow a^4-537a^2+6400=0\\).<br>\
+3.&nbsp;Let \\(t=a^2\\), so \\(t=\\frac{537\\pm\\sqrt{262769}}{2}\\).<br>\
+4.&nbsp;The root \\(t>16\\) is \\(t=\\frac{537+\\sqrt{262769}}{2}\\); hence \\(a=\\sqrt{\\left(\\frac{537+\\sqrt{262769}}{2}\\right)}\\).<br>\
+5.&nbsp;With \\(b>1\\) free, the infimum of \\(a+b\\) occurs as \\(b\\to 1^+\\):<br>\
+&ensp;\\(\\inf(a+b)=1+\\sqrt{\\tfrac{537+\\sqrt{262769}}{2}}\\approx23.912\\,\\ldots\\)."
+        ],
+        [
+          "Modified Answer",
+          "\\(1+\\sqrt{\\tfrac{537+\\sqrt{262769}}{2}}\\) ≈ 23.9"
+        ]
+      ]
+    },
+
+    /* ---------- slide 5 ---------- */
+    {
+      description: "slide5",
+      turns: [
+        [
+          "Modified Question",
+          "Two men and two women stand equally spaced around a circle in random order. What is the probability that every man stands diametrically opposite a woman?"
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Label the four positions 1–4 with opposites (1,3) and (2,4); total seatings = 4! = 24.<br>\
+2.&nbsp;For both men to be opposite women: pick the opposite pair in 2 ways, arrange the 2 men in that pair (2!), and arrange the 2 women in the remaining seats (2!) &rarr; 2·2·2 = 8 favorable.<br>\
+3.&nbsp;Probability \\(P=\\tfrac{8}{24}=\\tfrac{1}{3}\\)."
+        ],
+        ["Modified Answer", "\\(\\tfrac{1}{3}\\)"]
+      ]
+    },
+
+    /* ---------- slide 6 ---------- */
+    {
+      description: "slide6",
+      turns: [
+        [
+          "Modified Question",
+          "Find the sum of all positive integers m that are powers of 2 and for which \\(\\tfrac{13!}{m}\\) is a perfect square."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Legendre: \\(\\left\\lfloor\\tfrac{13}{2}\\right\\rfloor+\\left\\lfloor\\tfrac{13}{4}\\right\\rfloor+\\left\\lfloor\\tfrac{13}{8}\\right\\rfloor=6+3+1=10\\).<br>\
+2.&nbsp;An exponent of 2 in 13! equals 10, so to make it even we need to subtract an even \\(k\\in\\{0,2,4,6,8,10\\}\\).<br>\
+3.&nbsp;Corresponding powers: \\(2^0+2^2+2^4+2^6+2^8+2^{10}=1+4+16+64+256+1024=1365\\)."
+        ],
+        ["Modified Answer", "1365"]
+      ]
+    },
+
+    /* ---------- slide 7 ---------- */
+    {
+      description: "slide7",
+      turns: [
+        [
+          "Modified Question",
+          "Define \\(f(x)=\\bigl|\\,|x|-\\tfrac12\\,\\bigr|\\) and \\(g(x)=\\bigl|\\,|x|-\\tfrac14\\,\\bigr|\\). How many intersection points exist between the graphs of \\(y=4g(f(\\sin(2\\pi x)))\\) and the line \\(x=0\\)?"
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Set \\(x=0\\). Then \\(y=4g(f(\\sin(0)))=4g(f(0))\\).<br>\
+2.&nbsp;Compute \\(f(0)=\\bigl|\\,|0|-\\tfrac12\\,\\bigr|=\\tfrac12\\).<br>\
+3.&nbsp;Next \\(g\\bigl(\\tfrac12\\bigr)=\\bigl|\\,\\tfrac12-\\tfrac14\\,\\bigr|=\\tfrac14\\).<br>\
+4.&nbsp;Thus \\(y=4\\cdot\\tfrac14=1\\).<br>\
+5.&nbsp;Hence exactly one intersection point: \\((0,1)\\)."
+        ],
+        ["Modified Answer", "1"]
+      ]
+    },
+
+    /* ---------- slide 8 ---------- */
+    {
+      description: "slide8",
+      turns: [
+        [
+          "Modified Question",
+          "Let \\(p\\) be the smallest prime for which there exists a positive integer \\(n\\) with \\(n^{4}+1\\) divisible by \\(p^{2}\\). Find the least positive integer \\(m\\) such that \\(m^{4}+1\\equiv0\\pmod{p^{2}}\\), under the added condition \\(m=n\\)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;If \\(n^{4}\\equiv-1\\pmod{p^{2}}\\) then \\(p\\equiv1\\pmod8\\); the least such prime is 17.<br>\
+2.&nbsp;Modulo 17, \\(2^{4}=16\\equiv-1\\). Since \\(f(x)=x^{4}+1\\) and \\(f'(2)=4\\cdot2^{3}\\not\\equiv0\\pmod{17}\\), Hensel’s lemma lifts 2 to a unique root modulo \\(17^{2}\\): \\(x=2+17k\\).<br>\
+3.&nbsp;Expanding \\((2+17k)^{4}+1\\equiv17(1+32k)\\pmod{289}\\) gives \\(k\\equiv9\\pmod{17}\\). Smallest positive: \\(n=m=2+17\\cdot9=155\\)."
+        ],
+        ["Modified Answer", "155"]
+      ]
+    },
+
+    /* ---------- slide 9 ---------- */
+    {
+      description: "slide9",
+      turns: [
+        [
+          "Modified Question",
+          "Aimeville has 900 residents. Exactly 195 own a diamond ring, 367 own golf clubs, and 562 own a garden spade; everyone owns a bag of candy hearts. Suppose the 234 residents who own **exactly three** of these items actually own all four items (i.e.&nbsp;now have four). How many residents now own all four?"
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Let \\(n_k\\) be the number owning exactly \\(k\\) items after the change.<br>\
+2.&nbsp;Given: \\(n_3=0\\), those 234 move to \\(n_4\\). Let \\(x=n_4\\). Also \\(n_2=437\\).<br>\
+3.&nbsp;Population: \\(n_1+n_2+n_3+n_4=900\\Rightarrow n_1=900-437-x\\).<br>\
+4.&nbsp;Total item count is 195+367+562+900=2024, so<br>\
+&ensp;\\(n_1+2n_2+4n_4=2024\\).<br>\
+5.&nbsp;Substitute \\(n_1\\): \\((900-437-x)+2\\cdot437+4x=2024\\Rightarrow3x=687\\Rightarrow x=229\\)."
+        ],
+        ["Modified Answer", "229"]
+      ]
+    },
+    /* ---------- math500-1 ---------- */
+    {
+      description: "math500-1",
+      turns: [
+        [
+          "Modified Question",
+          "Let p(x) be a polynomial of degree&nbsp;5 such that<br>\
+  \\[p(n)=\\tfrac{n}{n^{2}-1}\\]<br>\
+  for n = 2, 3, 4, … 7. Find p(8). Added condition: suppose p(x) is actually degree 1 that fits the values at n = 2 and n = 3; find p(8)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Slope \\(m=\\frac{\\tfrac{3}{8}-\\tfrac{2}{3}}{3-2}=-\\tfrac{7}{24}\\).<br>\
+  2.&nbsp;Line: \\(p(x)=mx+b\\).<br>\
+  3.&nbsp;Use \\(p(2)=\\tfrac23\\): \\(-\\tfrac{7}{24}\\cdot2+b=\\tfrac23\\Rightarrow b=\\tfrac54\\).<br>\
+  4.&nbsp;Then \\(p(8)=-\\tfrac{7}{24}\\cdot8+\\tfrac54=-\\tfrac{13}{12}\\)."
+        ],
+        ["Modified Answer", "\\(-\\tfrac{13}{12}\\)"]
+      ]
+    },
+
+    /* ---------- math500-2 ---------- */
+    {
+      description: "math500-2",
+      turns: [
+        [
+          "Modified Question",
+          "Let \\(z=2+\\sqrt2-(3+3\\sqrt2)i\\) and \\(c=2-3i\\). Rotate z about c by \\(\\pi\\) radians counter-clockwise to get w. Find w."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;\\(w=c+(z-c)e^{i\\pi}=c-(z-c)\\).<br>\
+  2.&nbsp;Compute \\(z-c=\\sqrt2-3\\sqrt2\,i=\\sqrt2(1-3i)\\).<br>\
+  3.&nbsp;Thus \\(w=2-3i-\\sqrt2(1-3i)=(2-\\sqrt2)+(3\\sqrt2-3)i\\)."
+        ],
+        ["Modified Answer", "\\((2-\\sqrt2)+(3\\sqrt2-3)i\\)"]
+      ]
+    },
+
+    /* ---------- math500-3 ---------- */
+    {
+      description: "math500-3",
+      turns: [
+        [
+          "Modified Question",
+          "Denali walks 16 dogs, Nate 20. Denali’s pay doubles when she takes x more dogs from Nate. Find x."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Pay per dog = p.<br>\
+  2.&nbsp;Initial pay 16p; after transfer (16+x)p = 32p &rarr; 16+x = 32.<br>\
+  3.&nbsp;Hence x = 16."
+        ],
+        ["Modified Answer", "16"]
+      ]
+    },
+
+    /* ---------- math500-4 ---------- */
+    {
+      description: "math500-4",
+      turns: [
+        [
+          "Modified Question",
+          "For \\(k\\in[-500,500]\\) with \\(k\\ge0\\), how many k make<br>\
+  \\[\\log(kx)=2\\log(x+2)\\]<br>\
+  have exactly one real solution?"
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Domain: k>0, x>0.<br>\
+  2.&nbsp;Rewrite: \\(kx=(x+2)^2 \\Rightarrow x^{2}+(4-k)x+4=0\\).<br>\
+  3.&nbsp;Discriminant \\(D=(k-4)^{2}-16=k(k-8)\\).<br>\
+  4.&nbsp;Exactly one real root when \\(D=0\\) and root > 0 &rarr; k=8.<br>\
+  5.&nbsp;Thus only k=8."
+        ],
+        ["Modified Answer", "1"]
+      ]
+    },
+
+    /* ---------- math500-5 ---------- */
+    {
+      description: "math500-5",
+      turns: [
+        [
+          "Modified Question",
+          "Let x=1 and xyz=2 for positive reals x,y,z. Minimise \\(x^{4}+4y^{2}+4z^{4}\\)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;x=1 gives yz=2 ⇒ y=2/z.<br>\
+  2.&nbsp;Objective: \\(f(z)=1+\\tfrac{16}{z^{2}}+4z^{4}\\).<br>\
+  3.&nbsp;Set \\(f'(z)=0\\): \\,\\,-\\tfrac{32}{z^{3}}+16z^{3}=0 ⇒ z^{6}=2 ⇒ z=2^{1/6}.<br>\
+  4.&nbsp;Then y=2^{5/6}.<br>\
+  5.&nbsp;Minimum: \\(1+12\\cdot2^{2/3}\\)."
+        ],
+        ["Modified Answer", "\\(1+12\\cdot2^{2/3}\\)"]
+      ]
+    },
+    /* ---------- math500-1 ---------- */
+    {
+      description: "math500-1",
+      turns: [
+        [
+          "Modified Question",
+          "Let p(x) be a polynomial of degree&nbsp;5 such that<br>\
+\\[p(n)=\\tfrac{n}{n^{2}-1}\\]<br>\
+for n = 2, 3, 4, … 7. Find p(8). Added condition: suppose p(x) is actually degree 1 that fits the values at n = 2 and n = 3; find p(8)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Slope \\(m=\\frac{\\tfrac{3}{8}-\\tfrac{2}{3}}{3-2}=-\\tfrac{7}{24}\\).<br>\
+2.&nbsp;Line: \\(p(x)=mx+b\\).<br>\
+3.&nbsp;Use \\(p(2)=\\tfrac23\\): \\(-\\tfrac{7}{24}\\cdot2+b=\\tfrac23\\Rightarrow b=\\tfrac54\\).<br>\
+4.&nbsp;Then \\(p(8)=-\\tfrac{7}{24}\\cdot8+\\tfrac54=-\\tfrac{13}{12}\\)."
+        ],
+        ["Modified Answer", "\\(-\\tfrac{13}{12}\\)"]
+      ]
+    },
+
+    /* ---------- math500-2 ---------- */
+    {
+      description: "math500-2",
+      turns: [
+        [
+          "Modified Question",
+          "Let \\(z=2+\\sqrt2-(3+3\\sqrt2)i\\) and \\(c=2-3i\\). Rotate z about c by \\(\\pi\\) radians counter-clockwise to get w. Find w."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;\\(w=c+(z-c)e^{i\\pi}=c-(z-c)\\).<br>\
+2.&nbsp;Compute \\(z-c=\\sqrt2-3\\sqrt2\,i=\\sqrt2(1-3i)\\).<br>\
+3.&nbsp;Thus \\(w=2-3i-\\sqrt2(1-3i)=(2-\\sqrt2)+(3\\sqrt2-3)i\\)."
+        ],
+        ["Modified Answer", "\\((2-\\sqrt2)+(3\\sqrt2-3)i\\)"]
+      ]
+    },
+
+    /* ---------- math500-3 ---------- */
+    {
+      description: "math500-3",
+      turns: [
+        [
+          "Modified Question",
+          "Denali walks 16 dogs, Nate 20. Denali’s pay doubles when she takes x more dogs from Nate. Find x."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Pay per dog = p.<br>\
+2.&nbsp;Initial pay 16p; after transfer (16+x)p = 32p &rarr; 16+x = 32.<br>\
+3.&nbsp;Hence x = 16."
+        ],
+        ["Modified Answer", "16"]
+      ]
+    },
+
+    /* ---------- math500-4 ---------- */
+    {
+      description: "math500-4",
+      turns: [
+        [
+          "Modified Question",
+          "For \\(k\\in[-500,500]\\) with \\(k\\ge0\\), how many k make<br>\
+\\[\\log(kx)=2\\log(x+2)\\]<br>\
+have exactly one real solution?"
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Domain: k>0, x>0.<br>\
+2.&nbsp;Rewrite: \\(kx=(x+2)^2 \\Rightarrow x^{2}+(4-k)x+4=0\\).<br>\
+3.&nbsp;Discriminant \\(D=(k-4)^{2}-16=k(k-8)\\).<br>\
+4.&nbsp;Exactly one real root when \\(D=0\\) and root > 0 &rarr; k=8.<br>\
+5.&nbsp;Thus only k=8."
+        ],
+        ["Modified Answer", "1"]
+      ]
+    },
+
+    /* ---------- math500-5 ---------- */
+    {
+      description: "math500-5",
+      turns: [
+        [
+          "Modified Question",
+          "Let x=1 and xyz=2 for positive reals x,y,z. Minimise \\(x^{4}+4y^{2}+4z^{4}\\)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;x=1 gives yz=2 ⇒ y=2/z.<br>\
+2.&nbsp;Objective: \\(f(z)=1+\\tfrac{16}{z^{2}}+4z^{4}\\).<br>\
+3.&nbsp;Set \\(f'(z)=0\\): \\,\\,-\\tfrac{32}{z^{3}}+16z^{3}=0 ⇒ z^{6}=2 ⇒ z=2^{1/6}.<br>\
+4.&nbsp;Then y=2^{5/6}.<br>\
+5.&nbsp;Minimum: \\(1+12\\cdot2^{2/3}\\)."
+        ],
+        ["Modified Answer", "\\(1+12\\cdot2^{2/3}\\)"]
+      ]
+    },
+    /* ---------- math500-6 ---------- */
+    {
+      description: "math500-6",
+      turns: [
+        [
+          "Modified Question",
+          "Find all real numbers x such that \\[\\tfrac{x^{2}+2x+1}{x^{2}-1}=2\\] with \\(x\\ne1\\)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Multiply by \\(x^{2}-1\\): \\(x^{2}+2x+1=2(x^{2}-1)\\).<br>\
+2.&nbsp;Simplify \\(-x^{2}+2x+3=0 \\Rightarrow x^{2}-2x-3=0\\).<br>\
+3.&nbsp;Factor \\((x-3)(x+1)=0\\).<br>\
+4.&nbsp;Solutions: \\(x=3\\) or \\(x=-1\\)."
+        ],
+        ["Modified Answer", "x = 3 or x = -1"]
+      ]
+    },
+
+    /* ---------- math500-7 ---------- */
+    {
+      description: "math500-7",
+      turns: [
+        [
+          "Modified Question",
+          "A circle of radius 5 is centred at the origin. Find the area inside the circle but outside the square with vertices \\((\\pm3,\\pm3)\\)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Circle area: \\(25\\pi\\).<br>\
+2.&nbsp;Square area: \\(6\\times6=36\\).<br>\
+3.&nbsp;Desired area: \\(25\\pi-36\\)."
+        ],
+        ["Modified Answer", "\\(25\\pi-36\\)"]
+      ]
+    },
+
+    /* ---------- math500-8 ---------- */
+    {
+      description: "math500-8",
+      turns: [
+        [
+          "Modified Question",
+          "Find the sum of all positive integers n for which \\(n^{2}+n+1\\) is divisible by 7."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Observe \\(n^{2}+n+1=(n+1)^{2}\\).<br>\
+2.&nbsp;Need \\((n+1)^{2}\\equiv0\\pmod7\\Rightarrow n+1\\equiv0\\pmod7\\).<br>\
+3.&nbsp;So \\(n\\equiv6\\pmod7\\): 6, 13, 20, …, 97.<br>\
+4.&nbsp;Arithmetic series (14 terms): sum \\(=\\frac{14}{2}(6+97)=721\\)."
+        ],
+        ["Modified Answer", "721"]
+      ]
+    },
+
+    /* ---------- math500-9 ---------- */
+    {
+      description: "math500-9",
+      turns: [
+        [
+          "Modified Question",
+          "Let \\(f(x)=x^{3}-3x^{2}+2x\\). Find all real x with \\(f(x)=0\\) and \\(x>1\\)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Factor: \\(f(x)=x(x-1)(x-2)\\).<br>\
+2.&nbsp;Roots: 0, 1, 2.<br>\
+3.&nbsp;Only \\(x=2\\) satisfies \\(x>1\\)."
+        ],
+        ["Modified Answer", "x = 2"]
+      ]
+    },
+
+    /* ---------- math500-10 ---------- */
+    {
+      description: "math500-10",
+      turns: [
+        [
+          "Modified Question",
+          "How many arrangements of “MISSISSIPPI” have first letter M and last letter I?"
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Fix M at start, I at end.<br>\
+2.&nbsp;Remaining letters: I I S S S S P P (8 letters).<br>\
+3.&nbsp;Count: \\(\\frac{8!}{2!4!2!}=420\\)."
+        ],
+        ["Modified Answer", "420"]
+      ]
+    },
+    /* ---------- math500-11 ---------- */
+    {
+      description: "math500-11",
+      turns: [
+        [
+          "Modified Question",
+          "A triangle has sides 5, 6, 7. Find the radius of its circumscribed circle."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Use \\(R=\\tfrac{abc}{4K}\\), where \\(K\\) is the area.<br>\
+2.&nbsp;Heron: \\(s=9\\) so \\(K=\\sqrt{9\\cdot4\\cdot3\\cdot2}=6\\sqrt6\\).<br>\
+3.&nbsp;Thus \\(R=\\tfrac{5\\cdot6\\cdot7}{4\\cdot6\\sqrt6}=\\tfrac{35}{4\\sqrt6}\\)."
+        ],
+        ["Modified Answer", "\\(\\tfrac{35}{4\\sqrt6}\\)"]
+      ]
+    },
+
+    /* ---------- math500-12 ---------- */
+    {
+      description: "math500-12",
+      turns: [
+        [
+          "Modified Question",
+          "Find the sum of all positive integers n such that \\(n^{2}+n+1\\) is divisible by 13."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Need \\(n^{2}+n+1\\equiv0\\pmod{13}\\).<br>\
+2.&nbsp;Complete the square: \\((n+7)^{2}\\equiv48\\equiv9\\pmod{13}\\).<br>\
+3.&nbsp;Thus \\(n+7\\equiv\\pm3\\pmod{13}\\).<br>\
+4.&nbsp;So \\(n\\equiv9\\) or \\(n\\equiv3\\pmod{13}\\).<br>\
+5.&nbsp;Positive solutions ≤ 35: 3, 9, 16, 22, 29, 35.<br>\
+6.&nbsp;Sum = 114."
+        ],
+        ["Modified Answer", "114"]
+      ]
+    },
+
+    /* ---------- math500-13 ---------- */
+    {
+      description: "math500-13",
+      turns: [
+        [
+          "Modified Question",
+          "Let \\(f(x)=\\tfrac{x^{2}-1}{x-1}\\).  Solve \\(f(x)=2\\) with \\(x\\ne1\\)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;For \\(x\\ne1\\), \\(f(x)=x+1\\).<br>\
+2.&nbsp;Set \\(x+1=2\\Rightarrow x=1\\), contradicting \\(x\\ne1\\).<br>\
+3.&nbsp;Therefore no solutions."
+        ],
+        ["Modified Answer", "No solutions"]
+      ]
+    },
+
+    /* ---------- math500-14 ---------- */
+    {
+      description: "math500-14",
+      turns: [
+        [
+          "Modified Question",
+          "Arrange 5 red and 3 blue balls in a row so that no two blue balls are adjacent. How many ways?"
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Place the 5 reds: R&nbsp;R&nbsp;R&nbsp;R&nbsp;R (fixed order).<br>\
+2.&nbsp;Gaps (\\_|) around/between them: 6 positions.<br>\
+3.&nbsp;Choose 3 of the 6 for the blue balls: \\(\\binom63=20\\)."
+        ],
+        ["Modified Answer", "20"]
+      ]
+    },
+
+    /* ---------- math500-15 ---------- */
+    {
+      description: "math500-15",
+      turns: [
+        [
+          "Modified Question",
+          "A circle of radius 4 is centred at the origin. Find the area inside the circle but outside the square with vertices \\((\\pm2,\\pm2)\\)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;Circle area: \\(16\\pi\\).<br>\
+2.&nbsp;Square area: 16.<br>\
+3.&nbsp;Desired area: \\(16\\pi-16\\)."
+        ],
+        ["Modified Answer", "\\(16\\pi-16\\)"]
+      ]
+    },
+    /* ---------- puzzletrivial-1 ---------- */
+    {
+      description: "puzzletrivial-1",
+      turns: [
+        [
+          "Modified Question",
+          "An underground parking garage with an infinite number of parking spaces is partially full. A new car arrives—what can the attendant do to make space?"
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;The garage is only partially full, so there are empty spaces.<br>\
+  2.&nbsp;The attendant can simply direct the new car to any empty spot.<br>\
+  3.&nbsp;No rearrangement is needed."
+        ],
+        ["Modified Answer", "Move the new car to any empty parking space."]
+      ]
+    },
+
+    /* ---------- puzzletrivial-2 ---------- */
+    {
+      description: "puzzletrivial-2",
+      turns: [
+        [
+          "Modified Question",
+          "A runaway trolley is heading down the tracks away from five people up the track. You can pull a lever to switch it. How might pulling the lever impact the five people?"
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;The trolley is moving away from the five people.<br>\
+  2.&nbsp;It poses no threat to them.<br>\
+  3.&nbsp;Pulling the lever has no impact on their safety."
+        ],
+        ["Modified Answer", "None – the trolley is already heading away from them."]
+      ]
+    },
+
+    /* ---------- puzzletrivial-3 ---------- */
+    {
+      description: "puzzletrivial-3",
+      turns: [
+        [
+          "Modified Question",
+          "Twelve coins are rumored to include one heavier coin, but in fact all coins are identical. Which coin is heavier?"
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;The statement says all coins are actually identical.<br>\
+  2.&nbsp;Any weighing will balance.<br>\
+  3.&nbsp;Therefore no coin is heavier."
+        ],
+        ["Modified Answer", "None — they all weigh the same."]
+      ]
+    },
+
+    /* ---------- puzzletrivial-4 ---------- */
+    {
+      description: "puzzletrivial-4",
+      turns: [
+        [
+          "Modified Question",
+          "A line of scrolls is sorted by magical power; the secret-scroll position is known. Find it with the fewest inspections."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;The position is already known.<br>\
+  2.&nbsp;Inspect that scroll once.<br>\
+  3.&nbsp;Only one inspection needed."
+        ],
+        ["Modified Answer", "1 — inspect the known scroll."]
+      ]
+    },
+
+    /* ---------- puzzletrivial-5 ---------- */
+    {
+      description: "puzzletrivial-5",
+      turns: [
+        [
+          "Modified Question",
+          "You have jugs of 3, 5, 4, and 2 gallons. Measure exactly 3 gallons."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;A 3-gallon jug is available.<br>\
+  2.&nbsp;Fill it — you have exactly 3 gallons."
+        ],
+        ["Modified Answer", "Fill the 3-gallon jug."]
+      ]
+    },
   ];
 
   /* ---------- simple slideshow ---------- */
@@ -623,634 +1226,7 @@
   /* initial load */
   render();
 </script>
-  <!-- <script>
-    // Handle message showing
-    function createChatRow(sender, text, imageSrc) {
-      var article = document.createElement("article");
-      article.className = "media"
-
-      var figure = document.createElement("figure");
-      figure.className = "media-left";
-
-      var span = document.createElement("span");
-      span.className = "icon is-large";
-
-      var icon = document.createElement("i");
-      icon.className = "fas fas fa-2x" + (sender === "Modified Question" ? " fa-question-circle " : sender === "Modified Solution" ? " fa-info-circle " : sender === "Modified Answer" ? " fa-check-square " : "");
-
-      var media = document.createElement("div");
-      media.className = "media-content";
-
-      var content = document.createElement("div");
-      content.className = "content";
-
-      if (sender === "Modified Question") {
-        content.style.backgroundColor = "#fff8e1";  // light yellow
-      } else if (sender === "Modified Solution") {
-        content.style.backgroundColor = "#e1f5fe";  // light blue
-      } else if (sender === "Modified Answer") {
-        content.style.backgroundColor = "#e8f5e9";  // light green
-      }
-
-      content.style.padding = "12px";
-      content.style.borderRadius = "8px";
-      content.style.marginBottom = "10px";
-
-      var para = document.createElement("p");
-      var pre_text = document.createElement("pre");
-      pre_text.style = "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
-      pre_text.innerHTML = text;
-      if (window.MathJax) {
-        MathJax.typesetPromise([pre_text]);
-      }
-      var strong = document.createElement("strong");
-      strong.innerHTML = sender;
-      var br = document.createElement("br");
-
-      para.appendChild(strong);
-      para.appendChild(br);
-      para.appendChild(pre_text);
-
-      // Add image if imageSrc is provided
-      if (imageSrc) {
-        var img = document.createElement("img");
-        img.src = imageSrc;
-        img.style = "max-width: 100%; max-height: 300px;"; // Adjust the style as needed
-        para.appendChild(img);
-      }
-      // Then trigger MathJax
-      if (window.MathJax) {
-        MathJax.typesetPromise([pre_text]);
-      }
-      content.appendChild(para);
-      media.appendChild(content);
-      span.appendChild(icon);
-      figure.appendChild(span);
-      if (sender !== "Description") {
-        article.appendChild(figure);
-      };
-      article.appendChild(media);
-      return article;
-    }
-
-    function addMessageToChatHistory(sender, message, imageSrc) {
-      const chatHistory = document.querySelector('.chat-history');
-
-      // Create and append new chat row
-      const chatRow = createChatRow(sender, message, imageSrc);
-      chatHistory.appendChild(chatRow);
-      chatHistory.scrollTop = chatHistory.scrollHeight;
-
-    }
-    function clearChatHistory() {
-      const chatHistory = document.querySelector('.chat-history');
-      chatHistory.innerHTML = "";
-    }
-
-    // 
-    const conversations = [
-      {
-        "description": "slide1",
-        "turns": [
-          ["Modified Question",
-            "A straight river that is 264 m wide flows from west to east at 14 m/min.<br>" +
-            "Melanie and Sherry sit on the south bank with Melanie a distance D metres downstream from Sherry.<br>" +
-            "Each heads for the point directly opposite Sherry and they arrive simultaneously.<br>" +
-            "Melanie swims at 80 m/min relative to the water, while Sherry swims at 60 m/min.<br>" +
-            "Find D."
-          ],
-          ["Modified Solution",
-            "1. <b>Sherry:</b><br>" +
-            "- To land at \(x=0\) we need horizontal speed: \\(-60\\sin\\theta_S + 14 = 0 \\Rightarrow \\sin\\theta_S = \\frac{7}{30}\\)<br>" +
-            "- Hence, \(v_{y,S} = 60\\cos\\theta_S = 60\\sqrt{1 - \\frac{49}{900}} = 2\\sqrt{851}\)<br>" +
-            "- Time: \(t = \\frac{264}{2\\sqrt{851}} = \\frac{132}{\\sqrt{851}}\)<br><br>" +
-            "2. <b>Melanie:</b><br>" +
-            "- Vertical motion: \(80\\cos\\theta_M t = 264 \\Rightarrow \\cos\\theta_M = \\frac{\\sqrt{851}}{40}\)<br>" +
-            "- So, \(\\sin\\theta_M = \\frac{\\sqrt{749}}{40}\)<br>" +
-            "- Horizontal displacement: \\((80\\sin\\theta_M - 14)t = D\\)<br>" +
-            "- Hence, \(D = \\left(80 \\cdot \\frac{\\sqrt{749}}{40} - 14\\right) \\cdot \\left(\\frac{132}{\\sqrt{851}}\\right) = \\frac{264(\\sqrt{749} - 7)}{\\sqrt{851}} \\approx 184.4\,\\text{m}\)"
-          ],
-          ["Modified Answer",
-            "\\(\\frac{264(\\sqrt{749}-7)}{\\sqrt{851}} \\approx 184.4\\) m"
-          ]
-        ]
-      },
-      {
-        "description": "slide2",
-        "turns": [
-          ["Modified Question",
-            "Let a,b,c,d,e,f,g,h,i be distinct integers from 1 to 9, and suppose that a,b,c,d,e,f are<br>" +
-            "consecutive integers. Find the minimum possible positive value of \(\frac{a \cdot b \cdot c - d \cdot e \cdot f}{g \cdot h \cdot i}\)."
-          ],
-          ["Modified Solution",
-            "1. There are four possible 6-term consecutive sets \( S = \{k, \ldots, k+5\} \) with \( k=1\ldots4 \).<br>" +
-            "2. For each, enumerate all ways to split into two triples \( A \) and \( B \), compute products \( P(A) \) and \( P(B) = \text{Total}/P(A) \).<br>" +
-            "3. The minimal positive difference \( P(A) - P(B) \) occurs for \( S = \{2, \ldots, 7\} \) with \( A = \{3, 4, 6\} \) giving \( P(A) = 72 \), \( P(B) = 70 \) and numerator 2.<br>" +
-            "4. The remaining numbers are \(\{1, 8, 9\}\) so the denominator is 72, yielding \(\frac{2}{72} = \frac{1}{36}\)."
-          ],
-          ["Modified Answer",
-            "\(\frac{1}{36}\)"
-          ]
-        ]
-      },
-      {
-        "description": "slide3",
-        "turns": [
-          ["Modified Question",
-            "Let \(x_1 \leq x_2 \leq \cdots \leq x_{100}\) be real numbers such that \(|x_1| + |x_2| + \cdots + |x_{100}| = 1\) and \(x_1 + x_2 + \cdots + x_{100} = 0\). Suppose that \(x_1 = x_2 = \cdots = x_{15} = -\frac{1}{100}\) and \(x_{77} = x_{78} = \cdots = x_{100} = \frac{1}{100}\), find the greatest possible value of \(x_{76} - x_{16}\) under these conditions."
-          ],
-          ["Modified Solution",
-            "1. Sum of absolutes on \(x_1 \ldots x_{15}\) and \(x_{77} \ldots x_{100}\) uses \(\frac{39}{100}\), so on \(x_{16} \ldots x_{76}\) it's \(\frac{61}{100}\), and their sum must be \(-\frac{9}{100}\).<br>" +
-            "2. Partition the 61 variables into \(n_-\) at \(-u\) and \(n_+\) at \(v\) so that \(n_- u = 0.35\) and \(n_+ v = 0.26\).<br>" +
-            "3. The bounds \(u,v \leq 0.01\) force \(n_- = \frac{0.35}{0.01} = 35\) and \(n_+ = 61 - 35 = 26\).<br>" +
-            "4. Thus \(u = 0.01\), \(v = 0.01\), so \(x_{16} = -0.01\), \(x_{76} = 0.01\).<br>" +
-            "5. Therefore the maximum \(x_{76} - x_{16} = 0.01 - (-0.01) = 0.02\)."
-          ],
-          ["Modified Answer",
-            "\(0.02\)"
-          ]
-        ]
-      },
-      {
-        "description": "slide4",
-        "turns": [
-          ["Modified Question",
-            "Let a,b,x,y be real numbers with a>4 and b>1 such that \(\frac{x^2}{a^2}+\frac{y^2}{a^2-16}=1\), and \((x,y)=(20,11)\). Find the least possible value of a+b given these conditions."
-          ],
-          ["Modified Solution",
-            "1. Plugging \((x,y)=(20,11)\) into \(\frac{x^2}{a^2} + \frac{y^2}{a^2-16}=1\) gives \(\frac{400}{a^2} + \frac{121}{a^2-16}=1\).<br>" +
-            "2. Multiply through: \(400(a^2-16)+121a^2 = a^2(a^2-16) \Rightarrow a^4-537a^2+6400=0\).<br>" +
-            "3. Let \(t=a^2\), so \(t=\frac{537\pm\sqrt{262769}}{2}\).<br>" +
-            "4. The solution \(>16\) is \(t=\frac{537+\sqrt{262769}}{2}\), hence \(a=\sqrt{\left(\frac{537+\sqrt{262769}}{2}\right)}\).<br>" +
-            "5. Since \(b>1\) is free, the infimum of \(a+b\) is attained as \(b\to1^+\), giving \(\inf(a+b)=1+\sqrt{\left(\frac{537+\sqrt{262769}}{2}\right)} \approx 23.912\ldots\)."
-          ],
-          ["Modified Answer",
-            "\(1 + \sqrt{\frac{537+\sqrt{262769}}{2}}\)\n≈ 23.9"
-          ]
-        ]
-      },
-      {
-        "description": "slide5",
-        "turns": [
-          ["Modified Question",
-            "Two men and two women stand equally spaced around a circle in random order. What is the probability that every man stands diametrically opposite a woman?"
-          ],
-          ["Modified Solution",
-            "1. Label the 4 seats 1–4 around the circle; opposites are (1,3) and (2,4). Total seatings=4!=24.<br>" +
-            "2. For both men to be opposite women they must occupy one opposite pair: choose the pair in 2 ways, arrange the 2 men in it in 2! ways, and place the 2 women in the remaining seats in 2! ways, giving 2 · 2 · 2 = 8 favorable.<br>" +
-            "3. Thus P = \(\frac{8}{24} = \frac{1}{3}\)."
-          ],
-          ["Modified Answer",
-            "\\(\\frac{1}{3}\\)"
-          ]
-        ]
-      },
-      {
-        "description": "slide6",
-        "turns": [
-          ["Modified Question",
-            "Find the sum of all positive integers m which are powers of 2 and satisfy that \(\frac{13!}{m}\) is a perfect square."
-          ],
-          ["Modified Solution",
-            "1. \(\left\lfloor \frac{13}{2} \right\rfloor + \left\lfloor \frac{13}{4} \right\rfloor + \left\lfloor \frac{13}{8} \right\rfloor = 6 + 3 + 1 = 10\)<br>" +
-            "2. \(10 - k\), \(k \in \{0, 2, 4, 6, 8, 10\}\)<br>" +
-            "3. \(2^0 + 2^2 + 2^4 + 2^6 + 2^8 + 2^{10} = 1 + 4 + 16 + 64 + 256 + 1024 = 1365\)"
-          ],
-          ["Modified Answer",
-            "\(1365\)"
-          ]
-        ]
-      },
-      {
-        "description": "slide7",
-        "turns": [
-          ["Modified Question",
-            "Define \(f(x)=|| x| - \tfrac{1}{2}|\) and \(g(x)=|| x| - \tfrac{1}{4}|\). Find the number of intersections of the graphs of \(y=4 g(f(\sin(2 \pi x)))\) and \(x=0\). (Fix x=0 instead of the original expression.)"
-          ],
-          ["Modified Solution",
-            "1. Set \(x = 0\). Then \(y = 4g(f(\sin(2\pi \cdot 0))) = 4g(f(0))\).<br>" +
-            "2. Compute \(f(0) = \left| \left| 0 \right| - \frac{1}{2} \right| = \left| -\frac{1}{2} \right| = \frac{1}{2}\).<br>" +
-            "3. Compute \(g\left(\frac{1}{2}\right) = \left| \left| \frac{1}{2} \right| - \frac{1}{4} \right| = \left| \frac{1}{4} \right| = \frac{1}{4}\).<br>" +
-            "4. Thus \(y = 4 \cdot \frac{1}{4} = 1\).<br>" +
-            "5. Therefore there is exactly one intersection point at \((0, 1)\)."
-          ],
-          ["Modified Answer",
-            "\(1\)"
-          ]
-        ]
-      },
-      {
-        "description": "slide8",
-        "turns": [
-          ["Modified Question",
-            "Let p be the least prime number for which there exists a positive integer n such that \(n^{4}+1\) is divisible by \(p^{2}\). Find the least positive integer m such that \(m^{4}+1\) is divisible by \(p^{2}\). Add condition: Only consider n and m such that m=n."
-          ],
-          ["Modified Solution",
-            "1. Since \(n^4 \equiv -1 \mod p^2\) forces \(p \equiv 1 \mod 8\), the least such \(p\) is 17.<br>" +
-            "2. Mod 17, we have \(2^4 = 16 \equiv -1\), and \(f(x) = x^4 + 1\) has \(f'(2) = 4 \cdot 2^3 \not\equiv 0 \mod 17\), so by Hensel's lemma, there is a unique lift modulo \(17^2\): \(x = 2 + 17k\).<br>" +
-            "3. Expanding \((2+17k)^4+1 \equiv 17(1+32k) \equiv 0 \mod 289\) gives \(k \equiv 9 \mod 17\), so the least positive solution is \(n = m = 2 + 17 \cdot 9 = 155\)."
-          ],
-          ["Modified Answer",
-            "\(155\)"
-          ]
-        ]
-      },
-      {
-        "description": "slide9",
-        "turns": [
-          ["Modified Question",
-            "Among the 900 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. Suppose the 234 residents who own exactly three of these things also own a candy store, which means all four items. Find the number of residents who own all four of these things."
-          ],
-          ["Modified Solution",
-            "1. Let \(n_k\) be the number of residents owning exactly \(k\) items.<br>" +
-            "2. Modified gives \(n_2 = 437\) and those 234 with exactly three now own all four, so \(n_3 = 0\) and let \(x = n_4\).<br>" +
-            "3. From \(n_1 + n_2 + n_3 + n_4 = 900\), \(n_1 = 900 - 437 - x\).<br>" +
-            "4. Also the total item‑count is \(195 + 367 + 562 + 900 = 2024\), so \(n_1 + 2 \cdot 437 + 3 \cdot 0 + 4x = 2024\).<br>" +
-            "5. Substituting \(n_1\) yields: \((900 - 437 - x) + 874 + 4x = 2024 \implies 3x = 687 \implies x = 229\)"
-          ],
-          ["Modified Answer",
-            "\(229\)"
-          ]
-        ]
-      },
-      {
-        "description": "math500-1",
-        "turns": [
-          ["Modified Question",
-            "Let p(x) be a polynomial of degree 5 such that<br>" +
-            "\[p(n) = \frac{n}{n^2 - 1}\]<br>" +
-            "for n = 2, 3, 4, \dots, 7. Find p(8). Added condition: Suppose p(x) is actually a polynomial of degree 1 that fits the given values for n=2 and n=3. Find p(8)."
-          ],
-          ["Modified Solution",
-            "1. \(m = \frac{\frac{3}{8} - \frac{2}{3}}{3 - 2} = \frac{9}{24} - \frac{16}{24} = -\frac{7}{24}\)<br>" +
-            "2. Line: \(p(x) = mx + b\)<br>" +
-            "3. Use \(p(2) = \frac{2}{3}\):<br>" +
-            "   \[-\frac{7}{24} \cdot 2 + b = \frac{2}{3} \Rightarrow b = \frac{2}{3} + \frac{7}{12} = \frac{5}{4}\]<br>" +
-            "4. Then<br>" +
-            "   \[p(8) = -\frac{7}{24} \cdot 8 + \frac{5}{4} = -\frac{56}{24} + \frac{5}{4} = -\frac{7}{3} + \frac{5}{4} = -\frac{28}{12} + \frac{15}{12} = -\frac{13}{12}\]"
-          ],
-          ["Modified Answer",
-            "\[-\frac{13}{12}\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-2",
-        "turns": [
-          ["Modified Question",
-            "Let \[z = 2 + \sqrt{2} - (3 + 3 \sqrt{2})i,\] and let \[c = 2 - 3i.\] Let w be the result when z is rotated around c by \[\pi\] radians counter-clockwise. Find w."
-          ],
-          ["Modified Solution",
-            "1. \(w = c + (z - c)e^{i\pi} = c - (z - c)\)<br>" +
-            "2. Compute \(z - c = (2 + \sqrt{2} - 2) + (-(3 + 3\sqrt{2}) + 3)i = \sqrt{2} - 3\sqrt{2}i = \sqrt{2}(1 - 3i)\)<br>" +
-            "3. Thus \(w = 2 - 3i - \sqrt{2}(1 - 3i) = (2 - \sqrt{2}) + (3\sqrt{2} - 3)i\)"
-          ],
-          ["Modified Answer",
-            "\[(2 - \sqrt{2}) + (3\sqrt{2} - 3)i\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-3",
-        "turns": [
-          ["Modified Question",
-            "Denali and Nate work for a dog walking business and are paid for each dog they walk. Denali is responsible for 16 dogs and Nate is responsible for 20 dogs. If Denali's pay doubles when she takes on x more dogs from Nate, find x."
-          ],
-          ["Modified Solution",
-            "1. Let p be the pay per dog.<br>" +
-            "2. Initially Denali earns 16p.<br>" +
-            "3. After taking x dogs, she earns (16+x)p, which doubles her pay: (16+x)p = 2 · 16p = 32p.<br>" +
-            "4. Hence 16 + x = 32 and x = 16."
-          ],
-          ["Modified Answer",
-            "\[16\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-4",
-        "turns": [
-          ["Modified Question",
-            "Find the number of integer values of k in the closed interval [-500,500] for which the equation<br>" +
-            "\[\log(kx) = 2 \log(x+2)\]<br>" +
-            "has exactly one real solution. Assume \[k\geq 0\]."
-          ],
-          ["Modified Solution",
-            "1. Domain requires \(k>0\) and \(x>0\).<br>" +
-            "2. Rewrite \(\log(kx)=2\log(x+2)\) as \(kx=(x+2)^2 \Rightarrow x^2+(4-k)x+4=0\).<br>" +
-            "3. Discriminant \(D=(k-4)^2-16=k(k-8)\).<br>" +
-            "4. Exactly one real solution with \(x>0\) occurs only when \(D=0\) and root>0.<br>" +
-            "5. \(D=0\Rightarrow k=0\) or \(8\), but \(k>0\Rightarrow k=8\), giving double root \(x=\frac{k-4}{2}=2>0\)."
-          ],
-          ["Modified Answer",
-            "\[1\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-5",
-        "turns": [
-          ["Modified Question",
-            "Let x, y, and z be positive real numbers such that xyz = 2. Find the minimum value of \[x^4 + 4y^2 + 4z^4\] given that x = 1."
-          ],
-          ["Modified Solution",
-            "1. Since \(x = 1\) and \(xyz = 2\), we have \(yz = 2\), so \(y = \frac{2}{z}\).<br>" +
-            "2. Substitute into the target: \(f(z) = 1^4 + 4y^2 + 4z^4 = 1 + 4\left(\frac{2}{z}\right)^2 + 4z^4 = 1 + \frac{16}{z^2} + 4z^4\).<br>" +
-            "3. Compute \(f'(z) = -\frac{32}{z^3} + 16z^3\) and set to zero: \(16z^3 = \frac{32}{z^3} \Rightarrow z^6 = 2 \Rightarrow z = 2^{1/6}\). Then \(y = \frac{2}{z} = 2^{5/6}\).<br>" +
-            "4. The minimum is \(f(2^{1/6}) = 1 + \frac{16}{2^{1/3}} + 4 \times 2^{2/3} = 1 + 8 \times 2^{2/3} + 4 \times 2^{2/3} = 1 + 12 \times 2^{2/3}\)."
-          ],
-          ["Modified Answer",
-            "\[1 + 12 \cdot 2^{2/3}\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-6",
-        "turns": [
-          ["Modified Question",
-            "Find all real numbers x such that \[\frac{x^2 + 2x + 1}{x^2 - 1} = 2\] given that x \neq 1."
-          ],
-          ["Modified Solution",
-            "1. Since \(x \neq 1\), we can multiply both sides by \(x^2 - 1\): \(x^2 + 2x + 1 = 2(x^2 - 1)\).<br>" +
-            "2. Expand and simplify: \(x^2 + 2x + 1 = 2x^2 - 2 \Rightarrow -x^2 + 2x + 3 = 0\).<br>" +
-            "3. Multiply by -1: \(x^2 - 2x - 3 = 0\).<br>" +
-            "4. Factor: \((x - 3)(x + 1) = 0\).<br>" +
-            "5. Solutions: \(x = 3\) or \(x = -1\)."
-          ],
-          ["Modified Answer",
-            "\[x = 3 \text{ or } x = -1\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-7",
-        "turns": [
-          ["Modified Question",
-            "A circle has radius 5 and center at the origin. Find the area of the region inside the circle but outside the square with vertices at \((\pm 3, \pm 3)\)."
-          ],
-          ["Modified Solution",
-            "1. Area of circle: \(\pi r^2 = 25\pi\).<br>" +
-            "2. Area of square: \(6 \times 6 = 36\).<br>" +
-            "3. Desired area = Circle area - Square area = \(25\pi - 36\)."
-          ],
-          ["Modified Answer",
-            "\[25\pi - 36\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-8",
-        "turns": [
-          ["Modified Question",
-            "Find the sum of all positive integers n such that \(n^2 + n + 1\) is divisible by 7."
-          ],
-          ["Modified Solution",
-            "1. Note that \(n^2 + n + 1 = (n + 1)^2\).<br>" +
-            "2. We need \((n + 1)^2 \equiv 0 \pmod{7}\).<br>" +
-            "3. This means \(n + 1 \equiv 0 \pmod{7}\).<br>" +
-            "4. So \(n \equiv 6 \pmod{7}\).<br>" +
-            "5. The positive integers satisfying this are 6, 13, 20, ..., 97.<br>" +
-            "6. Sum = \(\frac{14}{2}(6 + 97) = 721\)."
-          ],
-          ["Modified Answer",
-            "\[721\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-9",
-        "turns": [
-          ["Modified Question",
-            "Let f(x) = x^3 - 3x^2 + 2x. Find all real numbers x such that f(x) = 0 and x > 1."
-          ],
-          ["Modified Solution",
-            "1. Factor: \(f(x) = x(x^2 - 3x + 2) = x(x - 1)(x - 2)\).<br>" +
-            "2. Set \(f(x) = 0\): \(x(x - 1)(x - 2) = 0\).<br>" +
-            "3. Solutions: \(x = 0, 1, 2\).<br>" +
-            "4. Only \(x = 2\) satisfies \(x > 1\)."
-          ],
-          ["Modified Answer",
-            "\[x = 2\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-10",
-        "turns": [
-          ["Modified Question",
-            "Find the number of ways to arrange the letters in \"MISSISSIPPI\" if the first letter must be 'M' and the last letter must be 'I'."
-          ],
-          ["Modified Solution",
-            "1. Fix M at start and I at end.<br>" +
-            "2. Remaining letters: ISSISSIP (2 I's, 4 S's, 2 P's).<br>" +
-            "3. Number of arrangements = \(\frac{8!}{2!4!2!} = 420\)."
-          ],
-          ["Modified Answer",
-            "\[420\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-11",
-        "turns": [
-          ["Modified Question",
-            "A triangle has sides of length 5, 6, and 7. Find the radius of its circumscribed circle."
-          ],
-          ["Modified Solution",
-            "1. Use the formula \(R = \frac{abc}{4K}\) where \(K\) is the area.<br>" +
-            "2. Find area using Heron's formula: \(s = 9\), \(K = \sqrt{9(4)(3)(2)} = 6\sqrt{6}\).<br>" +
-            "3. Thus \(R = \frac{5 \times 6 \times 7}{4 \times 6\sqrt{6}} = \frac{35}{4\sqrt{6}}\)."
-          ],
-          ["Modified Answer",
-            "\[\frac{35}{4\sqrt{6}}\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-12",
-        "turns": [
-          ["Modified Question",
-            "Find the sum of all positive integers n such that \(n^2 + n + 1\) is divisible by 13."
-          ],
-          ["Modified Solution",
-            "1. We need \(n^2 + n + 1 \equiv 0 \pmod{13}\).<br>" +
-            "2. Complete the square: \((n + 7)^2 \equiv 48 \pmod{13}\).<br>" +
-            "3. Since 48 ≡ 9 mod 13, we need \((n + 7)^2 \equiv 9 \pmod{13}\).<br>" +
-            "4. Thus \(n + 7 \equiv \pm 3 \pmod{13}\).<br>" +
-            "5. Solutions: \(n \equiv 9\) or \(n \equiv 3 \pmod{13}\).<br>" +
-            "6. Sum = 3 + 9 + 16 + 22 + 29 + 35 = 114."
-          ],
-          ["Modified Answer",
-            "\[114\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-13",
-        "turns": [
-          ["Modified Question",
-            "Let f(x) = \frac{x^2 - 1}{x - 1}. Find all real numbers x such that f(x) = 2 and x \neq 1."
-          ],
-          ["Modified Solution",
-            "1. Since \(x \neq 1\), we can simplify: \(f(x) = x + 1\).<br>" +
-            "2. Set \(f(x) = 2\): \(x + 1 = 2\).<br>" +
-            "3. Thus \(x = 1\), but this contradicts \(x \neq 1\).<br>" +
-            "4. Therefore, there are no solutions."
-          ],
-          ["Modified Answer",
-            "No solutions"
-          ]
-        ]
-      },
-      {
-        "description": "math500-14",
-        "turns": [
-          ["Modified Question",
-            "Find the number of ways to arrange 5 red balls and 3 blue balls in a row if no two blue balls can be adjacent."
-          ],
-          ["Modified Solution",
-            "1. First arrange the 5 red balls: 1 way.<br>" +
-            "2. There are 6 possible positions for the blue balls (before, between, and after red balls).<br>" +
-            "3. Choose 3 positions from 6: \(\binom{6}{3} = 20\)."
-          ],
-          ["Modified Answer",
-            "\[20\]"
-          ]
-        ]
-      },
-      {
-        "description": "math500-15",
-        "turns": [
-          ["Modified Question",
-            "A circle has radius 4 and center at the origin. Find the area of the region inside the circle but outside the square with vertices at \((\pm 2, \pm 2)\)."
-          ],
-          ["Modified Solution",
-            "1. Area of circle: \(\pi r^2 = 16\pi\).<br>" +
-            "2. Area of square: \(4 \times 4 = 16\).<br>" +
-            "3. Desired area = Circle area - Square area = \(16\pi - 16\)."
-          ],
-          ["Modified Answer",
-            "\[16\pi - 16\]"
-          ]
-        ]
-      },
-      {
-        "description": "puzzletrivial-1",
-        "turns": [
-          ["Modified Question",
-            "An underground parking garage with an infinite number of parking spaces is partially full. A new car arrives—what can the attendant do to make space?"
-          ],
-          ["Modified Solution",
-            "1. The garage is only partially full, meaning there are empty spaces available.<br>" +
-            "2. Since there are empty spaces, the attendant can simply direct the new car to any available empty space.<br>" +
-            "3. No need for complex rearrangement since the garage is not full."
-          ],
-          ["Modified Answer",
-            "Move the new car to any empty parking space."
-          ]
-        ]
-      },
-      {
-        "description": "puzzletrivial-2",
-        "turns": [
-          ["Modified Question",
-            "A runaway trolley is heading down the tracks away from five people upwards of the track. You are near a lever that can switch the trolley to another track. How might pulling the lever impact the five people's lives?"
-          ],
-          ["Modified Solution",
-            "1. The trolley is moving away from the five people, not towards them.<br>" +
-            "2. Since the trolley is moving in the opposite direction, it poses no threat to the five people.<br>" +
-            "3. Pulling the lever would have no impact on the five people's safety."
-          ],
-          ["Modified Answer",
-            "No, as the trolley is heading down the tracks in the opposite direction to the five people up the track."
-          ]
-        ]
-      },
-      {
-        "description": "puzzletrivial-3",
-        "turns": [
-          ["Modified Question",
-            "There are 12 coins, and one is rumored to be heavier than the rest. You have a perfect balance scale to determine which coin it is. However, all coins are actually identical. Which coin is heavier?"
-          ],
-          ["Modified Solution",
-            "1. The question states that all coins are actually identical.<br>" +
-            "2. Despite the rumor about one coin being heavier, the reality is that all coins weigh the same.<br>" +
-            "3. No matter how many times you use the balance scale, it will always show equal weights."
-          ],
-          ["Modified Answer",
-            "None—they all weigh the same."
-          ]
-        ]
-      },
-      {
-        "description": "puzzletrivial-4",
-        "turns": [
-          ["Modified Question",
-            "In a long line of ancient scrolls, one contains the secret to immortality whose position is known. The scrolls are sorted in increasing magical power. You must find the secret scroll using the fewest inspections possible."
-          ],
-          ["Modified Solution",
-            "1. The position of the secret scroll is already known.<br>" +
-            "2. Since we know exactly where the scroll is, we only need one inspection.<br>" +
-            "3. No need for binary search or multiple inspections since the location is given."
-          ],
-          ["Modified Answer",
-            "1, position of the secret scroll is known."
-          ]
-        ]
-      },
-      {
-        "description": "puzzletrivial-5",
-        "turns": [
-          ["Modified Question",
-            "How do you measure exactly 3 gallons of water with only a 3-gallon, 5-gallon, 4-gallon, and 2-gallon jug if you are a clever gardener?"
-          ],
-          ["Modified Solution",
-            "1. You have a 3-gallon jug available.<br>" +
-            "2. Since you need exactly 3 gallons, and you have a 3-gallon jug, the solution is straightforward.<br>" +
-            "3. Simply fill up the 3-gallon jug to get exactly 3 gallons."
-          ],
-          ["Modified Answer",
-            "Fill up the 3-gallon jug"
-          ]
-        ]
-      },
-    ];
-
-    // The current image index
-    let currentIndex = 0;
-
-    // The function to update the displayed chat history
-    function update_dialog_demo() {
-      // Clear the chat history
-      clearChatHistory();
-
-      for (let i = 0; i < conversations[currentIndex].turns.length; i++) {
-        if (conversations[currentIndex].turns[i].length == 2) {
-          addMessageToChatHistory(conversations[currentIndex].turns[i][0], conversations[currentIndex].turns[i][1]);
-        }
-        else {
-          addMessageToChatHistory(conversations[currentIndex].turns[i][0], conversations[currentIndex].turns[i][1], conversations[currentIndex].turns[i][2]);
-        }
-      }
-
-      // scroll to the top of the chat history
-      document.querySelector('.chat-history').scrollTop = 0;
-    }
-
-    // Initialize the displayed image
-    update_dialog_demo();
-
-    // Event listeners for the buttons
-    document.getElementById('prev-question').addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + conversations.length) % conversations.length;
-      update_dialog_demo();
-    });
-
-    document.getElementById('next-question').addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % conversations.length;
-      update_dialog_demo();
-    });
-  </script> -->
+    
 </body >
 
 </html >
