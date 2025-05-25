@@ -45,29 +45,8 @@
   <script src="./static/js/lazy.js"></script>
   <script src="./static/js/faster.js"></script>
   <script src="./static/js/index.js"></script>
-  <script>
-    window.MathJax = {
-      loader: {
-        load: ['input/tex-base', 'output/svg']
-      },
-      options: {
-        renderActions: {
-          findScript: [10, function (doc) {
-            for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = { node: text, delim: '', n: 0 };
-              math.end = { node: text, delim: '', n: 0 };
-              doc.math.push(math);
-            }
-          }, '']
-        }
-      }
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
+  <!-- MathJax (LaTeX rendering) -->
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -502,7 +481,167 @@
   </div>
 </section>
 
-  <script>
+<!-- chat pane -->
+<div class="chat-history"></div>
+
+<!-- navigation buttons -->
+<div class="buttons has-addons is-centered">
+  <button id="prev-question" class="button is-link is-light">
+    ‹ Previous
+  </button>
+  <button id="next-question" class="button is-link is-light">
+    Next ›
+  </button>
+</div>
+
+<!-- ------- the supplied script goes below ------- -->
+<script>
+  /* --------- helpers to build a chat row --------- */
+  function createChatRow(sender, text, imageSrc) {
+    var article = document.createElement("article");
+    article.className = "media";
+
+    var figure = document.createElement("figure");
+    figure.className = "media-left";
+
+    var span = document.createElement("span");
+    span.className = "icon is-large";
+
+    var icon = document.createElement("i");
+    icon.className =
+      "fas fa-2x" +
+      (sender === "Modified Question"
+        ? " fa-question-circle "
+        : sender === "Modified Solution"
+          ? " fa-info-circle "
+          : sender === "Modified Answer"
+            ? " fa-check-square "
+            : "");
+
+    var media = document.createElement("div");
+    media.className = "media-content";
+
+    var content = document.createElement("div");
+    content.className = "content";
+
+    if (sender === "Modified Question") {
+      content.style.backgroundColor = "#fff8e1"; /* light yellow */
+    } else if (sender === "Modified Solution") {
+      content.style.backgroundColor = "#e1f5fe"; /* light blue  */
+    } else if (sender === "Modified Answer") {
+      content.style.backgroundColor = "#e8f5e9"; /* light green */
+    }
+
+    content.style.padding = "12px";
+    content.style.borderRadius = "8px";
+    content.style.marginBottom = "10px";
+
+    var para = document.createElement("p");
+    var pre_text = document.createElement("pre");
+    pre_text.style =
+      "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
+    pre_text.innerHTML = text;
+    if (window.MathJax) MathJax.typesetPromise([pre_text]);
+
+    var strong = document.createElement("strong");
+    strong.innerHTML = sender;
+    var br = document.createElement("br");
+
+    para.appendChild(strong);
+    para.appendChild(br);
+    para.appendChild(pre_text);
+
+    /* image support (optional) */
+    if (imageSrc) {
+      var img = document.createElement("img");
+      img.src = imageSrc;
+      img.style = "max-width: 100%; max-height: 300px;";
+      para.appendChild(img);
+    }
+
+    /* typeset LaTeX once more after adding everything */
+    if (window.MathJax) MathJax.typesetPromise([pre_text]);
+
+    content.appendChild(para);
+    media.appendChild(content);
+    span.appendChild(icon);
+    figure.appendChild(span);
+    if (sender !== "Description") article.appendChild(figure);
+    article.appendChild(media);
+    return article;
+  }
+
+  function addMessageToChatHistory(sender, message, imageSrc) {
+    const chatHistory = document.querySelector(".chat-history");
+    chatHistory.appendChild(createChatRow(sender, message, imageSrc));
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+  }
+
+  function clearChatHistory() {
+    document.querySelector(".chat-history").innerHTML = "";
+  }
+
+  /* -------- demo conversation data -------- */
+  const conversations = [
+    {
+      description: "slide1",
+      turns: [
+        [
+          "Modified Question",
+          "A straight river that is 264 m wide flows from west to east at 14 m/min.<br>Melanie and Sherry sit on the south bank with Melanie a distance D&nbsp;metres downstream from Sherry.<br>Each heads for the point directly opposite Sherry and they arrive simultaneously.<br>Melanie swims at 80&nbsp;m/min relative to the water, while Sherry swims at 60&nbsp;m/min.<br>Find&nbsp;D."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;<b>Sherry:</b><br>- To land at \\(x=0\\) we need horizontal speed: \\(-60\\sin\\theta_S + 14 = 0 \\Rightarrow \\sin\\theta_S = \\frac{7}{30}\\)<br>- Hence, \\(v_{y,S} = 60\\cos\\theta_S = 60\\sqrt{1 - \\frac{49}{900}} = 2\\sqrt{851}\\)<br>- Time: \\(t = \\frac{264}{2\\sqrt{851}} = \\frac{132}{\\sqrt{851}}\\)<br><br>2.&nbsp;<b>Melanie:</b><br>- Vertical motion: \\(80\\cos\\theta_M t = 264 \\Rightarrow \\cos\\theta_M = \\frac{\\sqrt{851}}{40}\\)<br>- So, \\(\\sin\\theta_M = \\frac{\\sqrt{749}}{40}\\)<br>- Horizontal displacement: \\((80\\sin\\theta_M - 14)t = D\\)<br>- Hence, \\(D = \\left(80 \\cdot \\frac{\\sqrt{749}}{40} - 14\\right) \\cdot \\left(\\frac{132}{\\sqrt{851}}\\right) = \\frac{264(\\sqrt{749} - 7)}{\\sqrt{851}} \\approx 184.4\\,\\text{m}\\)"
+        ],
+        ["Modified Answer", "\\(\\frac{264(\\sqrt{749}-7)}{\\sqrt{851}} \\approx 184.4\\,\\text{m}\\)"]
+      ]
+    },
+    {
+      description: "slide2",
+      turns: [
+        [
+          "Modified Question",
+          "Let a,b,c,d,e,f,g,h,i be distinct integers from&nbsp;1 to&nbsp;9, and suppose that a,b,c,d,e,f are consecutive integers.<br>Find the minimum positive value of \\(\\dfrac{a b c - d e f}{g h i}\\)."
+        ],
+        [
+          "Modified Solution",
+          "1.&nbsp;There are four possible 6-term consecutive sets \\(S = \\{k,\\dots,k+5\\}\\) with \\(k=1\\ldots4\\).<br>2.&nbsp;For each, enumerate all ways to split into two triples, compute the triple products, and their difference.<br>3.&nbsp;The minimum numerator 2 occurs for \\(S = \\{2,\\dots,7\\}\\) with \(A=\\{3,4,6\\}\\) (product 72) versus the complement (product 70).<br>4.&nbsp;The remaining digits are \\(\\{1,8,9\\}\\), so the denominator is 72 and the fraction is \\(\\frac{1}{36}\\)."
+        ],
+        ["Modified Answer", "\\(\\frac{1}{36}\\)"]
+      ]
+    }
+  ];
+
+  /* -------- slideshow logic -------- */
+  let currentIndex = 0;
+
+  function updateDialog() {
+    clearChatHistory();
+    conversations[currentIndex].turns.forEach((t) =>
+      addMessageToChatHistory(...t)
+    );
+    document.querySelector(".chat-history").scrollTop = 0;
+  }
+
+  document
+    .getElementById("prev-question")
+    .addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + conversations.length) % conversations.length;
+      updateDialog();
+    });
+
+  document
+    .getElementById("next-question")
+    .addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % conversations.length;
+      updateDialog();
+    });
+
+  /* initial render */
+  updateDialog();
+</script>
+  <!-- <script>
     // Handle message showing
     function createChatRow(sender, text, imageSrc) {
       var article = document.createElement("article");
@@ -1115,15 +1254,6 @@
       // scroll to the top of the chat history
       document.querySelector('.chat-history').scrollTop = 0;
     }
-    createChatRow("Modified Solution", `
-      1. To land at \\(x=0\\), Sherry needs horizontal speed: \\(-60\\sin\\theta_S + 14 = 0 \\Rightarrow \\sin\\theta_S = \\frac{7}{30}\\)\\n
-      2. Hence, \\(v_{y,S} = 60\\cos\\theta_S = 60\\sqrt{1 - \\frac{49}{900}} = 2\\sqrt{851}\\)\\n
-      3. Time: \\(t = \\frac{264}{2\\sqrt{851}} = \\frac{132}{\\sqrt{851}}\\)\\n\\n
-      4. Melanie: \\(80\\cos\\theta_M \\cdot t = 264 \\Rightarrow \\cos\\theta_M = \\frac{\\sqrt{851}}{40}\\)\\n
-      5. So \\(\\sin\\theta_M = \\frac{\\sqrt{749}}{40}\\)\\n
-      6. Horizontal: \\((80\\sin\\theta_M - 14)t = D\\)\\n
-      7. Final: \\(D = \\frac{264(\\sqrt{749} - 7)}{\\sqrt{851}}\\)
-      `);
 
     // Initialize the displayed image
     update_dialog_demo();
@@ -1138,7 +1268,7 @@
       currentIndex = (currentIndex + 1) % conversations.length;
       update_dialog_demo();
     });
-  </script>
+  </script> -->
 </body >
 
 </html >
